@@ -11,7 +11,10 @@ public:
     Vec2 add(Vec2 vector);
     Vec2 scale(double scalar);
     double getMagnitude();
-    Vec2 operator+(const Vec2& vector2D);
+    Vec2 operator+(const Vec2& vector);
+    void operator+=(const Vec2& vector);
+    Vec2 operator-(const Vec2& vector);
+    Vec2 operator-=(const Vec2& vector);
     Vec2 operator*(const double& scalar);
     Vec2 operator/(const double& scalar);
 
@@ -19,6 +22,9 @@ public:
     double x;
 
     static Vec2 polar(double rotation, double radius);
+
+    static double distanceBetween(Vec2 v1, Vec2 v2);
+
 };
 
 #endif //UNTITLED_VEC2_H

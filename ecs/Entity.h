@@ -9,13 +9,18 @@
 
 class Entity {
 private:
+    unsigned int id;
+
     std::unordered_map<std::type_index, Component *> components;
 
 public:
-    explicit Entity(unsigned int i);
+    explicit Entity(unsigned int id);
 
     template<typename Component, typename ... Args>
     void assign(Args &&... args);
+
+    template<typename Component, typename ... Args>
+    void remove();
 
     template<typename Component>
     Component * get();
@@ -26,6 +31,8 @@ public:
     // We need to specify both A and B so that the method is not ambiguous
     template<typename ComponentA, typename ComponentB, typename ... OtherComponents>
     bool has();
+
+    unsigned int getId();
 };
 
 template<typename Component>
@@ -42,6 +49,12 @@ template<typename Component, typename... Args>
 void Entity::assign(Args &&... args) {
     components[typeid(Component)] = static_cast<Component *>(new Component(
             std::forward<Args>(args) ...));
+}
+
+template<typename Component, typename... Args>
+void Entity::remove() {
+    // TODO: fix memory leak
+    components.erase(typeid(Component));
 }
 
 template<typename Component>

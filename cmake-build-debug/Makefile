@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Components/Helpers.o: Components/Helpers.cpp.o
+
+.PHONY : Components/Helpers.o
+
+# target to build an object file
+Components/Helpers.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.o
+.PHONY : Components/Helpers.cpp.o
+
+Components/Helpers.i: Components/Helpers.cpp.i
+
+.PHONY : Components/Helpers.i
+
+# target to preprocess a source file
+Components/Helpers.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.i
+.PHONY : Components/Helpers.cpp.i
+
+Components/Helpers.s: Components/Helpers.cpp.s
+
+.PHONY : Components/Helpers.s
+
+# target to generate assembly for a file
+Components/Helpers.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.s
+.PHONY : Components/Helpers.cpp.s
+
 Coordinates.o: Coordinates.cpp.o
 
 .PHONY : Coordinates.o
@@ -230,6 +257,87 @@ Ship.s: Ship.cpp.s
 Ship.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.s
 .PHONY : Ship.cpp.s
+
+Systems/CollisionSystem.o: Systems/CollisionSystem.cpp.o
+
+.PHONY : Systems/CollisionSystem.o
+
+# target to build an object file
+Systems/CollisionSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
+.PHONY : Systems/CollisionSystem.cpp.o
+
+Systems/CollisionSystem.i: Systems/CollisionSystem.cpp.i
+
+.PHONY : Systems/CollisionSystem.i
+
+# target to preprocess a source file
+Systems/CollisionSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/CollisionSystem.cpp.i
+.PHONY : Systems/CollisionSystem.cpp.i
+
+Systems/CollisionSystem.s: Systems/CollisionSystem.cpp.s
+
+.PHONY : Systems/CollisionSystem.s
+
+# target to generate assembly for a file
+Systems/CollisionSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/CollisionSystem.cpp.s
+.PHONY : Systems/CollisionSystem.cpp.s
+
+Systems/DestroySystem.o: Systems/DestroySystem.cpp.o
+
+.PHONY : Systems/DestroySystem.o
+
+# target to build an object file
+Systems/DestroySystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
+.PHONY : Systems/DestroySystem.cpp.o
+
+Systems/DestroySystem.i: Systems/DestroySystem.cpp.i
+
+.PHONY : Systems/DestroySystem.i
+
+# target to preprocess a source file
+Systems/DestroySystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.i
+.PHONY : Systems/DestroySystem.cpp.i
+
+Systems/DestroySystem.s: Systems/DestroySystem.cpp.s
+
+.PHONY : Systems/DestroySystem.s
+
+# target to generate assembly for a file
+Systems/DestroySystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
+.PHONY : Systems/DestroySystem.cpp.s
+
+Systems/FiringSystem.o: Systems/FiringSystem.cpp.o
+
+.PHONY : Systems/FiringSystem.o
+
+# target to build an object file
+Systems/FiringSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/FiringSystem.cpp.o
+.PHONY : Systems/FiringSystem.cpp.o
+
+Systems/FiringSystem.i: Systems/FiringSystem.cpp.i
+
+.PHONY : Systems/FiringSystem.i
+
+# target to preprocess a source file
+Systems/FiringSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/FiringSystem.cpp.i
+.PHONY : Systems/FiringSystem.cpp.i
+
+Systems/FiringSystem.s: Systems/FiringSystem.cpp.s
+
+.PHONY : Systems/FiringSystem.s
+
+# target to generate assembly for a file
+Systems/FiringSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/FiringSystem.cpp.s
+.PHONY : Systems/FiringSystem.cpp.s
 
 Systems/PhysicsSystem.o: Systems/PhysicsSystem.cpp.o
 
@@ -393,6 +501,33 @@ ecs/EntityManager.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EntityManager.cpp.s
 .PHONY : ecs/EntityManager.cpp.s
 
+ecs/EventManager.o: ecs/EventManager.cpp.o
+
+.PHONY : ecs/EventManager.o
+
+# target to build an object file
+ecs/EventManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.o
+.PHONY : ecs/EventManager.cpp.o
+
+ecs/EventManager.i: ecs/EventManager.cpp.i
+
+.PHONY : ecs/EventManager.i
+
+# target to preprocess a source file
+ecs/EventManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.i
+.PHONY : ecs/EventManager.cpp.i
+
+ecs/EventManager.s: ecs/EventManager.cpp.s
+
+.PHONY : ecs/EventManager.s
+
+# target to generate assembly for a file
+ecs/EventManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.s
+.PHONY : ecs/EventManager.cpp.s
+
 ecs/Service.o: ecs/Service.cpp.o
 
 .PHONY : ecs/Service.o
@@ -456,6 +591,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... Components/Helpers.o"
+	@echo "... Components/Helpers.i"
+	@echo "... Components/Helpers.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"
@@ -468,6 +606,15 @@ help:
 	@echo "... Ship.o"
 	@echo "... Ship.i"
 	@echo "... Ship.s"
+	@echo "... Systems/CollisionSystem.o"
+	@echo "... Systems/CollisionSystem.i"
+	@echo "... Systems/CollisionSystem.s"
+	@echo "... Systems/DestroySystem.o"
+	@echo "... Systems/DestroySystem.i"
+	@echo "... Systems/DestroySystem.s"
+	@echo "... Systems/FiringSystem.o"
+	@echo "... Systems/FiringSystem.i"
+	@echo "... Systems/FiringSystem.s"
 	@echo "... Systems/PhysicsSystem.o"
 	@echo "... Systems/PhysicsSystem.i"
 	@echo "... Systems/PhysicsSystem.s"
@@ -486,6 +633,9 @@ help:
 	@echo "... ecs/EntityManager.o"
 	@echo "... ecs/EntityManager.i"
 	@echo "... ecs/EntityManager.s"
+	@echo "... ecs/EventManager.o"
+	@echo "... ecs/EventManager.i"
+	@echo "... ecs/EventManager.s"
 	@echo "... ecs/Service.o"
 	@echo "... ecs/Service.i"
 	@echo "... ecs/Service.s"

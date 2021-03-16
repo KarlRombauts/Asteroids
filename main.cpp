@@ -28,16 +28,30 @@
 #include "Components/Moveable.h"
 #include "Systems/PhysicsSystem.h"
 #include "Systems/PlayerInputSystem.h"
+#include "Components/Texture.h"
+#include "ecs/EventManager.h"
+#include "Events/CollisionEvent.h"
+#include "Systems/CollisionSystem.h"
+#include "Components/Identity.h"
+#include "Components/Collision.h"
+#include "Systems/FiringSystem.h"
+#include "Components/SpaceShip.h"
+#include "Components/GravityForce.h"
+#include "Components/BlackHole.h"
+#include "Components/Shape.h"
 
 /* Display callback */
 static float rotDeg = 0.0f;
-static float lastTime = 0;
+static int lastTime = 0;
+static Vec2 initialWorldSize = {4, 4};
 
 Ship ship(Vec2(0.5, 0.5), 0.0, 5.0, 1);
 EntityManager entities;
 RenderSystem renderSystem;
 PhysicsSystem physicsSystem;
+CollisionSystem collisionSystem;
 PlayerInputSystem playerInputSystem;
+FiringSystem firingSystem;
 
 void display()
 {
@@ -48,7 +62,6 @@ void display()
     glutSwapBuffers();
 }
 
-/* Keyboard callback */
 void onKeyPress(unsigned char key, int x, int y) {
     keyboardState.setPressedKey(key);
     switch (key) {
@@ -70,13 +83,11 @@ static void idle_func(void)
     int thisTime;
 
     thisTime = glutGet(GLUT_ELAPSED_TIME);
-    float dt = thisTime - lastTime;
-
-    rotDeg += (float)dt * 0.1f;
-
-//    ship.update(dt);
+    int dt = thisTime - lastTime;
 
     playerInputSystem.update(entities, dt);
+    firingSystem.update(entities, dt);
+    collisionSystem.update(entities, dt);
     physicsSystem.update(entities, dt);
 
     lastTime = thisTime;
@@ -87,38 +98,52 @@ static void idle_func(void)
 void reshape (int w, int h)
 {
     glViewport (0, 0, (GLsizei) w, (GLsizei) h);
+
     GLdouble aspectRatio = (GLfloat) h / (GLfloat) w;
-    if (w <= h)
-        gameState.resizeWorld(-2, 2, -2, 2 * aspectRatio);
-    else
-        gameState.resizeWorld(-2, 2 / aspectRatio, -2, 2);
+    gameState.resizeWorld(aspectRatio);
 }
 
 void init() {
-    /* In this simple program these OpenGL calls only need to be done once, */
     glMatrixMode(GL_PROJECTION);
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     glMatrixMode(GL_MODELVIEW);
 
+    eventManager.subscribe<CollisionEvent>(&physicsSystem);
+
     Entity *spaceShip = entities.create();
-    spaceShip->assign<Transform>(1, 1,  10, OutOfBoundsBehaviour::WRAP);
+    spaceShip->assign<Identity>(EntityType::SPACE_SHIP);
+    spaceShip->assign<Transform>(Vec2(0,0), 90, Vec2(1,1), OutOfBoundsBehaviour::WRAP);
+
+    std::vector<Vec2> spaceShipModel = {
+            {4, 0}, {-3, 0}, {-4, 2},
+            {4, 0}, {-3, 0}, {-4, -2}
+    };
+
+    spaceShip->assign<Shape>(spaceShipModel);
+    spaceShip->assign<SpaceShip>(200, 20);
+    spaceShip->assign<Collision>(CollisionType::DYNAMIC, 5);
+    spaceShip->assign<Texture>(1, 0, 0);
     spaceShip->assign<Moveable>(Vec2(0.1, 0.2), Vec2(0, 0));
     spaceShip->assign<PlayerInput>();
 
-    Entity *asteroid = entities.create();
-    asteroid->assign<Transform>(0, 0, 0, OutOfBoundsBehaviour::BOUNCE);
-    asteroid->assign<Moveable>(Vec2(0.3, 0.2), Vec2(0, 0));
+    entities.createAsteroid(8);
+    entities.createAsteroid(8);
 
-    Entity *asteroid2 = entities.create();
-    asteroid2->assign<Transform>(-0.7, 0.3, 0, OutOfBoundsBehaviour::BOUNCE);
-    asteroid2->assign<Moveable>(Vec2(-0.4, 0.5), Vec2(0, 0));
+//    Entity* blackHole = entities.create();
+//    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2), OutOfBoundsBehaviour::BOUNCE);
+//    blackHole->assign<BlackHole>();
+//    blackHole->assign<Collision>(CollisionType::TRIGGER);
+//    blackHole->assign<GravityForce>(1);
+//    blackHole->assign<Texture>(0.2, 0.2, 0.2);
 }
 
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowSize(600, 600);
     glutCreateWindow("Asteroids");
+    reshape(500, 600);
     init();
 
     /* Display and keyboard callbacks */

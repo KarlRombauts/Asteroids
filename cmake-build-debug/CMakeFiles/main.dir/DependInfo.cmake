@@ -4,16 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Components/Helpers.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Coordinates.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/GameState.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/KeyboardState.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Ship.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/DestroySystem.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/FiringSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/RenderSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Vec2.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/ecs/Entity.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/ecs/EntityManager.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/ecs/EventManager.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Service.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/ecs/Service.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/main.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/main.cpp.o"
   )

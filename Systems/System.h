@@ -8,7 +8,7 @@
 #include "../ecs/EntityManager.h"
 
 class System {
-private:
+public:
     virtual void update(EntityManager &entities, double dt) = 0;
 };
 #endif //UNTITLED_SYSTEM_H

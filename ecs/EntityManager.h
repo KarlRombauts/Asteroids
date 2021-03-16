@@ -17,6 +17,8 @@ private:
 public:
     Entity * create();
 
+    Entity * createAsteroid(double radius);
+
     void destroy(Entity *entity);
 
     template<typename ... Components>

@@ -13,7 +13,10 @@ private:
     CoordinateSpace worldCoordinates;
 
 public:
+    void resizeWorld(double aspectRatio);
+
     void resizeWorld(double minX, double maxX, double minY, double maxY);
+
     CoordinateSpace getWorldCoordinates();
 
     bool isOutOfBounds(Vec2 vector);

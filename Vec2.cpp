@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 12/3/21.
-//
-
 #include <cmath>
 #include "Vec2.h"
 
@@ -19,8 +15,8 @@ double Vec2::getMagnitude() {
 }
 
 Vec2 Vec2::scale(double scalar) {
-    double newX = this->x / scalar;
-    double newY = this->y / scalar;
+    double newX = this->x * scalar;
+    double newY = this->y * scalar;
     return Vec2(newX, newY);
 }
 
@@ -38,6 +34,27 @@ Vec2 Vec2::polar(double rotation, double radius) {
     return Vec2(x, y);
 }
 
-Vec2 Vec2::operator+(const Vec2 &vector2D) {
-    return this->add(vector2D);
+double Vec2::distanceBetween(Vec2 v1, Vec2 v2) {
+    return (v1 - v2).getMagnitude();
 }
+
+Vec2 Vec2::operator+(const Vec2 &vector) {
+    return this->add(vector);
+}
+
+Vec2 Vec2::operator-(const Vec2 &vector) {
+    return this->scale(-1).add(vector);
+}
+
+void Vec2::operator+=(const Vec2 &vector) {
+    Vec2 newVector = *this + vector;
+    this->x = newVector.x;
+    this->y = newVector.y;
+}
+
+Vec2 Vec2::operator-=(const Vec2 &vector) {
+    Vec2 newVector = *this - vector;
+    this->x = newVector.x;
+    this->y = newVector.y;
+}
+

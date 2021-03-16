@@ -7,11 +7,15 @@
 
 
 #include "System.h"
+#include "../Events/CollisionEvent.h"
+#include "../ecs/EventManager.h"
 
-class PhysicsSystem: public System {
+class PhysicsSystem: public System, public EventListener<CollisionEvent> {
 
 public:
     void update(EntityManager &entities, double dt) override;
+
+    void notify(CollisionEvent event) override;
 };
 
 
