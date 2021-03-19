@@ -231,6 +231,33 @@ KeyboardState.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/KeyboardState.cpp.s
 .PHONY : KeyboardState.cpp.s
 
+MouseState.o: MouseState.cpp.o
+
+.PHONY : MouseState.o
+
+# target to build an object file
+MouseState.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.o
+.PHONY : MouseState.cpp.o
+
+MouseState.i: MouseState.cpp.i
+
+.PHONY : MouseState.i
+
+# target to preprocess a source file
+MouseState.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.i
+.PHONY : MouseState.cpp.i
+
+MouseState.s: MouseState.cpp.s
+
+.PHONY : MouseState.s
+
+# target to generate assembly for a file
+MouseState.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.s
+.PHONY : MouseState.cpp.s
+
 Ship.o: Ship.cpp.o
 
 .PHONY : Ship.o
@@ -311,6 +338,33 @@ Systems/DestroySystem.s: Systems/DestroySystem.cpp.s
 Systems/DestroySystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
 .PHONY : Systems/DestroySystem.cpp.s
+
+Systems/DragSystem.o: Systems/DragSystem.cpp.o
+
+.PHONY : Systems/DragSystem.o
+
+# target to build an object file
+Systems/DragSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.o
+.PHONY : Systems/DragSystem.cpp.o
+
+Systems/DragSystem.i: Systems/DragSystem.cpp.i
+
+.PHONY : Systems/DragSystem.i
+
+# target to preprocess a source file
+Systems/DragSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.i
+.PHONY : Systems/DragSystem.cpp.i
+
+Systems/DragSystem.s: Systems/DragSystem.cpp.s
+
+.PHONY : Systems/DragSystem.s
+
+# target to generate assembly for a file
+Systems/DragSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.s
+.PHONY : Systems/DragSystem.cpp.s
 
 Systems/FiringSystem.o: Systems/FiringSystem.cpp.o
 
@@ -603,6 +657,9 @@ help:
 	@echo "... KeyboardState.o"
 	@echo "... KeyboardState.i"
 	@echo "... KeyboardState.s"
+	@echo "... MouseState.o"
+	@echo "... MouseState.i"
+	@echo "... MouseState.s"
 	@echo "... Ship.o"
 	@echo "... Ship.i"
 	@echo "... Ship.s"
@@ -612,6 +669,9 @@ help:
 	@echo "... Systems/DestroySystem.o"
 	@echo "... Systems/DestroySystem.i"
 	@echo "... Systems/DestroySystem.s"
+	@echo "... Systems/DragSystem.o"
+	@echo "... Systems/DragSystem.i"
+	@echo "... Systems/DragSystem.s"
 	@echo "... Systems/FiringSystem.o"
 	@echo "... Systems/FiringSystem.i"
 	@echo "... Systems/FiringSystem.s"

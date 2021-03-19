@@ -9,6 +9,7 @@
 #include "../Components/Helpers.h"
 #include "../Components/Shape.h"
 #include "../GameState.h"
+#include "../Components/Draggable.h"
 
 Entity * EntityManager::create() {
     unsigned int id = nextId;
@@ -32,21 +33,24 @@ Entity* EntityManager::createAsteroid(double radius) {
     {
         double theta = 2.0 * M_PI * float(i) / float(num_segments); //get the current angle
 
-        double x = radius * cos(theta);//calculate the x component
-        double y = radius * sin(theta);//calculate the y component
+        double x = radius * cos(theta); //calculate the x component
+        double y = radius * sin(theta); //calculate the y component
 
         Vec2 vertex = {
-                x + radius * randf(-roughness, roughness),
-                y + radius * randf(-roughness, roughness)
+            x + radius * randf(-roughness, roughness),
+            y + radius * randf(-roughness, roughness)
         };
+
        asteroidModel.push_back(vertex);
     }
 
     asteroid->assign<Asteroid>(radius);
     asteroid->assign<Shape>(asteroidModel);
     asteroid->assign<Collision>(CollisionType::DYNAMIC, radius);
+    asteroid->assign<Draggable>(radius);
     asteroid->assign<Texture>(1, 1, 1);
-    asteroid->assign<Moveable>(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0));
+    asteroid->assign<Moveable>(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
+
     return asteroid;
 }
 

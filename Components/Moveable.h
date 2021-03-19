@@ -9,11 +9,12 @@
 #include "../Vec2.h"
 
 struct Moveable : public Component {
-    Moveable(const Vec2 &velocity, const Vec2 &acceleration) : velocity(
-            velocity), acceleration(acceleration) {}
+    Moveable(const Vec2 &velocity, const Vec2 &acceleration, double mass) : velocity(
+            velocity), acceleration(acceleration), mass(mass) {}
 
     Vec2 velocity;
     Vec2 acceleration;
+    double mass;
 };
 
 

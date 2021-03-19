@@ -8,18 +8,22 @@
 
 #include "Coordinates.h"
 
-class GameState {
-private:
+struct GameState {
+    int worldSize = 100;
+    int width;
+    int height;
+
     CoordinateSpace worldCoordinates;
 
-public:
     void resizeWorld(double aspectRatio);
+
+    void resizeScreen(int w, int h);
 
     void resizeWorld(double minX, double maxX, double minY, double maxY);
 
-    CoordinateSpace getWorldCoordinates();
-
     bool isOutOfBounds(Vec2 vector);
+
+    CoordinateSpace getWorldCoordinates();
 };
 
 extern GameState gameState;

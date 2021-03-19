@@ -9,11 +9,12 @@ class Vec2 {
 public:
     Vec2(double x, double y);
     Vec2 add(Vec2 vector);
+    double dot(Vec2 vector);
     Vec2 scale(double scalar);
     double getMagnitude();
     Vec2 operator+(const Vec2& vector);
     void operator+=(const Vec2& vector);
-    Vec2 operator-(const Vec2& vector);
+    Vec2 operator-(Vec2 vector);
     Vec2 operator-=(const Vec2& vector);
     Vec2 operator*(const double& scalar);
     Vec2 operator/(const double& scalar);

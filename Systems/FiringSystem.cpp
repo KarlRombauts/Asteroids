@@ -28,7 +28,7 @@ void FiringSystem::update(EntityManager &entities, double dt) {
 
             bullet->assign<Transform>(transform->position, transform->rotation, Vec2(1, 1), OutOfBoundsBehaviour::DESTROY);
             Vec2 bulletVelocity = entity->get<Moveable>()->velocity + Vec2::polar(transform->rotation, 100);
-            bullet->assign<Moveable>(bulletVelocity, Vec2(0,0));
+            bullet->assign<Moveable>(bulletVelocity, Vec2(0,0), 1);
             bullet->assign<Bullet>(10);
             bullet->assign<Collision>(CollisionType::TRIGGER, 2);
             bullet->assign<Texture>(1, 1, 0);

@@ -39,6 +39,7 @@
 #include "Components/GravityForce.h"
 #include "Components/BlackHole.h"
 #include "Components/Shape.h"
+#include "Systems/DragSystem.h"
 
 /* Display callback */
 static float rotDeg = 0.0f;
@@ -48,6 +49,7 @@ static Vec2 initialWorldSize = {4, 4};
 Ship ship(Vec2(0.5, 0.5), 0.0, 5.0, 1);
 EntityManager entities;
 RenderSystem renderSystem;
+DragSystem dragSystem;
 PhysicsSystem physicsSystem;
 CollisionSystem collisionSystem;
 PlayerInputSystem playerInputSystem;
@@ -86,6 +88,7 @@ static void idle_func(void)
     int dt = thisTime - lastTime;
 
     playerInputSystem.update(entities, dt);
+    dragSystem.update(entities, dt);
     firingSystem.update(entities, dt);
     collisionSystem.update(entities, dt);
     physicsSystem.update(entities, dt);
@@ -97,10 +100,8 @@ static void idle_func(void)
 
 void reshape (int w, int h)
 {
-    glViewport (0, 0, (GLsizei) w, (GLsizei) h);
-
-    GLdouble aspectRatio = (GLfloat) h / (GLfloat) w;
-    gameState.resizeWorld(aspectRatio);
+    glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+    gameState.resizeScreen(w, h);
 }
 
 void init() {
@@ -123,11 +124,21 @@ void init() {
     spaceShip->assign<SpaceShip>(200, 20);
     spaceShip->assign<Collision>(CollisionType::DYNAMIC, 5);
     spaceShip->assign<Texture>(1, 0, 0);
-    spaceShip->assign<Moveable>(Vec2(0.1, 0.2), Vec2(0, 0));
+    spaceShip->assign<Moveable>(Vec2(0.1, 0.2), Vec2(0, 0), 1);
     spaceShip->assign<PlayerInput>();
 
     entities.createAsteroid(8);
     entities.createAsteroid(8);
+    entities.createAsteroid(4);
+    entities.createAsteroid(4);
+    entities.createAsteroid(16);
+    entities.createAsteroid(16);
+    entities.createAsteroid(8);
+    entities.createAsteroid(8);
+    entities.createAsteroid(4);
+    entities.createAsteroid(4);
+    entities.createAsteroid(16);
+    entities.createAsteroid(16);
 
 //    Entity* blackHole = entities.create();
 //    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2), OutOfBoundsBehaviour::BOUNCE);
@@ -137,6 +148,17 @@ void init() {
 //    blackHole->assign<Texture>(0.2, 0.2, 0.2);
 }
 
+void onMouseButton(int btn, int state, int x, int y) {
+    mouseState.onMouseButton(btn, state, x, y);
+}
+
+void onMouseMove(int x, int y) {
+    mouseState.onMouseMove(x, y);
+}
+
+void onMouseDrag(int x, int y) {
+    mouseState.onMouseDrag(x, y);
+}
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
@@ -152,6 +174,9 @@ int main(int argc, char **argv) {
     glutReshapeFunc(reshape);
     glutKeyboardFunc(onKeyPress);
     glutKeyboardUpFunc(onKeyRelease);
+    glutMouseFunc(onMouseButton);
+    glutMotionFunc(onMouseDrag);
+    glutPassiveMotionFunc(onMouseMove);
     /* Let glut take over */
     glutMainLoop();
 

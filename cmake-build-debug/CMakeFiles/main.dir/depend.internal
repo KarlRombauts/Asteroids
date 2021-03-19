@@ -17,12 +17,19 @@ CMakeFiles/main.dir/GameState.cpp.o
 CMakeFiles/main.dir/KeyboardState.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+CMakeFiles/main.dir/MouseState.cpp.o
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 CMakeFiles/main.dir/Ship.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.h
@@ -44,6 +51,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/SpaceShipHitEvent.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
@@ -55,6 +63,21 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Draggable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Bullet.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
@@ -96,6 +119,7 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
@@ -128,6 +152,7 @@ CMakeFiles/main.dir/ecs/Entity.cpp.o
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Draggable.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
@@ -164,8 +189,10 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.h

@@ -98,6 +98,9 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Destroy.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Draggable.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/FiringBullet.h">
 			<Option target="main"/>
 		</Unit>
@@ -170,6 +173,12 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h">
 			<Option target="main"/>
 		</Unit>
@@ -189,6 +198,12 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp">

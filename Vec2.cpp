@@ -42,8 +42,9 @@ Vec2 Vec2::operator+(const Vec2 &vector) {
     return this->add(vector);
 }
 
-Vec2 Vec2::operator-(const Vec2 &vector) {
-    return this->scale(-1).add(vector);
+Vec2 Vec2::operator-(Vec2 vector) {
+
+    return this->add(vector.scale(-1));
 }
 
 void Vec2::operator+=(const Vec2 &vector) {
@@ -56,5 +57,9 @@ Vec2 Vec2::operator-=(const Vec2 &vector) {
     Vec2 newVector = *this - vector;
     this->x = newVector.x;
     this->y = newVector.y;
+}
+
+double Vec2::dot(Vec2 vector) {
+    return this->x * vector.x + this->y * vector.y;
 }
 

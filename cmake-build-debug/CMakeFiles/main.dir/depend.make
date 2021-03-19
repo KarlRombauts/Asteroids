@@ -17,11 +17,18 @@ CMakeFiles/main.dir/GameState.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/KeyboardState.cpp.o: ../KeyboardState.cpp
 CMakeFiles/main.dir/KeyboardState.cpp.o: ../KeyboardState.h
 
+CMakeFiles/main.dir/MouseState.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/MouseState.cpp.o: ../GameState.h
+CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.cpp
+CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.h
+CMakeFiles/main.dir/MouseState.cpp.o: ../Vec2.h
+
 CMakeFiles/main.dir/Ship.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Ship.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Ship.cpp.o: ../GameState.h
 CMakeFiles/main.dir/Ship.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Ship.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/Ship.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Ship.cpp.o: ../OpenGL.h
 CMakeFiles/main.dir/Ship.cpp.o: ../Ship.cpp
 CMakeFiles/main.dir/Ship.cpp.o: ../Ship.h
@@ -43,6 +50,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Events/Death.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Events/SpaceShipHitEvent.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/CollisionSystem.cpp
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/CollisionSystem.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/System.h
@@ -54,6 +62,21 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../ecs/EventManager.h
 
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.cpp
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.h
+
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Draggable.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Transform.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Globals.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../MouseState.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/DragSystem.cpp
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/DragSystem.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Vec2.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/Component.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/Entity.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/EntityManager.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/EventManager.h
 
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Bullet.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Collision.h
@@ -95,6 +118,7 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/PlayerInputSystem.cpp
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/PlayerInputSystem.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/System.h
@@ -127,6 +151,7 @@ CMakeFiles/main.dir/ecs/Entity.cpp.o: ../ecs/Entity.h
 
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Asteroid.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Collision.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Draggable.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Helpers.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Shape.h
@@ -163,8 +188,10 @@ CMakeFiles/main.dir/main.cpp.o: ../Events/CollisionEvent.h
 CMakeFiles/main.dir/main.cpp.o: ../GameState.h
 CMakeFiles/main.dir/main.cpp.o: ../Globals.h
 CMakeFiles/main.dir/main.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/main.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/main.cpp.o: ../Ship.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/CollisionSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../Systems/DragSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/FiringSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/PhysicsSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/PlayerInputSystem.h

@@ -8,12 +8,12 @@
 GameState gameState;
 
 void GameState::resizeWorld(double aspectRatio) {
-    int size = 100;
+
 
     if (aspectRatio > 1)
-        gameState.resizeWorld(-size, size, -size * aspectRatio, size * aspectRatio);
+        gameState.resizeWorld(-worldSize, worldSize, -worldSize * aspectRatio, worldSize * aspectRatio);
     else
-        gameState.resizeWorld(-size / aspectRatio, size / aspectRatio, -size, size);
+        gameState.resizeWorld(-worldSize / aspectRatio, worldSize / aspectRatio, -worldSize, worldSize);
 }
 void GameState::resizeWorld(double minX, double maxX, double minY, double maxY) {
     worldCoordinates.minX = minX;
@@ -36,4 +36,11 @@ CoordinateSpace GameState::getWorldCoordinates() {
 
 bool GameState::isOutOfBounds(Vec2 vector) {
     return worldCoordinates.isOutOfBounds(vector);
+}
+
+void GameState::resizeScreen(int w, int h) {
+    width = w;
+    height = h;
+    GLdouble aspectRatio = (GLfloat) h / (GLfloat) w;
+    gameState.resizeWorld(aspectRatio);
 }

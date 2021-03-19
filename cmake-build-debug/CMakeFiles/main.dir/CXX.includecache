@@ -8,29 +8,23 @@
 
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
 
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/BlackHole.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Bullet.h
+
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
 deque
 -
 
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Identity.h
+../ecs/Component.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
 
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
 ../Vec2.h
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
-utility
--
-vector
--
-../ecs/Component.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
-../Vec2.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
-
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
-../ecs/Component.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
 
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
 ../ecs/Component.h
@@ -38,13 +32,73 @@ vector
 ../Vec2.h
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/AsteroidHitEvent.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/CollisionEvent.h
+../ecs/Entity.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/Death.h
+../ecs/Entity.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/SpaceShipHitEvent.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
+KeyboardState.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ecs/EventManager.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.h
+MouseState.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+set
+-
+iostream
+-
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
 Vec2.h
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
-Coordinates.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp
+CollisionSystem.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.h
+../Components/Transform.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
+../Globals.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
+../Events/CollisionEvent.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/CollisionEvent.h
+../Components/Identity.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Identity.h
+../Events/AsteroidHitEvent.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/AsteroidHitEvent.h
+../Events/Death.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/Death.h
+../Events/SpaceShipHitEvent.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/SpaceShipHitEvent.h
+../Components/Collision.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
+../Components/Asteroid.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
+../Components/SpaceShip.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
+../Components/Bullet.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Bullet.h
+../Components/Moveable.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+../Components/BlackHole.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/BlackHole.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.h
+System.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+../ecs/EntityManager.h
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
 
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 
@@ -62,30 +116,6 @@ typeindex
 Component.h
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
 
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.cpp
-OpenGL/OpenGL.h
--
-EntityManager.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
-Entity.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
-../Components/Transform.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
-../Components/Collision.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
-../Components/Texture.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
-../Components/Moveable.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
-../Components/Asteroid.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
-../Components/Helpers.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
-../Components/Shape.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
-../GameState.h
-/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
-
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
 unordered_map
 -
@@ -93,4 +123,10 @@ vector
 -
 Entity.h
 /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+
+/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.h
+typeindex
+-
+unordered_map
+-
 

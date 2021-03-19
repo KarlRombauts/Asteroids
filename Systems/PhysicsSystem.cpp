@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 14/3/21.
-//
-
 #include <iostream>
 #include "PhysicsSystem.h"
 #include "../Components/Moveable.h"
@@ -34,6 +30,11 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
 
 
         if (gameState.isOutOfBounds(transform->position)) {
+            if (transform->outOfBoundsBehaviour ==
+                OutOfBoundsBehaviour::DESTROY) {
+                entities.destroy(entity);
+            }
+
             CoordinateSpace world = gameState.getWorldCoordinates();
             if (transform->position.x < world.minX) {
                 if (transform->outOfBoundsBehaviour ==
@@ -80,9 +81,8 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
             }
         }
 
-        moveable->acceleration = Vec2(0,0);
+        moveable->acceleration = Vec2(0, 0);
     }
-
 }
 
 void PhysicsSystem::notify(CollisionEvent event) {
