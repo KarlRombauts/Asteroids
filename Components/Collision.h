@@ -6,6 +6,7 @@
 #define UNTITLED_COLLISION_H
 
 #import <deque>
+#include "Line.h"
 
 enum class CollisionType {
     STATIC,
@@ -14,10 +15,18 @@ enum class CollisionType {
 };
 
 struct Collision: public Component {
-    Collision(CollisionType type, double radius) : type(type), radius(radius) {}
+    Collision(CollisionType type) : type(type) {}
     CollisionType type;
-    double radius;
 };
 
+struct CircleCollision: public Component {
+    double radius;
+    CircleCollision(double radius) : radius(radius) {}
+};
+
+struct LineCollision: public Component {
+    Line *line;
+    LineCollision(Line *line) : line(line) {}
+};
 
 #endif //UNTITLED_COLLISION_H

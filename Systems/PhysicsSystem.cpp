@@ -11,12 +11,12 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
         for (Entity *gravityEntity: entities.getEntitiesWith<GravityForce, Transform>()) {
             Vec2 diff = entity->get<Transform>()->position -
                         gravityEntity->get<Transform>()->position;
-            double distance = diff.getMagnitude();
+            double distance = diff.magnitude();
 
             double forceMagnitude =
                     gravityEntity->get<GravityForce>()->mass / pow(distance, 2);
 
-            Vec2 force = (diff / diff.getMagnitude()) * forceMagnitude;
+            Vec2 force = (diff / diff.magnitude()) * forceMagnitude;
             entity->get<Moveable>()->acceleration += force;
         }
 

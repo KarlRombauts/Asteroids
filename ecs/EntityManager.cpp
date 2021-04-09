@@ -10,6 +10,10 @@
 #include "../Components/Shape.h"
 #include "../GameState.h"
 #include "../Components/Draggable.h"
+#include "../Components/Line.h"
+#include "../Components/Health.h"
+#include "../Components/HealthBar.h"
+#include "../Components/SplitOnDeath.h"
 
 Entity * EntityManager::create() {
     unsigned int id = nextId;
@@ -46,12 +50,28 @@ Entity* EntityManager::createAsteroid(double radius) {
 
     asteroid->assign<Asteroid>(radius);
     asteroid->assign<Shape>(asteroidModel);
-    asteroid->assign<Collision>(CollisionType::DYNAMIC, radius);
+    asteroid->assign<Collision>(CollisionType::DYNAMIC);
+    asteroid->assign<CircleCollision>(radius);
     asteroid->assign<Draggable>(radius);
     asteroid->assign<Texture>(1, 1, 1);
+    asteroid->assign<Health>(radius * 10);
+    asteroid->assign<HealthBar>();
     asteroid->assign<Moveable>(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
 
+    if (radius > 2) {
+        asteroid->assign<SplitOnDeath>();
+    }
+
     return asteroid;
+}
+
+Entity* EntityManager::createFixedLine(Vec2 start, Vec2 end) {
+    Entity *line = create();
+    line->assign<Line>(start, end);
+    line->assign<Collision>(CollisionType::STATIC);
+    line->assign<LineCollision>(line->get<Line>());
+    line->assign<Transform>();
+    line->assign<Texture>(1, 1, 1);
 }
 
 void EntityManager::destroy(Entity *entity) {

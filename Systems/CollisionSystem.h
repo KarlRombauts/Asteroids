@@ -13,8 +13,16 @@ public:
     void update(EntityManager &entities, double dt) override;
 
 public:
-    void handleCollision(EntityManager &entities, Entity *entity1,
-                         Entity *entity2);
+    void resolveCircleCircleCollision(EntityManager &entities, Entity *entity1,
+                                      Entity *entity2);
+
+    bool areCirclesIntersecting(Entity *entity1, Entity *entity2) const;
+
+    const bool areCircleAndLineIntersecting(Entity *circle, Entity *line) const;
+
+    void resolveCircleLineCollision(Entity *circle, Entity *line) const;
+
+    void createImpacts(Entity *entity1, Entity *entity2) const;
 };
 
 

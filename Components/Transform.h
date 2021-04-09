@@ -11,6 +11,8 @@ enum class OutOfBoundsBehaviour {
 };
 
 struct Transform : public Component {
+    Transform()
+            : position(Vec2(0,0)), rotation(0), scale(Vec2(1,1)), outOfBoundsBehaviour(OutOfBoundsBehaviour::WRAP) {}
     Transform(Vec2 position, double rotation, Vec2 scale,
               OutOfBoundsBehaviour outOfBoundsBehaviour)
             : position(position), rotation(rotation), scale(scale), outOfBoundsBehaviour(outOfBoundsBehaviour) {}

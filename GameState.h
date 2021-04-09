@@ -10,6 +10,7 @@
 
 struct GameState {
     int worldSize = 100;
+    int arenaSize = worldSize - 5;
     int width;
     int height;
 
@@ -24,6 +25,8 @@ struct GameState {
     bool isOutOfBounds(Vec2 vector);
 
     CoordinateSpace getWorldCoordinates();
+
+    bool isCircleInArena(Vec2 pos, double radius);
 };
 
 extern GameState gameState;

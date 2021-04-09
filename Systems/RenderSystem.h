@@ -11,7 +11,6 @@
 class RenderSystem: public System {
 
 public:
-
     void update(EntityManager &entities, double dt) override;
 };
 

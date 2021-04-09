@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 16/3/21.
-//
-
 #include <GLUT/glut.h>
 #include "FiringSystem.h"
 #include "../Components/FiringBullet.h"
@@ -11,6 +7,7 @@
 #include "../Components/Bullet.h"
 #include "../Components/Collision.h"
 #include "../Components/Texture.h"
+#include "../Components/Damage.h"
 
 void FiringSystem::update(EntityManager &entities, double dt) {
     for (Entity *entity: entities.getEntitiesWith<SpaceShip, FiringBullet>()) {
@@ -26,11 +23,13 @@ void FiringSystem::update(EntityManager &entities, double dt) {
 
             Transform *transform = entity->get<Transform>();
 
-            bullet->assign<Transform>(transform->position, transform->rotation, Vec2(1, 1), OutOfBoundsBehaviour::DESTROY);
             Vec2 bulletVelocity = entity->get<Moveable>()->velocity + Vec2::polar(transform->rotation, 100);
+            bullet->assign<Transform>(transform->position, transform->rotation, Vec2(1, 1), OutOfBoundsBehaviour::DESTROY);
             bullet->assign<Moveable>(bulletVelocity, Vec2(0,0), 1);
             bullet->assign<Bullet>(10);
-            bullet->assign<Collision>(CollisionType::TRIGGER, 2);
+            bullet->assign<Damage>(20);
+            bullet->assign<Collision>(CollisionType::TRIGGER);
+            bullet->assign<CircleCollision>(2);
             bullet->assign<Texture>(1, 1, 0);
         }
     }

@@ -15,7 +15,7 @@ void DragSystem::update(EntityManager &entities, double dt) {
             Transform * transform = entity->get<Transform>();
             Moveable * moveable = entity->get<Moveable>();
             Vec2 offset = mouseState.drag - transform->position;
-            if (offset.getMagnitude() < draggable->targetSize) {
+            if (offset.magnitude() < draggable->targetSize) {
                 transform->position = mouseState.drag;
                 moveable->velocity = {0,0};
 
@@ -28,7 +28,7 @@ void DragSystem::update(EntityManager &entities, double dt) {
             Draggable * draggable = entity->get<Draggable>();
             Transform * transform = entity->get<Transform>();
             Vec2 offset = mouseState.drag - transform->position;
-            if (offset.getMagnitude() < draggable->targetSize) {
+            if (offset.magnitude() < draggable->targetSize) {
                 selectedEntity = entity;
             }
         }

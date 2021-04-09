@@ -9,6 +9,7 @@
 #include <unordered_map>
 #include <vector>
 #include "Entity.h"
+#include "../Vec2.h"
 
 class EntityManager {
 private:
@@ -23,6 +24,8 @@ public:
 
     template<typename ... Components>
     std::vector<Entity*> getEntitiesWith();
+
+    Entity *createFixedLine(Vec2 start, Vec2 end);
 };
 
 template<typename... Components>

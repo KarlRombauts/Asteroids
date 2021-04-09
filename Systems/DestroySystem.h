@@ -6,8 +6,9 @@
 #define UNTITLED_DESTROYSYSTEM_H
 
 
-class DestroySystem {
+#include "../ecs/EntityManager.h"
 
+class DestroySystem {
 };
 
 

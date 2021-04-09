@@ -9,7 +9,7 @@ Vec2 Vec2::add(Vec2 vector) {
     return Vec2(newX, newY);
 }
 
-double Vec2::getMagnitude() {
+double Vec2::magnitude() {
     return sqrt(pow(this->x, 2)
               + pow(this->y, 2));
 }
@@ -35,7 +35,7 @@ Vec2 Vec2::polar(double rotation, double radius) {
 }
 
 double Vec2::distanceBetween(Vec2 v1, Vec2 v2) {
-    return (v1 - v2).getMagnitude();
+    return (v1 - v2).magnitude();
 }
 
 Vec2 Vec2::operator+(const Vec2 &vector) {
@@ -61,5 +61,20 @@ Vec2 Vec2::operator-=(const Vec2 &vector) {
 
 double Vec2::dot(Vec2 vector) {
     return this->x * vector.x + this->y * vector.y;
+}
+
+Vec2 Vec2::normalize() {
+    return *this / this->magnitude();
+}
+
+Vec2 Vec2::perpendicular() {
+    return Vec2(this->y, this->x * -1).normalize();
+}
+
+Vec2 Vec2::rotate(double theta) {
+    double sinT = sin(theta);
+    double cosT = cos(theta);
+
+    return Vec2(this->x * cosT - this->y * sinT, this->x * sinT + this->y * cosT);
 }
 

@@ -11,7 +11,9 @@ public:
     Vec2 add(Vec2 vector);
     double dot(Vec2 vector);
     Vec2 scale(double scalar);
-    double getMagnitude();
+    Vec2 normalize();
+    double magnitude();
+
     Vec2 operator+(const Vec2& vector);
     void operator+=(const Vec2& vector);
     Vec2 operator-(Vec2 vector);
@@ -26,6 +28,9 @@ public:
 
     static double distanceBetween(Vec2 v1, Vec2 v2);
 
+    Vec2 perpendicular();
+
+    Vec2 rotate(double theta);
 };
 
 #endif //UNTITLED_VEC2_H

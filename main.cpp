@@ -40,6 +40,9 @@
 #include "Components/BlackHole.h"
 #include "Components/Shape.h"
 #include "Systems/DragSystem.h"
+#include "Systems/ImpactCleanupSystem.h"
+#include "Systems/DamageSystem.h"
+#include "Systems/BulletCleanupSystem.h"
 
 /* Display callback */
 static float rotDeg = 0.0f;
@@ -54,6 +57,10 @@ PhysicsSystem physicsSystem;
 CollisionSystem collisionSystem;
 PlayerInputSystem playerInputSystem;
 FiringSystem firingSystem;
+ImpactCleanupSystem impactCleanupSystem;
+DamageSystem damageSystem;
+BulletCleanupSystem bulletCleanupSystem;
+
 
 void display()
 {
@@ -92,6 +99,9 @@ static void idle_func(void)
     firingSystem.update(entities, dt);
     collisionSystem.update(entities, dt);
     physicsSystem.update(entities, dt);
+    damageSystem.update(entities);
+    bulletCleanupSystem.update(entities, dt);
+    impactCleanupSystem.update(entities, dt);
 
     lastTime = thisTime;
 
@@ -111,6 +121,21 @@ void init() {
 
     eventManager.subscribe<CollisionEvent>(&physicsSystem);
 
+
+    // LEFT WALL
+    int l = gameState.arenaSize;
+    entities.createFixedLine(Vec2(-l , -l), Vec2(-l, l));
+
+    // TOP WALL
+    entities.createFixedLine(Vec2(-l, l), Vec2(l, l));
+
+    // RIGHT WALL
+    entities.createFixedLine(Vec2(l, -l), Vec2(l, l));
+
+    // BOTTOM WALL
+    entities.createFixedLine(Vec2(-l, -l), Vec2(l, -l));
+
+
     Entity *spaceShip = entities.create();
     spaceShip->assign<Identity>(EntityType::SPACE_SHIP);
     spaceShip->assign<Transform>(Vec2(0,0), 90, Vec2(1,1), OutOfBoundsBehaviour::WRAP);
@@ -122,23 +147,20 @@ void init() {
 
     spaceShip->assign<Shape>(spaceShipModel);
     spaceShip->assign<SpaceShip>(200, 20);
-    spaceShip->assign<Collision>(CollisionType::DYNAMIC, 5);
+//    spaceShip->assign<Collision>(CollisionType::DYNAMIC);
+    spaceShip->assign<CircleCollision>(5);
     spaceShip->assign<Texture>(1, 0, 0);
     spaceShip->assign<Moveable>(Vec2(0.1, 0.2), Vec2(0, 0), 1);
     spaceShip->assign<PlayerInput>();
 
-    entities.createAsteroid(8);
-    entities.createAsteroid(8);
-    entities.createAsteroid(4);
-    entities.createAsteroid(4);
-    entities.createAsteroid(16);
-    entities.createAsteroid(16);
-    entities.createAsteroid(8);
-    entities.createAsteroid(8);
-    entities.createAsteroid(4);
-    entities.createAsteroid(4);
-    entities.createAsteroid(16);
-    entities.createAsteroid(16);
+    entities.createAsteroid(32);
+//    entities.createAsteroid(8);
+//    entities.createAsteroid(4);
+//    entities.createAsteroid(4);
+//    entities.createAsteroid(16);
+//    entities.createAsteroid(16);
+
+    entities.create();
 
 //    Entity* blackHole = entities.create();
 //    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2), OutOfBoundsBehaviour::BOUNCE);

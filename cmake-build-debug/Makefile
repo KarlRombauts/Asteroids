@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+Arena.o: Arena.cpp.o
+
+.PHONY : Arena.o
+
+# target to build an object file
+Arena.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.o
+.PHONY : Arena.cpp.o
+
+Arena.i: Arena.cpp.i
+
+.PHONY : Arena.i
+
+# target to preprocess a source file
+Arena.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.i
+.PHONY : Arena.cpp.i
+
+Arena.s: Arena.cpp.s
+
+.PHONY : Arena.s
+
+# target to generate assembly for a file
+Arena.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.s
+.PHONY : Arena.cpp.s
+
 Components/Helpers.o: Components/Helpers.cpp.o
 
 .PHONY : Components/Helpers.o
@@ -176,6 +203,60 @@ Coordinates.s: Coordinates.cpp.s
 Coordinates.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Coordinates.cpp.s
 .PHONY : Coordinates.cpp.s
+
+Factories/AteroidFactory.o: Factories/AteroidFactory.cpp.o
+
+.PHONY : Factories/AteroidFactory.o
+
+# target to build an object file
+Factories/AteroidFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o
+.PHONY : Factories/AteroidFactory.cpp.o
+
+Factories/AteroidFactory.i: Factories/AteroidFactory.cpp.i
+
+.PHONY : Factories/AteroidFactory.i
+
+# target to preprocess a source file
+Factories/AteroidFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.i
+.PHONY : Factories/AteroidFactory.cpp.i
+
+Factories/AteroidFactory.s: Factories/AteroidFactory.cpp.s
+
+.PHONY : Factories/AteroidFactory.s
+
+# target to generate assembly for a file
+Factories/AteroidFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.s
+.PHONY : Factories/AteroidFactory.cpp.s
+
+Factories/LineFactory.o: Factories/LineFactory.cpp.o
+
+.PHONY : Factories/LineFactory.o
+
+# target to build an object file
+Factories/LineFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.o
+.PHONY : Factories/LineFactory.cpp.o
+
+Factories/LineFactory.i: Factories/LineFactory.cpp.i
+
+.PHONY : Factories/LineFactory.i
+
+# target to preprocess a source file
+Factories/LineFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.i
+.PHONY : Factories/LineFactory.cpp.i
+
+Factories/LineFactory.s: Factories/LineFactory.cpp.s
+
+.PHONY : Factories/LineFactory.s
+
+# target to generate assembly for a file
+Factories/LineFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.s
+.PHONY : Factories/LineFactory.cpp.s
 
 GameState.o: GameState.cpp.o
 
@@ -285,6 +366,33 @@ Ship.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.s
 .PHONY : Ship.cpp.s
 
+Systems/BulletCleanupSystem.o: Systems/BulletCleanupSystem.cpp.o
+
+.PHONY : Systems/BulletCleanupSystem.o
+
+# target to build an object file
+Systems/BulletCleanupSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o
+.PHONY : Systems/BulletCleanupSystem.cpp.o
+
+Systems/BulletCleanupSystem.i: Systems/BulletCleanupSystem.cpp.i
+
+.PHONY : Systems/BulletCleanupSystem.i
+
+# target to preprocess a source file
+Systems/BulletCleanupSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.i
+.PHONY : Systems/BulletCleanupSystem.cpp.i
+
+Systems/BulletCleanupSystem.s: Systems/BulletCleanupSystem.cpp.s
+
+.PHONY : Systems/BulletCleanupSystem.s
+
+# target to generate assembly for a file
+Systems/BulletCleanupSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.s
+.PHONY : Systems/BulletCleanupSystem.cpp.s
+
 Systems/CollisionSystem.o: Systems/CollisionSystem.cpp.o
 
 .PHONY : Systems/CollisionSystem.o
@@ -311,6 +419,33 @@ Systems/CollisionSystem.s: Systems/CollisionSystem.cpp.s
 Systems/CollisionSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/CollisionSystem.cpp.s
 .PHONY : Systems/CollisionSystem.cpp.s
+
+Systems/DamageSystem.o: Systems/DamageSystem.cpp.o
+
+.PHONY : Systems/DamageSystem.o
+
+# target to build an object file
+Systems/DamageSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
+.PHONY : Systems/DamageSystem.cpp.o
+
+Systems/DamageSystem.i: Systems/DamageSystem.cpp.i
+
+.PHONY : Systems/DamageSystem.i
+
+# target to preprocess a source file
+Systems/DamageSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DamageSystem.cpp.i
+.PHONY : Systems/DamageSystem.cpp.i
+
+Systems/DamageSystem.s: Systems/DamageSystem.cpp.s
+
+.PHONY : Systems/DamageSystem.s
+
+# target to generate assembly for a file
+Systems/DamageSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DamageSystem.cpp.s
+.PHONY : Systems/DamageSystem.cpp.s
 
 Systems/DestroySystem.o: Systems/DestroySystem.cpp.o
 
@@ -392,6 +527,33 @@ Systems/FiringSystem.s: Systems/FiringSystem.cpp.s
 Systems/FiringSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/FiringSystem.cpp.s
 .PHONY : Systems/FiringSystem.cpp.s
+
+Systems/ImpactCleanupSystem.o: Systems/ImpactCleanupSystem.cpp.o
+
+.PHONY : Systems/ImpactCleanupSystem.o
+
+# target to build an object file
+Systems/ImpactCleanupSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o
+.PHONY : Systems/ImpactCleanupSystem.cpp.o
+
+Systems/ImpactCleanupSystem.i: Systems/ImpactCleanupSystem.cpp.i
+
+.PHONY : Systems/ImpactCleanupSystem.i
+
+# target to preprocess a source file
+Systems/ImpactCleanupSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.i
+.PHONY : Systems/ImpactCleanupSystem.cpp.i
+
+Systems/ImpactCleanupSystem.s: Systems/ImpactCleanupSystem.cpp.s
+
+.PHONY : Systems/ImpactCleanupSystem.s
+
+# target to generate assembly for a file
+Systems/ImpactCleanupSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.s
+.PHONY : Systems/ImpactCleanupSystem.cpp.s
 
 Systems/PhysicsSystem.o: Systems/PhysicsSystem.cpp.o
 
@@ -645,12 +807,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... Arena.o"
+	@echo "... Arena.i"
+	@echo "... Arena.s"
 	@echo "... Components/Helpers.o"
 	@echo "... Components/Helpers.i"
 	@echo "... Components/Helpers.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"
+	@echo "... Factories/AteroidFactory.o"
+	@echo "... Factories/AteroidFactory.i"
+	@echo "... Factories/AteroidFactory.s"
+	@echo "... Factories/LineFactory.o"
+	@echo "... Factories/LineFactory.i"
+	@echo "... Factories/LineFactory.s"
 	@echo "... GameState.o"
 	@echo "... GameState.i"
 	@echo "... GameState.s"
@@ -663,9 +834,15 @@ help:
 	@echo "... Ship.o"
 	@echo "... Ship.i"
 	@echo "... Ship.s"
+	@echo "... Systems/BulletCleanupSystem.o"
+	@echo "... Systems/BulletCleanupSystem.i"
+	@echo "... Systems/BulletCleanupSystem.s"
 	@echo "... Systems/CollisionSystem.o"
 	@echo "... Systems/CollisionSystem.i"
 	@echo "... Systems/CollisionSystem.s"
+	@echo "... Systems/DamageSystem.o"
+	@echo "... Systems/DamageSystem.i"
+	@echo "... Systems/DamageSystem.s"
 	@echo "... Systems/DestroySystem.o"
 	@echo "... Systems/DestroySystem.i"
 	@echo "... Systems/DestroySystem.s"
@@ -675,6 +852,9 @@ help:
 	@echo "... Systems/FiringSystem.o"
 	@echo "... Systems/FiringSystem.i"
 	@echo "... Systems/FiringSystem.s"
+	@echo "... Systems/ImpactCleanupSystem.o"
+	@echo "... Systems/ImpactCleanupSystem.i"
+	@echo "... Systems/ImpactCleanupSystem.s"
 	@echo "... Systems/PhysicsSystem.o"
 	@echo "... Systems/PhysicsSystem.i"
 	@echo "... Systems/PhysicsSystem.s"
