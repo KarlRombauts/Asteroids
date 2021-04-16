@@ -12,8 +12,6 @@ class DamageSystem {
 public:
     void update(EntityManager &entities);
 
-    void handleDeath(EntityManager &entities, Entity *entity) const;
-
     void handleDeath(EntityManager &entities, Entity *entity,
                      Entity *otherEntity) const;
 };

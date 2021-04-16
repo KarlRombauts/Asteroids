@@ -311,6 +311,12 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h">
 			<Option target="main"/>
 		</Unit>

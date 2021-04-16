@@ -227,6 +227,17 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/EntityManager.h
 
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Asteroid.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Impact.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/SpaceShip.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Wall.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Systems/ShipImpactSystem.cpp
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Systems/ShipImpactSystem.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Vec2.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../ecs/Component.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../ecs/Entity.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../ecs/EntityManager.h
+
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Components/BoundingCircle.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Components/SpaceShip.h
@@ -310,9 +321,11 @@ CMakeFiles/main.dir/main.cpp.o: ../Systems/DamageSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/DragSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/FiringSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/ImpactCleanupSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../Systems/OutOfBoundsSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/PhysicsSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/PlayerInputSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/RenderSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../Systems/ShipImpactSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/System.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/WarningSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Vec2.h

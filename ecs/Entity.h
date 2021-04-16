@@ -33,6 +33,12 @@ public:
     bool has();
 
     unsigned int getId();
+
+    template<typename ComponentA, typename ComponentB, typename ... OtherComponents>
+    bool hasAny();
+
+    template<typename Component>
+    bool hasAny();
 };
 
 template<typename Component>
@@ -43,6 +49,16 @@ bool Entity::has() {
 template<typename ComponentA, typename ComponentB, typename ... OtherComponents>
 bool Entity::has() {
     return has<ComponentA>() && has<ComponentB, OtherComponents...>();
+}
+
+template<typename Component>
+bool Entity::hasAny() {
+    return has<Component>();
+}
+
+template<typename ComponentA, typename ComponentB, typename ... OtherComponents>
+bool Entity::hasAny() {
+    return has<ComponentA>() || hasAny<ComponentB, OtherComponents...>();
 }
 
 template<typename Component, typename... Args>

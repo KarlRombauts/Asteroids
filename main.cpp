@@ -50,6 +50,7 @@
 #include "Components/Asteroid.h"
 #include "Systems/AsteroidSystem.h"
 #include "Systems/OutOfBoundsSystem.h"
+#include "Systems/ShipImpactSystem.h"
 
 /* Display callback */
 static float rotDeg = 0.0f;
@@ -69,6 +70,8 @@ BulletCleanupSystem bulletCleanupSystem;
 WarningSystem warningSystem;
 AsteroidSystem asteroidSystem;
 OutOfBoundsSystem outOfBoundsSystem;
+ShipImpactSystem shipImpactSystem;
+
 
 void display()
 {
@@ -125,6 +128,7 @@ static void idle_func(void)
     warningSystem.update(entities);
     damageSystem.update(entities);
     bulletCleanupSystem.update(entities, dt);
+    shipImpactSystem.update(entities);
     impactCleanupSystem.update(entities, dt);
     outOfBoundsSystem.update(entities);
 

@@ -184,10 +184,6 @@ void CollisionSystem::resolveCircleCircleCollision(
                                    (2 * m1) / (m1 + m2);
     }
 
-    if (entity1->has<Asteroid>() && entity2->has<SpaceShip>()) {
-        entities.destroy(entity2);
-    }
-
     if (entity1->has<BlackHole>()) {
         entities.destroy(entity2);
     }

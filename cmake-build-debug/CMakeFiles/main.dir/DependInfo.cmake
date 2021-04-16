@@ -26,6 +26,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/RenderSystem.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/WarningSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Vec2.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/ecs/Entity.cpp.o"

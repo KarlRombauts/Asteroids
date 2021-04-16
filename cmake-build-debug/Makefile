@@ -717,6 +717,33 @@ Systems/RenderSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/RenderSystem.cpp.s
 .PHONY : Systems/RenderSystem.cpp.s
 
+Systems/ShipImpactSystem.o: Systems/ShipImpactSystem.cpp.o
+
+.PHONY : Systems/ShipImpactSystem.o
+
+# target to build an object file
+Systems/ShipImpactSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o
+.PHONY : Systems/ShipImpactSystem.cpp.o
+
+Systems/ShipImpactSystem.i: Systems/ShipImpactSystem.cpp.i
+
+.PHONY : Systems/ShipImpactSystem.i
+
+# target to preprocess a source file
+Systems/ShipImpactSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.i
+.PHONY : Systems/ShipImpactSystem.cpp.i
+
+Systems/ShipImpactSystem.s: Systems/ShipImpactSystem.cpp.s
+
+.PHONY : Systems/ShipImpactSystem.s
+
+# target to generate assembly for a file
+Systems/ShipImpactSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.s
+.PHONY : Systems/ShipImpactSystem.cpp.s
+
 Systems/WarningSystem.o: Systems/WarningSystem.cpp.o
 
 .PHONY : Systems/WarningSystem.o
@@ -981,6 +1008,9 @@ help:
 	@echo "... Systems/RenderSystem.o"
 	@echo "... Systems/RenderSystem.i"
 	@echo "... Systems/RenderSystem.s"
+	@echo "... Systems/ShipImpactSystem.o"
+	@echo "... Systems/ShipImpactSystem.i"
+	@echo "... Systems/ShipImpactSystem.s"
 	@echo "... Systems/WarningSystem.o"
 	@echo "... Systems/WarningSystem.i"
 	@echo "... Systems/WarningSystem.s"

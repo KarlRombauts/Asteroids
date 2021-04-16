@@ -227,6 +227,17 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Impact.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Wall.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/BoundingCircle.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Impact.h
@@ -311,9 +322,11 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
