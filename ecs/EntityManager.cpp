@@ -61,8 +61,11 @@ Entity *EntityManager::createAsteroid(double radius) {
     asteroid->assign<Texture>(1, 1, 1);
     asteroid->assign<Health>(radius * 10);
     asteroid->assign<HealthBar>();
-    asteroid->assign<Moveable>(Vec2::polar(randf(0, 360), randf(10, 20)),
-                               Vec2(0, 0), pow(radius, 2));
+
+    Moveable moveable(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
+    moveable.angularVelocity = randf(-180, 180);
+
+    asteroid->assign<Moveable>(moveable);
 
     if (radius > 2) {
         asteroid->assign<SplitOnDeath>();

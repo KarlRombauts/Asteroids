@@ -149,10 +149,13 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp">
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h">
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/PlayerInput.h">
@@ -168,6 +171,9 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SplitOnDeath.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Text.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h">
@@ -291,6 +297,12 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp">

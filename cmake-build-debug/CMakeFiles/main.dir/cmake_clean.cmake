@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Arena.cpp.o"
   "CMakeFiles/main.dir/Components/Helpers.cpp.o"
-  "CMakeFiles/main.dir/Components/OutsideArena.cpp.o"
   "CMakeFiles/main.dir/Coordinates.cpp.o"
   "CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o"
   "CMakeFiles/main.dir/Factories/LineFactory.cpp.o"
@@ -18,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Systems/FiringSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o"
+  "CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/RenderSystem.cpp.o"

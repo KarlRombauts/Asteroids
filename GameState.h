@@ -10,10 +10,11 @@
 
 struct GameState {
     int worldSize = 100;
-    int arenaSize = worldSize - 5;
+    int arenaSize = worldSize - 10;
     int width;
     int height;
     int waveCount = 1;
+    int msElapsedTime = 0;
 
     CoordinateSpace worldCoordinates;
 
@@ -28,6 +29,8 @@ struct GameState {
     CoordinateSpace getWorldCoordinates();
 
     bool isCircleInArena(Vec2 pos, double radius);
+
+    double getWorldToPixelRatioWidth();
 };
 
 extern GameState gameState;

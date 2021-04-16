@@ -8,6 +8,7 @@
 #include "../Components/Collision.h"
 #include "../Components/Texture.h"
 #include "../Components/Damage.h"
+#include "../Components/Particle.h"
 
 void FiringSystem::update(EntityManager &entities, double dt) {
     for (Entity *entity: entities.getEntitiesWith<SpaceShip, FiringBullet>()) {
@@ -27,6 +28,7 @@ void FiringSystem::update(EntityManager &entities, double dt) {
             bullet->assign<Transform>(transform->position, transform->rotation, Vec2(1, 1));
             bullet->assign<Moveable>(bulletVelocity, Vec2(0,0), 1);
             bullet->assign<Bullet>(10);
+            bullet->assign<Particle>();
             bullet->assign<Damage>(20);
             bullet->assign<Collision>(CollisionType::TRIGGER);
             bullet->assign<CircleCollision>(2);

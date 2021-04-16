@@ -421,22 +421,9 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp -o CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s
 
-CMakeFiles/main.dir/Components/OutsideArena.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Components/OutsideArena.cpp.o: ../Components/OutsideArena.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Components/OutsideArena.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Components/OutsideArena.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp
-
-CMakeFiles/main.dir/Components/OutsideArena.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Components/OutsideArena.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp > CMakeFiles/main.dir/Components/OutsideArena.cpp.i
-
-CMakeFiles/main.dir/Components/OutsideArena.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Components/OutsideArena.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp -o CMakeFiles/main.dir/Components/OutsideArena.cpp.s
-
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Systems/ShipImpactSystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp
 
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.i: cmake_force
@@ -446,6 +433,19 @@ CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.i: cmake_force
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp -o CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.s
+
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Systems/ParticleSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp
+
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Systems/ParticleSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp > CMakeFiles/main.dir/Systems/ParticleSystem.cpp.i
+
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/ParticleSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp -o CMakeFiles/main.dir/Systems/ParticleSystem.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -477,8 +477,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/GameManager.cpp.o" \
 "CMakeFiles/main.dir/Systems/WarningSystem.cpp.o" \
 "CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o" \
-"CMakeFiles/main.dir/Components/OutsideArena.cpp.o" \
-"CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o"
+"CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o" \
+"CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -511,8 +511,8 @@ main: CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o
 main: CMakeFiles/main.dir/GameManager.cpp.o
 main: CMakeFiles/main.dir/Systems/WarningSystem.cpp.o
 main: CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o
-main: CMakeFiles/main.dir/Components/OutsideArena.cpp.o
 main: CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o
+main: CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable main"

@@ -51,11 +51,12 @@
 #include "Systems/AsteroidSystem.h"
 #include "Systems/OutOfBoundsSystem.h"
 #include "Systems/ShipImpactSystem.h"
+#include "Components/ParticleSource.h"
+#include "Systems/ParticleSystem.h"
+#include "Components/Particle.h"
 
 /* Display callback */
-static float rotDeg = 0.0f;
 static int lastTime = 0;
-static Vec2 initialWorldSize = {4, 4};
 
 EntityManager entities;
 RenderSystem renderSystem;
@@ -71,6 +72,7 @@ WarningSystem warningSystem;
 AsteroidSystem asteroidSystem;
 OutOfBoundsSystem outOfBoundsSystem;
 ShipImpactSystem shipImpactSystem;
+ParticleSystem particleSystem;
 
 
 void display()
@@ -118,8 +120,9 @@ static void idle_func(void)
     int thisTime;
 
     thisTime = glutGet(GLUT_ELAPSED_TIME);
-    int dt = thisTime - lastTime;
+    int dt = thisTime - gameState.msElapsedTime;
 
+    particleSystem.update(entities, dt);
     playerInputSystem.update(entities, dt);
     dragSystem.update(entities, dt);
     firingSystem.update(entities, dt);
@@ -132,7 +135,7 @@ static void idle_func(void)
     impactCleanupSystem.update(entities, dt);
     outOfBoundsSystem.update(entities);
 
-    lastTime = thisTime;
+    gameState.msElapsedTime = thisTime;
 
     glutPostRedisplay();
 }
@@ -148,27 +151,17 @@ void init() {
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     glMatrixMode(GL_MODELVIEW);
 
-    eventManager.subscribe<CollisionEvent>(&physicsSystem);
-
     entities.createArena();
+    entities.createSpaceShip();
+    asteroidSystem.startWave(entities, gameState.waveCount);
 
-    Entity *asteroid = entities.createAsteroid(2);
-    Vec2 asteroidPosition = Vec2::polar(randf(0, 360), gameState.worldCoordinates.distanceToCorner());
 
-    Entity *spaceShip = entities.createSpaceShip();
-
-    Vec2 spaceShipPosition = spaceShip->get<Transform>()->position;
-    asteroid->get<Transform>()->position = asteroidPosition;
-    asteroid->assign<OutsideArena>();
-    asteroid->get<Moveable>()->velocity = (spaceShipPosition - asteroidPosition).normalize().scale(5);
-
-    entities.create();
-    Entity* blackHole = entities.create();
-    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2));
-    blackHole->assign<BlackHole>();
-    blackHole->assign<Collision>(CollisionType::TRIGGER);
-    blackHole->assign<GravityForce>(1);
-    blackHole->assign<Texture>(0.2, 0.2, 0.2);
+//    Entity* blackHole = entities.create();
+//    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2));
+//    blackHole->assign<BlackHole>();
+//    blackHole->assign<Collision>(CollisionType::TRIGGER);
+//    blackHole->assign<GravityForce>(1);
+//    blackHole->assign<Texture>(0.2, 0.2, 0.2);
 }
 
 
@@ -204,8 +197,7 @@ int main(int argc, char **argv) {
     glutMouseFunc(onMouseButton);
     glutMotionFunc(onMouseDrag);
     glutPassiveMotionFunc(onMouseMove);
+
     /* Let glut take over */
     glutMainLoop();
-
-//    std::vector<Entity *> entitiesWithMomentum = entities.getEntitiesWith<Momentum, Rotation, PlayerInput>();
 }

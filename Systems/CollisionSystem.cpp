@@ -27,9 +27,7 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
         if (entity1->has<OutsideArena, CircleCollision>()) {
             Vec2 p = entity1->get<Transform>()->position;
             double r = entity1->get<CircleCollision>()->radius;
-            std::cout << "Outside" << std::endl;
             if (gameState.isCircleInArena(p, r)) {
-                std::cout << "inside" << std::endl;
                 entity1->remove<OutsideArena>();
             }
             continue;
@@ -37,8 +35,6 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
 
         for (int j = i + 1; j < rigidBodyEntities.size(); j++) {
             Entity *entity2 = rigidBodyEntities.at(j);
-
-//            if (entity1 == entity2) { continue; }
 
             if (entity1->has<CircleCollision>() &&
                 entity2->has<CircleCollision>()) {

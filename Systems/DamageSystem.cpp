@@ -1,14 +1,13 @@
-#include <iostream>
 #include "DamageSystem.h"
 #include "../Components/Impact.h"
 #include "../Components/Damage.h"
 #include "../Components/Health.h"
-#include "../Components/Destroy.h"
 #include "../Components/SplitOnDeath.h"
 #include "../Components/Asteroid.h"
 #include "../Components/Transform.h"
-#include "../Components/Collision.h"
 #include "../Components/Moveable.h"
+#include "../Components/ParticleSource.h"
+#include "../Components/Particle.h"
 
 void DamageSystem::update(EntityManager &entities) {
     for(Entity* entity: entities.getEntitiesWith<Impact, Health>()) {
@@ -18,12 +17,12 @@ void DamageSystem::update(EntityManager &entities) {
             if (otherEntity->has<Damage>()) {
                health->health -= otherEntity->get<Damage>()->damage;
             }
+
             if (health->health <= 0) {
                 handleDeath(entities, entity, otherEntity);
                 break;
             }
         }
-
     }
 }
 
@@ -46,7 +45,17 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
                 asteroid2->get<Transform>()->position = p1 - splitDir;
                 asteroid1->get<Moveable>()->velocity = (p2 - p1).normalize().scale(v.magnitude()).rotate(-25);
             }
+
         }
     }
+
+    // Create particle emitter
+    if (entity->has<Asteroid>()) {
+        double size = entity->get<Asteroid>()->size;
+        Entity* particles = entities.create();
+        particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5, 0);
+        particles->assign<Transform>(*entity->get<Transform>());
+    }
+
     entities.destroy(entity);
 }

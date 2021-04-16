@@ -2,7 +2,6 @@
 #include "PhysicsSystem.h"
 #include "../Components/Moveable.h"
 #include "../Components/Transform.h"
-#include "../GameState.h"
 #include "../Components/GravityForce.h"
 #include "../Components/Child.h"
 
@@ -26,10 +25,9 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
 
         moveable->acceleration -= moveable->velocity * moveable->drag;
 
-        moveable->velocity =
-                moveable->velocity + moveable->acceleration * dt / 1000;
-        transform->position =
-                transform->position + moveable->velocity * dt / 1000;
+        moveable->velocity += moveable->acceleration * dt / 1000;
+        transform->position += moveable->velocity * dt / 1000;
+        transform->rotation += moveable->angularVelocity * dt / 1000;
 
         moveable->acceleration = Vec2(0, 0);
 

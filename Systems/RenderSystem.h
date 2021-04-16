@@ -6,12 +6,32 @@
 #define UNTITLED_RENDERSYSTEM_H
 
 
+#include <OpenGL/OpenGL.h>
 #include "System.h"
+#include "../Components/Transform.h"
+#include "../Components/Texture.h"
+
+enum class TextAlignment {
+    LEFT,
+    CENTER,
+    RIGHT
+};
 
 class RenderSystem: public System {
 
 public:
     void update(EntityManager &entities, double dt) override;
+
+    void drawHealthBars(Entity *entity) const;
+
+    void drawShape(Entity *entity) const;
+
+    void drawLine(Entity *entity) const;
+
+    void drawParticle(Entity *entity) const;
+
+    void renderString(GLdouble x, GLdouble y, const std::string &string,
+                      TextAlignment alignment);
 };
 
 

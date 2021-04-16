@@ -8,10 +8,6 @@ CMakeFiles/main.dir/Arena.cpp.o
 CMakeFiles/main.dir/Components/Helpers.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
-CMakeFiles/main.dir/Components/OutsideArena.cpp.o
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
 CMakeFiles/main.dir/Coordinates.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
@@ -107,13 +103,12 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Collision.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Damage.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Destroy.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Health.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Impact.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SplitOnDeath.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.cpp
@@ -144,6 +139,7 @@ CMakeFiles/main.dir/Systems/FiringSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/FiringBullet.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
@@ -173,14 +169,25 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Child.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/GravityForce.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/CollisionEvent.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
@@ -195,6 +202,7 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/FiringBullet.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/PlayerInput.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
@@ -213,12 +221,17 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Health.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/HealthBar.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Rotation.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Text.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h
@@ -301,6 +314,8 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Momentum.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Particle.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/PlayerInput.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Rotation.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
@@ -323,6 +338,7 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h

@@ -57,3 +57,7 @@ void GameState::resizeScreen(int w, int h) {
     GLdouble aspectRatio = (GLfloat) h / (GLfloat) w;
     gameState.resizeWorld(aspectRatio);
 }
+
+double GameState::getWorldToPixelRatioWidth() {
+    return (double) width / (worldCoordinates.maxX * 2);
+}

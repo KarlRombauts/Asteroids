@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Arena.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Arena.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Components/Helpers.cpp.o"
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Components/OutsideArena.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Coordinates.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/AteroidFactory.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/LineFactory.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Factories/LineFactory.cpp.o"
@@ -23,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/FiringSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/RenderSystem.cpp.o"

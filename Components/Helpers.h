@@ -8,5 +8,7 @@
 
 double randf(double min, double max);
 
+double lerp(double a, double b, double f);
 
+std::string formatTime(int msElapsedTime);
 #endif //UNTITLED_HELPERS_H

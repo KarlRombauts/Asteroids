@@ -177,33 +177,6 @@ Components/Helpers.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.s
 .PHONY : Components/Helpers.cpp.s
 
-Components/OutsideArena.o: Components/OutsideArena.cpp.o
-
-.PHONY : Components/OutsideArena.o
-
-# target to build an object file
-Components/OutsideArena.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.o
-.PHONY : Components/OutsideArena.cpp.o
-
-Components/OutsideArena.i: Components/OutsideArena.cpp.i
-
-.PHONY : Components/OutsideArena.i
-
-# target to preprocess a source file
-Components/OutsideArena.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.i
-.PHONY : Components/OutsideArena.cpp.i
-
-Components/OutsideArena.s: Components/OutsideArena.cpp.s
-
-.PHONY : Components/OutsideArena.s
-
-# target to generate assembly for a file
-Components/OutsideArena.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.s
-.PHONY : Components/OutsideArena.cpp.s
-
 Coordinates.o: Coordinates.cpp.o
 
 .PHONY : Coordinates.o
@@ -636,6 +609,33 @@ Systems/OutOfBoundsSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.s
 .PHONY : Systems/OutOfBoundsSystem.cpp.s
 
+Systems/ParticleSystem.o: Systems/ParticleSystem.cpp.o
+
+.PHONY : Systems/ParticleSystem.o
+
+# target to build an object file
+Systems/ParticleSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o
+.PHONY : Systems/ParticleSystem.cpp.o
+
+Systems/ParticleSystem.i: Systems/ParticleSystem.cpp.i
+
+.PHONY : Systems/ParticleSystem.i
+
+# target to preprocess a source file
+Systems/ParticleSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ParticleSystem.cpp.i
+.PHONY : Systems/ParticleSystem.cpp.i
+
+Systems/ParticleSystem.s: Systems/ParticleSystem.cpp.s
+
+.PHONY : Systems/ParticleSystem.s
+
+# target to generate assembly for a file
+Systems/ParticleSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ParticleSystem.cpp.s
+.PHONY : Systems/ParticleSystem.cpp.s
+
 Systems/PhysicsSystem.o: Systems/PhysicsSystem.cpp.o
 
 .PHONY : Systems/PhysicsSystem.o
@@ -948,9 +948,6 @@ help:
 	@echo "... Components/Helpers.o"
 	@echo "... Components/Helpers.i"
 	@echo "... Components/Helpers.s"
-	@echo "... Components/OutsideArena.o"
-	@echo "... Components/OutsideArena.i"
-	@echo "... Components/OutsideArena.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"
@@ -999,6 +996,9 @@ help:
 	@echo "... Systems/OutOfBoundsSystem.o"
 	@echo "... Systems/OutOfBoundsSystem.i"
 	@echo "... Systems/OutOfBoundsSystem.s"
+	@echo "... Systems/ParticleSystem.o"
+	@echo "... Systems/ParticleSystem.i"
+	@echo "... Systems/ParticleSystem.s"
 	@echo "... Systems/PhysicsSystem.o"
 	@echo "... Systems/PhysicsSystem.i"
 	@echo "... Systems/PhysicsSystem.s"
