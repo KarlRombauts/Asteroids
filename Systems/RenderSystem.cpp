@@ -2,11 +2,7 @@
 
 #include <string>
 #include "RenderSystem.h"
-#include "../Components/Transform.h"
-#include "../Components/Rotation.h"
 #include "../OpenGL.h"
-#include "../Components/Texture.h"
-#include "../Components/Moveable.h"
 #include "../Components/Shape.h"
 #include "../Components/Line.h"
 #include "../Components/Health.h"
@@ -22,8 +18,9 @@ void RenderSystem::update(EntityManager &entities, double dt) {
         Transform *transform = entity->get<Transform>();
         Texture *texture = entity->get<Texture>();
 
+        glColor3f(1, 1, 1);
         int arenaSize = gameState.arenaSize;
-        renderString(-arenaSize, arenaSize + 2, "Score: 10",
+        renderString(-arenaSize, arenaSize + 2, "Score: " + std::to_string(gameState.score),
                      TextAlignment::LEFT);
 
         renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameState.msElapsedTime),

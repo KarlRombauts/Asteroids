@@ -106,10 +106,11 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Damage.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Moveable.h
-CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/ParticleSource.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/SplitOnDeath.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Transform.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameState.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.cpp
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Vec2.h
@@ -222,9 +223,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Helpers.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Particle.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Rotation.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Text.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Texture.h

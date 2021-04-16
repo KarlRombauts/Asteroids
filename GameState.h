@@ -15,6 +15,7 @@ struct GameState {
     int height;
     int waveCount = 1;
     int msElapsedTime = 0;
+    int score = 0;
 
     CoordinateSpace worldCoordinates;
 

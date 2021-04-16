@@ -24,9 +24,12 @@ void PlayerInputSystem::update(EntityManager &entities, double dt) {
 
         if (keyboardState.isKeyPressed('w')) {
             moveable->acceleration = Vec2::polar(transform->rotation, spaceShip->thrust);
+
             Entity* particles = entities.create();
             particles->assign<ParticleSource>(moveable->acceleration.scale(-1) * dt / 1000, 5, 5, 0);
-            particles->assign<Transform>(*entity->get<Transform>());
+            Transform particlesTransform = *transform;
+            particlesTransform.position += moveable->acceleration.normalize().scale(-3);
+            particles->assign<Transform>(particlesTransform);
         }
 
         if (keyboardState.isKeyPressed(' '))

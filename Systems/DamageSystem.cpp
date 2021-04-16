@@ -7,7 +7,7 @@
 #include "../Components/Transform.h"
 #include "../Components/Moveable.h"
 #include "../Components/ParticleSource.h"
-#include "../Components/Particle.h"
+#include "../GameState.h"
 
 void DamageSystem::update(EntityManager &entities) {
     for(Entity* entity: entities.getEntitiesWith<Impact, Health>()) {
@@ -49,12 +49,15 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
         }
     }
 
-    // Create particle emitter
     if (entity->has<Asteroid>()) {
+        // Create particle emitter
         double size = entity->get<Asteroid>()->size;
         Entity* particles = entities.create();
         particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5, 0);
         particles->assign<Transform>(*entity->get<Transform>());
+
+        // Increment Score
+        gameState.score++;
     }
 
     entities.destroy(entity);
