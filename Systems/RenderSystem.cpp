@@ -61,20 +61,6 @@ void RenderSystem::update(EntityManager &entities, double dt) {
             glEnd();
         }
 
-        if (entity->has<Shape>()) {
-            Shape *shape = entity->get<Shape>();
-
-            glPointSize(3.0);
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-            glBegin(GL_POLYGON);
-            {
-                for(Vec2 vertex: shape->vertices) {
-                    glVertex3f(vertex.x, vertex.y, 0);
-                }
-            }
-            glEnd();
-        }
-
         else if (entity->has<Line>()) {
             Line *line = entity->get<Line>();
             glPointSize(3.0);
@@ -89,10 +75,10 @@ void RenderSystem::update(EntityManager &entities, double dt) {
         else {
             glBegin(GL_POLYGON);
             {
-                glVertex3f(-0.1, -0.1, 0);
-                glVertex3f(0.1, -0.1, 0);
-                glVertex3f(0.1, 0.1, 0);
-                glVertex3f(-0.1, 0.1, 0);
+                glVertex3f(-1, -1, 0);
+                glVertex3f(1, -1, 0);
+                glVertex3f(1, 1, 0);
+                glVertex3f(-1, 1, 0);
             }
             glEnd();
         }

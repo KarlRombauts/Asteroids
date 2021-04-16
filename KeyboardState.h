@@ -30,6 +30,10 @@ public:
         }
         std::cout << std::endl;
     }
+
+    bool isAnyKeyPressed() {
+        return !pressedKeys.empty();
+    }
 };
 
 

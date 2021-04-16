@@ -7,7 +7,6 @@
 
 #if __APPLE__
     # include <OpenGL/gl.h>
-    # include <OpenGL/glu.h>
     # include <GLUT/glut.h>
 
 #else
@@ -43,13 +42,20 @@
 #include "Systems/ImpactCleanupSystem.h"
 #include "Systems/DamageSystem.h"
 #include "Systems/BulletCleanupSystem.h"
+#include "Components/Child.h"
+#include "Components/BoundingCircle.h"
+#include "Components/Wall.h"
+#include "Systems/WarningSystem.h"
+#include "Components/Helpers.h"
+#include "Components/Asteroid.h"
+#include "Systems/AsteroidSystem.h"
+#include "Systems/OutOfBoundsSystem.h"
 
 /* Display callback */
 static float rotDeg = 0.0f;
 static int lastTime = 0;
 static Vec2 initialWorldSize = {4, 4};
 
-Ship ship(Vec2(0.5, 0.5), 0.0, 5.0, 1);
 EntityManager entities;
 RenderSystem renderSystem;
 DragSystem dragSystem;
@@ -60,7 +66,9 @@ FiringSystem firingSystem;
 ImpactCleanupSystem impactCleanupSystem;
 DamageSystem damageSystem;
 BulletCleanupSystem bulletCleanupSystem;
-
+WarningSystem warningSystem;
+AsteroidSystem asteroidSystem;
+OutOfBoundsSystem outOfBoundsSystem;
 
 void display()
 {
@@ -77,7 +85,6 @@ void onKeyPress(unsigned char key, int x, int y) {
         case 27:
         case 'q':
             exit(EXIT_SUCCESS);
-            break;
         default:
             break;
   }
@@ -89,6 +96,22 @@ void onKeyRelease(unsigned char key, int x, int y) {
 
 static void idle_func(void)
 {
+    bool gameOver = entities.getEntitiesWith<SpaceShip>().empty();
+
+    if (gameOver) {
+        if (keyboardState.isAnyKeyPressed()) {
+
+        } else {
+            return;
+        }
+    }
+
+    bool waveComplete = entities.getEntitiesWith<Asteroid>().empty();
+
+    if (waveComplete) {
+        asteroidSystem.startWave(entities, gameState.waveCount++);
+    }
+
     int thisTime;
 
     thisTime = glutGet(GLUT_ELAPSED_TIME);
@@ -99,20 +122,22 @@ static void idle_func(void)
     firingSystem.update(entities, dt);
     collisionSystem.update(entities, dt);
     physicsSystem.update(entities, dt);
+    warningSystem.update(entities);
     damageSystem.update(entities);
     bulletCleanupSystem.update(entities, dt);
     impactCleanupSystem.update(entities, dt);
+    outOfBoundsSystem.update(entities);
 
     lastTime = thisTime;
 
     glutPostRedisplay();
 }
 
-void reshape (int w, int h)
-{
+void reshape (int w, int h) {
     glViewport(0, 0, (GLsizei) w, (GLsizei) h);
     gameState.resizeScreen(w, h);
 }
+
 
 void init() {
     glMatrixMode(GL_PROJECTION);
@@ -121,66 +146,42 @@ void init() {
 
     eventManager.subscribe<CollisionEvent>(&physicsSystem);
 
+    entities.createArena();
 
-    // LEFT WALL
-    int l = gameState.arenaSize;
-    entities.createFixedLine(Vec2(-l , -l), Vec2(-l, l));
+    Entity *asteroid = entities.createAsteroid(2);
+    Vec2 asteroidPosition = Vec2::polar(randf(0, 360), gameState.worldCoordinates.distanceToCorner());
 
-    // TOP WALL
-    entities.createFixedLine(Vec2(-l, l), Vec2(l, l));
+    Entity *spaceShip = entities.createSpaceShip();
 
-    // RIGHT WALL
-    entities.createFixedLine(Vec2(l, -l), Vec2(l, l));
-
-    // BOTTOM WALL
-    entities.createFixedLine(Vec2(-l, -l), Vec2(l, -l));
-
-
-    Entity *spaceShip = entities.create();
-    spaceShip->assign<Identity>(EntityType::SPACE_SHIP);
-    spaceShip->assign<Transform>(Vec2(0,0), 90, Vec2(1,1), OutOfBoundsBehaviour::WRAP);
-
-    std::vector<Vec2> spaceShipModel = {
-            {4, 0}, {-3, 0}, {-4, 2},
-            {4, 0}, {-3, 0}, {-4, -2}
-    };
-
-    spaceShip->assign<Shape>(spaceShipModel);
-    spaceShip->assign<SpaceShip>(200, 20);
-//    spaceShip->assign<Collision>(CollisionType::DYNAMIC);
-    spaceShip->assign<CircleCollision>(5);
-    spaceShip->assign<Texture>(1, 0, 0);
-    spaceShip->assign<Moveable>(Vec2(0.1, 0.2), Vec2(0, 0), 1);
-    spaceShip->assign<PlayerInput>();
-
-    entities.createAsteroid(32);
-//    entities.createAsteroid(8);
-//    entities.createAsteroid(4);
-//    entities.createAsteroid(4);
-//    entities.createAsteroid(16);
-//    entities.createAsteroid(16);
+    Vec2 spaceShipPosition = spaceShip->get<Transform>()->position;
+    asteroid->get<Transform>()->position = asteroidPosition;
+    asteroid->assign<OutsideArena>();
+    asteroid->get<Moveable>()->velocity = (spaceShipPosition - asteroidPosition).normalize().scale(5);
 
     entities.create();
-
-//    Entity* blackHole = entities.create();
-//    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2), OutOfBoundsBehaviour::BOUNCE);
-//    blackHole->assign<BlackHole>();
-//    blackHole->assign<Collision>(CollisionType::TRIGGER);
-//    blackHole->assign<GravityForce>(1);
-//    blackHole->assign<Texture>(0.2, 0.2, 0.2);
+    Entity* blackHole = entities.create();
+    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2));
+    blackHole->assign<BlackHole>();
+    blackHole->assign<Collision>(CollisionType::TRIGGER);
+    blackHole->assign<GravityForce>(1);
+    blackHole->assign<Texture>(0.2, 0.2, 0.2);
 }
+
 
 void onMouseButton(int btn, int state, int x, int y) {
     mouseState.onMouseButton(btn, state, x, y);
 }
 
+
 void onMouseMove(int x, int y) {
     mouseState.onMouseMove(x, y);
 }
 
+
 void onMouseDrag(int x, int y) {
     mouseState.onMouseDrag(x, y);
 }
+
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);

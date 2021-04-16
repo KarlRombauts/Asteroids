@@ -28,9 +28,6 @@ void DamageSystem::update(EntityManager &entities) {
 }
 
 void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *otherEntity) const {
-
-    std::cout << "kill entity" << std::endl;
-    entity->remove<Collision>();
     if (entity->has<SplitOnDeath>()) {
         if (entity->has<Asteroid, Transform>()) {
             double size = entity->get<Asteroid>()->size;

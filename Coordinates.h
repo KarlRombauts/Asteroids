@@ -15,6 +15,8 @@ struct CoordinateSpace {
     double maxY;
 
     bool isOutOfBounds(Vec2 vector);
+
+    double distanceToCorner();
 };
 
 

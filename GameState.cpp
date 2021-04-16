@@ -42,6 +42,7 @@ bool GameState::isOutOfBounds(Vec2 vector) {
            vector.y < -arenaSize || vector.y > arenaSize;
 }
 
+
 bool GameState::isCircleInArena(Vec2 pos, double radius) {
     return (pos.x - radius) > -arenaSize &&
            (pos.x + radius) < arenaSize &&

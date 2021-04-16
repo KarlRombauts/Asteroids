@@ -252,18 +252,18 @@ CMakeFiles/main.dir/Components/Helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Components/Helpers.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp -o CMakeFiles/main.dir/Components/Helpers.cpp.s
 
-CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/Systems/DestroySystem.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/DestroySystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Systems/OutOfBoundsSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp
 
-CMakeFiles/main.dir/Systems/DestroySystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Systems/DestroySystem.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp > CMakeFiles/main.dir/Systems/DestroySystem.cpp.i
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp > CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.i
 
-CMakeFiles/main.dir/Systems/DestroySystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/DestroySystem.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp -o CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp -o CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.s
 
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Systems/FiringSystem.cpp
@@ -382,6 +382,58 @@ CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.cpp -o CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.s
 
+CMakeFiles/main.dir/GameManager.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/GameManager.cpp.o: ../GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/main.dir/GameManager.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/GameManager.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp
+
+CMakeFiles/main.dir/GameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/GameManager.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp > CMakeFiles/main.dir/GameManager.cpp.i
+
+CMakeFiles/main.dir/GameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/GameManager.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp -o CMakeFiles/main.dir/GameManager.cpp.s
+
+CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Systems/WarningSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/main.dir/Systems/WarningSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/WarningSystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.cpp
+
+CMakeFiles/main.dir/Systems/WarningSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Systems/WarningSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.cpp > CMakeFiles/main.dir/Systems/WarningSystem.cpp.i
+
+CMakeFiles/main.dir/Systems/WarningSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/WarningSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.cpp -o CMakeFiles/main.dir/Systems/WarningSystem.cpp.s
+
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Systems/AsteroidSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp
+
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp > CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.i
+
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp -o CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s
+
+CMakeFiles/main.dir/Components/OutsideArena.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Components/OutsideArena.cpp.o: ../Components/OutsideArena.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Components/OutsideArena.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Components/OutsideArena.cpp.o -c /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp
+
+CMakeFiles/main.dir/Components/OutsideArena.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Components/OutsideArena.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp > CMakeFiles/main.dir/Components/OutsideArena.cpp.i
+
+CMakeFiles/main.dir/Components/OutsideArena.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Components/OutsideArena.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.cpp -o CMakeFiles/main.dir/Components/OutsideArena.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
@@ -399,7 +451,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/ecs/EventManager.cpp.o" \
 "CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o" \
 "CMakeFiles/main.dir/Components/Helpers.cpp.o" \
-"CMakeFiles/main.dir/Systems/DestroySystem.cpp.o" \
+"CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o" \
 "CMakeFiles/main.dir/Systems/FiringSystem.cpp.o" \
 "CMakeFiles/main.dir/Systems/DragSystem.cpp.o" \
 "CMakeFiles/main.dir/MouseState.cpp.o" \
@@ -408,7 +460,11 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/Arena.cpp.o" \
 "CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o" \
 "CMakeFiles/main.dir/Systems/DamageSystem.cpp.o" \
-"CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o"
+"CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o" \
+"CMakeFiles/main.dir/GameManager.cpp.o" \
+"CMakeFiles/main.dir/Systems/WarningSystem.cpp.o" \
+"CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o" \
+"CMakeFiles/main.dir/Components/OutsideArena.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -428,7 +484,7 @@ main: CMakeFiles/main.dir/Coordinates.cpp.o
 main: CMakeFiles/main.dir/ecs/EventManager.cpp.o
 main: CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
 main: CMakeFiles/main.dir/Components/Helpers.cpp.o
-main: CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
+main: CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o
 main: CMakeFiles/main.dir/Systems/FiringSystem.cpp.o
 main: CMakeFiles/main.dir/Systems/DragSystem.cpp.o
 main: CMakeFiles/main.dir/MouseState.cpp.o
@@ -438,9 +494,13 @@ main: CMakeFiles/main.dir/Arena.cpp.o
 main: CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o
 main: CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
 main: CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o
+main: CMakeFiles/main.dir/GameManager.cpp.o
+main: CMakeFiles/main.dir/Systems/WarningSystem.cpp.o
+main: CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o
+main: CMakeFiles/main.dir/Components/OutsideArena.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

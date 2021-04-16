@@ -13,6 +13,7 @@ struct GameState {
     int arenaSize = worldSize - 5;
     int width;
     int height;
+    int waveCount = 1;
 
     CoordinateSpace worldCoordinates;
 

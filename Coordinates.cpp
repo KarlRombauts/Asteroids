@@ -11,3 +11,7 @@ bool CoordinateSpace::isOutOfBounds(Vec2 vector) {
            vector.y < minY || vector.y > maxY;
 }
 
+double CoordinateSpace::distanceToCorner() {
+    return Vec2(maxX, maxY).magnitude();
+}
+

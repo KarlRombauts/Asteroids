@@ -14,13 +14,27 @@
 #include "../Components/BlackHole.h"
 #include "../GameState.h"
 #include "../Components/Impact.h"
+#include "../Components/OutsideArena.h"
 
 void CollisionSystem::update(EntityManager &entities, double dt) {
     std::vector<Entity *> rigidBodyEntities = entities.getEntitiesWith<Transform, Collision>();
 
 
     for (int i = 0; i < rigidBodyEntities.size(); i++) {
+
         Entity *entity1 = rigidBodyEntities.at(i);
+
+        if (entity1->has<OutsideArena, CircleCollision>()) {
+            Vec2 p = entity1->get<Transform>()->position;
+            double r = entity1->get<CircleCollision>()->radius;
+            std::cout << "Outside" << std::endl;
+            if (gameState.isCircleInArena(p, r)) {
+                std::cout << "inside" << std::endl;
+                entity1->remove<OutsideArena>();
+            }
+            continue;
+        }
+
         for (int j = i + 1; j < rigidBodyEntities.size(); j++) {
             Entity *entity2 = rigidBodyEntities.at(j);
 
@@ -36,7 +50,6 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
 
             if (entity1->has<CircleCollision>() &&
                 entity2->has<LineCollision>()) {
-//                if (gameState.isCircleInArena(q, r)) {}
                 if (areCircleAndLineIntersecting(entity1, entity2)) {
                     createImpacts(entity1, entity2);
                     resolveCircleLineCollision(entity1, entity2);
@@ -99,14 +112,16 @@ void CollisionSystem::resolveCircleLineCollision(Entity *circle,
 
     Vec2 distance = q - closestPoint;
 
-    // Static resolution
-    Vec2 normal = distance.normalize();
-    circle->get<Transform>()->position += normal * r - distance;
+    if (circle->has<Moveable, Transform>() && circle->get<Collision>()->type == CollisionType::DYNAMIC) {
+        // Static resolution
+        Vec2 normal = distance.normalize();
+        circle->get<Transform>()->position += normal * r - distance;
 
-    // Dynamic resolution
-    Vec2 velocity = circle->get<Moveable>()->velocity;
-    circle->get<Moveable>()->velocity =
-            velocity - normal * 2 * (velocity.dot(normal));
+        // Dynamic resolution
+        Vec2 velocity = circle->get<Moveable>()->velocity;
+        circle->get<Moveable>()->velocity =
+                velocity - normal * 2 * (velocity.dot(normal));
+    }
 }
 
 
@@ -167,25 +182,6 @@ void CollisionSystem::resolveCircleCircleCollision(
         moveable2->velocity = v2 - ((p2 - p1) * (v2 - v1).dot(p2 - p1) /
                                     pow((p2 - p1).magnitude(), 2)) *
                                    (2 * m1) / (m1 + m2);
-    }
-
-    if (entity2->has<Bullet>()) {
-//        eventManager.emit<AsteroidHitEvent>(entity1, entity2);
-//        Asteroid *asteroidComponent = entity1->get<Asteroid>();
-//        Transform *transform = entity1->get<Transform>();
-//
-//        if (asteroidComponent->size >= 2) {
-//            Entity *asteroid1 = entities.createAsteroid(
-//                    asteroidComponent->size / (float) 2);
-//            Entity *asteroid2 = entities.createAsteroid(
-//                    asteroidComponent->size / (float) 2);
-//
-//            asteroid1->get<Transform>()->position = transform->position;
-//            asteroid2->get<Transform>()->position = transform->position;
-//        }
-//
-//        entities.destroy(entity1);
-        entities.destroy(entity2);
     }
 
     if (entity1->has<Asteroid>() && entity2->has<SpaceShip>()) {

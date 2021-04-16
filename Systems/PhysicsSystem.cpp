@@ -4,6 +4,7 @@
 #include "../Components/Transform.h"
 #include "../GameState.h"
 #include "../Components/GravityForce.h"
+#include "../Components/Child.h"
 
 
 void PhysicsSystem::update(EntityManager &entities, double dt) {
@@ -23,65 +24,22 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
         Moveable *moveable = entity->get<Moveable>();
         Transform *transform = entity->get<Transform>();
 
+        moveable->acceleration -= moveable->velocity * moveable->drag;
+
         moveable->velocity =
                 moveable->velocity + moveable->acceleration * dt / 1000;
         transform->position =
                 transform->position + moveable->velocity * dt / 1000;
 
+        moveable->acceleration = Vec2(0, 0);
 
-        if (gameState.isOutOfBounds(transform->position)) {
-            if (transform->outOfBoundsBehaviour ==
-                OutOfBoundsBehaviour::DESTROY) {
-                entities.destroy(entity);
-            }
-
-            CoordinateSpace world = gameState.getWorldCoordinates();
-            if (transform->position.x < world.minX) {
-                if (transform->outOfBoundsBehaviour ==
-                    OutOfBoundsBehaviour::WRAP) {
-                    transform->position.x = world.maxX;
-                } else if (transform->outOfBoundsBehaviour ==
-                           OutOfBoundsBehaviour::BOUNCE) {
-                    transform->position.x = world.minX;
-                    moveable->velocity.x *= -1;
-                }
-            }
-
-            if (transform->position.x > world.maxX) {
-                if (transform->outOfBoundsBehaviour ==
-                    OutOfBoundsBehaviour::WRAP) {
-                    transform->position.x = world.minX;
-                } else if (transform->outOfBoundsBehaviour ==
-                           OutOfBoundsBehaviour::BOUNCE) {
-                    transform->position.x = world.maxX;
-                    moveable->velocity.x *= -1;
-                }
-            }
-
-            if (transform->position.y < world.minY) {
-                if (transform->outOfBoundsBehaviour ==
-                    OutOfBoundsBehaviour::WRAP) {
-                    transform->position.y = world.maxY;
-                } else if (transform->outOfBoundsBehaviour ==
-                           OutOfBoundsBehaviour::BOUNCE) {
-                    transform->position.y = world.minY;
-                    moveable->velocity.y *= -1;
-                }
-            }
-
-            if (transform->position.y > world.maxY) {
-                if (transform->outOfBoundsBehaviour ==
-                    OutOfBoundsBehaviour::WRAP) {
-                    transform->position.y = world.minY;
-                } else if (transform->outOfBoundsBehaviour ==
-                           OutOfBoundsBehaviour::BOUNCE) {
-                    transform->position.y = world.maxY;
-                    moveable->velocity.y *= -1;
-                }
+        if(entity->has<Child>()) {
+            Entity *child = entity->get<Child>()->child;
+            if (child->has<Transform>()) {
+                child->get<Transform>()->position = transform->position;
             }
         }
 
-        moveable->acceleration = Vec2(0, 0);
     }
 }
 

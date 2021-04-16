@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 14/3/21.
-//
-
 #include "PlayerInputSystem.h"
 #include "../Globals.h"
 #include "../Components/PlayerInput.h"
@@ -20,9 +16,9 @@ void PlayerInputSystem::update(EntityManager &entities, double dt) {
         SpaceShip *spaceShip = entity->get<SpaceShip>();
 
         if (keyboardState.isKeyPressed('a'))
-            transform->rotation += (float) dt * 0.1f;
+            transform->rotation += (float) dt * 0.2;
         if (keyboardState.isKeyPressed('d'))
-            transform->rotation -= (float) dt * 0.1f;
+            transform->rotation -= (float) dt * 0.2;
 
         if (keyboardState.isKeyPressed('w'))
             moveable->acceleration = Vec2::polar(transform->rotation, spaceShip->thrust);

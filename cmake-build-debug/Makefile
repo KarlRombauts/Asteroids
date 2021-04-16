@@ -177,6 +177,33 @@ Components/Helpers.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.s
 .PHONY : Components/Helpers.cpp.s
 
+Components/OutsideArena.o: Components/OutsideArena.cpp.o
+
+.PHONY : Components/OutsideArena.o
+
+# target to build an object file
+Components/OutsideArena.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.o
+.PHONY : Components/OutsideArena.cpp.o
+
+Components/OutsideArena.i: Components/OutsideArena.cpp.i
+
+.PHONY : Components/OutsideArena.i
+
+# target to preprocess a source file
+Components/OutsideArena.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.i
+.PHONY : Components/OutsideArena.cpp.i
+
+Components/OutsideArena.s: Components/OutsideArena.cpp.s
+
+.PHONY : Components/OutsideArena.s
+
+# target to generate assembly for a file
+Components/OutsideArena.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/OutsideArena.cpp.s
+.PHONY : Components/OutsideArena.cpp.s
+
 Coordinates.o: Coordinates.cpp.o
 
 .PHONY : Coordinates.o
@@ -257,6 +284,33 @@ Factories/LineFactory.s: Factories/LineFactory.cpp.s
 Factories/LineFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.s
 .PHONY : Factories/LineFactory.cpp.s
+
+GameManager.o: GameManager.cpp.o
+
+.PHONY : GameManager.o
+
+# target to build an object file
+GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.o
+.PHONY : GameManager.cpp.o
+
+GameManager.i: GameManager.cpp.i
+
+.PHONY : GameManager.i
+
+# target to preprocess a source file
+GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.i
+.PHONY : GameManager.cpp.i
+
+GameManager.s: GameManager.cpp.s
+
+.PHONY : GameManager.s
+
+# target to generate assembly for a file
+GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.s
+.PHONY : GameManager.cpp.s
 
 GameState.o: GameState.cpp.o
 
@@ -366,6 +420,33 @@ Ship.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.s
 .PHONY : Ship.cpp.s
 
+Systems/AsteroidSystem.o: Systems/AsteroidSystem.cpp.o
+
+.PHONY : Systems/AsteroidSystem.o
+
+# target to build an object file
+Systems/AsteroidSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o
+.PHONY : Systems/AsteroidSystem.cpp.o
+
+Systems/AsteroidSystem.i: Systems/AsteroidSystem.cpp.i
+
+.PHONY : Systems/AsteroidSystem.i
+
+# target to preprocess a source file
+Systems/AsteroidSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.i
+.PHONY : Systems/AsteroidSystem.cpp.i
+
+Systems/AsteroidSystem.s: Systems/AsteroidSystem.cpp.s
+
+.PHONY : Systems/AsteroidSystem.s
+
+# target to generate assembly for a file
+Systems/AsteroidSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s
+.PHONY : Systems/AsteroidSystem.cpp.s
+
 Systems/BulletCleanupSystem.o: Systems/BulletCleanupSystem.cpp.o
 
 .PHONY : Systems/BulletCleanupSystem.o
@@ -446,33 +527,6 @@ Systems/DamageSystem.s: Systems/DamageSystem.cpp.s
 Systems/DamageSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DamageSystem.cpp.s
 .PHONY : Systems/DamageSystem.cpp.s
-
-Systems/DestroySystem.o: Systems/DestroySystem.cpp.o
-
-.PHONY : Systems/DestroySystem.o
-
-# target to build an object file
-Systems/DestroySystem.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
-.PHONY : Systems/DestroySystem.cpp.o
-
-Systems/DestroySystem.i: Systems/DestroySystem.cpp.i
-
-.PHONY : Systems/DestroySystem.i
-
-# target to preprocess a source file
-Systems/DestroySystem.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.i
-.PHONY : Systems/DestroySystem.cpp.i
-
-Systems/DestroySystem.s: Systems/DestroySystem.cpp.s
-
-.PHONY : Systems/DestroySystem.s
-
-# target to generate assembly for a file
-Systems/DestroySystem.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
-.PHONY : Systems/DestroySystem.cpp.s
 
 Systems/DragSystem.o: Systems/DragSystem.cpp.o
 
@@ -555,6 +609,33 @@ Systems/ImpactCleanupSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.s
 .PHONY : Systems/ImpactCleanupSystem.cpp.s
 
+Systems/OutOfBoundsSystem.o: Systems/OutOfBoundsSystem.cpp.o
+
+.PHONY : Systems/OutOfBoundsSystem.o
+
+# target to build an object file
+Systems/OutOfBoundsSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o
+.PHONY : Systems/OutOfBoundsSystem.cpp.o
+
+Systems/OutOfBoundsSystem.i: Systems/OutOfBoundsSystem.cpp.i
+
+.PHONY : Systems/OutOfBoundsSystem.i
+
+# target to preprocess a source file
+Systems/OutOfBoundsSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.i
+.PHONY : Systems/OutOfBoundsSystem.cpp.i
+
+Systems/OutOfBoundsSystem.s: Systems/OutOfBoundsSystem.cpp.s
+
+.PHONY : Systems/OutOfBoundsSystem.s
+
+# target to generate assembly for a file
+Systems/OutOfBoundsSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.s
+.PHONY : Systems/OutOfBoundsSystem.cpp.s
+
 Systems/PhysicsSystem.o: Systems/PhysicsSystem.cpp.o
 
 .PHONY : Systems/PhysicsSystem.o
@@ -635,6 +716,33 @@ Systems/RenderSystem.s: Systems/RenderSystem.cpp.s
 Systems/RenderSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/RenderSystem.cpp.s
 .PHONY : Systems/RenderSystem.cpp.s
+
+Systems/WarningSystem.o: Systems/WarningSystem.cpp.o
+
+.PHONY : Systems/WarningSystem.o
+
+# target to build an object file
+Systems/WarningSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/WarningSystem.cpp.o
+.PHONY : Systems/WarningSystem.cpp.o
+
+Systems/WarningSystem.i: Systems/WarningSystem.cpp.i
+
+.PHONY : Systems/WarningSystem.i
+
+# target to preprocess a source file
+Systems/WarningSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/WarningSystem.cpp.i
+.PHONY : Systems/WarningSystem.cpp.i
+
+Systems/WarningSystem.s: Systems/WarningSystem.cpp.s
+
+.PHONY : Systems/WarningSystem.s
+
+# target to generate assembly for a file
+Systems/WarningSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/WarningSystem.cpp.s
+.PHONY : Systems/WarningSystem.cpp.s
 
 Vec2.o: Vec2.cpp.o
 
@@ -813,6 +921,9 @@ help:
 	@echo "... Components/Helpers.o"
 	@echo "... Components/Helpers.i"
 	@echo "... Components/Helpers.s"
+	@echo "... Components/OutsideArena.o"
+	@echo "... Components/OutsideArena.i"
+	@echo "... Components/OutsideArena.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"
@@ -822,6 +933,9 @@ help:
 	@echo "... Factories/LineFactory.o"
 	@echo "... Factories/LineFactory.i"
 	@echo "... Factories/LineFactory.s"
+	@echo "... GameManager.o"
+	@echo "... GameManager.i"
+	@echo "... GameManager.s"
 	@echo "... GameState.o"
 	@echo "... GameState.i"
 	@echo "... GameState.s"
@@ -834,6 +948,9 @@ help:
 	@echo "... Ship.o"
 	@echo "... Ship.i"
 	@echo "... Ship.s"
+	@echo "... Systems/AsteroidSystem.o"
+	@echo "... Systems/AsteroidSystem.i"
+	@echo "... Systems/AsteroidSystem.s"
 	@echo "... Systems/BulletCleanupSystem.o"
 	@echo "... Systems/BulletCleanupSystem.i"
 	@echo "... Systems/BulletCleanupSystem.s"
@@ -843,9 +960,6 @@ help:
 	@echo "... Systems/DamageSystem.o"
 	@echo "... Systems/DamageSystem.i"
 	@echo "... Systems/DamageSystem.s"
-	@echo "... Systems/DestroySystem.o"
-	@echo "... Systems/DestroySystem.i"
-	@echo "... Systems/DestroySystem.s"
 	@echo "... Systems/DragSystem.o"
 	@echo "... Systems/DragSystem.i"
 	@echo "... Systems/DragSystem.s"
@@ -855,6 +969,9 @@ help:
 	@echo "... Systems/ImpactCleanupSystem.o"
 	@echo "... Systems/ImpactCleanupSystem.i"
 	@echo "... Systems/ImpactCleanupSystem.s"
+	@echo "... Systems/OutOfBoundsSystem.o"
+	@echo "... Systems/OutOfBoundsSystem.i"
+	@echo "... Systems/OutOfBoundsSystem.s"
 	@echo "... Systems/PhysicsSystem.o"
 	@echo "... Systems/PhysicsSystem.i"
 	@echo "... Systems/PhysicsSystem.s"
@@ -864,6 +981,9 @@ help:
 	@echo "... Systems/RenderSystem.o"
 	@echo "... Systems/RenderSystem.i"
 	@echo "... Systems/RenderSystem.s"
+	@echo "... Systems/WarningSystem.o"
+	@echo "... Systems/WarningSystem.i"
+	@echo "... Systems/WarningSystem.s"
 	@echo "... Vec2.o"
 	@echo "... Vec2.i"
 	@echo "... Vec2.s"
