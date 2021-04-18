@@ -10,7 +10,7 @@
 #include "../Components/Asteroid.h"
 #include "../Components/SpaceShip.h"
 #include "../Components/Bullet.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/BlackHole.h"
 #include "../GameState.h"
 #include "../Components/Impact.h"
@@ -39,6 +39,11 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
 
             if (entity1->has<CircleCollision>() &&
                 entity2->has<CircleCollision>()) {
+
+                if (entity1->has<Particle>() && entity2->has<Particle>()) {
+                    continue;
+                }
+
                 if (areCirclesIntersecting(entity1, entity2)) {
                     createImpacts(entity1, entity2);
                     resolveCircleCircleCollision(entities, entity1, entity2);
@@ -113,14 +118,14 @@ void CollisionSystem::resolveCircleLineCollision(Entity *circle,
 
     Vec2 distance = q - closestPoint;
 
-    if (circle->has<Moveable, Transform>() && circle->get<Collision>()->type == CollisionType::DYNAMIC) {
+    if (circle->has<Kinematics, Transform>() && circle->get<Collision>()->type == CollisionType::DYNAMIC) {
         // Static resolution
         Vec2 normal = distance.normalize();
         circle->get<Transform>()->position += normal * r - distance;
 
         // Dynamic resolution
-        Vec2 velocity = circle->get<Moveable>()->velocity;
-        circle->get<Moveable>()->velocity =
+        Vec2 velocity = circle->get<Kinematics>()->velocity;
+        circle->get<Kinematics>()->velocity =
                 velocity - normal * 2 * (velocity.dot(normal));
     }
 }
@@ -146,8 +151,8 @@ void CollisionSystem::resolveCircleCircleCollision(
         double r2 = entity2->get<CircleCollision>()->radius;
         Transform *transform1 = entity1->get<Transform>();
         Transform *transform2 = entity2->get<Transform>();
-        Moveable *moveable1 = entity1->get<Moveable>();
-        Moveable *moveable2 = entity2->get<Moveable>();
+        Kinematics *kinematics1 = entity1->get<Kinematics>();
+        Kinematics *kinematics2 = entity2->get<Kinematics>();
 
 
         Vec2 diff = transform1->position - transform2->position;
@@ -157,13 +162,13 @@ void CollisionSystem::resolveCircleCircleCollision(
 
         Vec2 offset = (diff / diff.magnitude()) * overlap;
 
-        double m1 = moveable1->mass;
-        double m2 = moveable2->mass;
+        double m1 = kinematics1->mass;
+        double m2 = kinematics2->mass;
 
         Vec2 p1 = transform1->position;
         Vec2 p2 = transform2->position;
-        Vec2 v1 = moveable1->velocity;
-        Vec2 v2 = moveable2->velocity;
+        Vec2 v1 = kinematics1->velocity;
+        Vec2 v2 = kinematics2->velocity;
 
         // STATIC COLLISION RESOLUTION
         // both entities are moved so that they no longer overlap. The amount
@@ -176,16 +181,12 @@ void CollisionSystem::resolveCircleCircleCollision(
 //        // DYNAMIC COLLISION RESOLUTION
 //        // Equation sourced from: https://en.wikipedia.org/wiki/Elastic_collision
 //
-        moveable1->velocity = v1 - ((p1 - p2) * (v1 - v2).dot(p1 - p2) /
+        kinematics1->velocity = v1 - ((p1 - p2) * (v1 - v2).dot(p1 - p2) /
                                     pow((p1 - p2).magnitude(), 2)) *
                                    (2 * m2) / (m1 + m2);
 
-        moveable2->velocity = v2 - ((p2 - p1) * (v2 - v1).dot(p2 - p1) /
+        kinematics2->velocity = v2 - ((p2 - p1) * (v2 - v1).dot(p2 - p1) /
                                     pow((p2 - p1).magnitude(), 2)) *
                                    (2 * m1) / (m1 + m2);
-    }
-
-    if (entity1->has<BlackHole>()) {
-        entities.destroy(entity2);
     }
 }

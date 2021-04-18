@@ -1,14 +1,11 @@
-//
-// Created by Karl Rombauts on 18/4/21.
-//
-
-#include <iostream>
 #include "BlackHoleSystem.h"
 #include "../Components/BlackHole.h"
 #include "../Components/Transform.h"
 #include "../GameState.h"
 #include "../Components/Impact.h"
 #include "../Components/Collision.h"
+#include "../Components/Destroy.h"
+#include "../Components/BoundingCircle.h"
 
 void BlackHoleSystem::update(EntityManager &entities, double dt) {
     for (Entity *entity: entities.getEntitiesWith<BlackHole, Transform, CircleCollision>()) {
@@ -22,9 +19,10 @@ void BlackHoleSystem::update(EntityManager &entities, double dt) {
     }
 
     for (Entity *blackHole: entities.getEntitiesWith<BlackHole, Impact>()) {
-        std::cout << "blackhole impact" << std::endl;
         for (Entity *otherEntity: blackHole->get<Impact>()->entities) {
-            entities.destroy(otherEntity);
+            if (!otherEntity->has<BoundingCircle>()) {
+                otherEntity->assign<Destroy>();
+            }
         }
     }
 }

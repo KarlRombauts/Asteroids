@@ -3,7 +3,7 @@
 #include "../Components/FiringBullet.h"
 #include "../Components/SpaceShip.h"
 #include "../Components/Transform.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/Bullet.h"
 #include "../Components/Collision.h"
 #include "../Components/Texture.h"
@@ -24,9 +24,9 @@ void FiringSystem::update(EntityManager &entities, double dt) {
 
             Transform *transform = entity->get<Transform>();
 
-            Vec2 bulletVelocity = entity->get<Moveable>()->velocity + Vec2::polar(transform->rotation, 100);
+            Vec2 bulletVelocity = entity->get<Kinematics>()->velocity + Vec2::polar(transform->rotation, 100);
             bullet->assign<Transform>(transform->position, transform->rotation, Vec2(1, 1));
-            bullet->assign<Moveable>(bulletVelocity, Vec2(0,0), 1);
+            bullet->assign<Kinematics>(bulletVelocity, Vec2(0, 0), 1);
             bullet->assign<Bullet>(10);
             bullet->assign<Particle>();
             bullet->assign<Damage>(20);

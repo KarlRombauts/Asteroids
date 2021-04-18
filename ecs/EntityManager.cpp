@@ -3,7 +3,7 @@
 #include "../Components/Transform.h"
 #include "../Components/Collision.h"
 #include "../Components/Texture.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/Asteroid.h"
 #include "../Components/Helpers.h"
 #include "../Components/Shape.h"
@@ -19,6 +19,7 @@
 #include "../Components/SpaceShip.h"
 #include "../Components/BlackHole.h"
 #include "../Components/GravityForce.h"
+#include "../Globals.h"
 
 
 Entity *EntityManager::create() {
@@ -27,7 +28,6 @@ Entity *EntityManager::create() {
     nextId++;
     return entities.at(id);
 }
-
 
 Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
     std::vector<Vec2> circle;
@@ -88,10 +88,10 @@ Entity *EntityManager::createAsteroid(double radius) {
     asteroid->assign<Texture>(1, 1, 1);
     asteroid->assign<Health>(radius * 10);
 
-    Moveable moveable(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
-    moveable.angularVelocity = randf(-180, 180);
+    Kinematics kinematics(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
+    kinematics.angularVelocity = randf(-180, 180);
 
-    asteroid->assign<Moveable>(moveable);
+    asteroid->assign<Kinematics>(kinematics);
 
     if (radius > 2) {
         asteroid->assign<SplitOnDeath>();
@@ -100,7 +100,6 @@ Entity *EntityManager::createAsteroid(double radius) {
 
     return asteroid;
 }
-
 
 Entity *EntityManager::createFixedLine(Vec2 start, Vec2 end) {
     Entity *line = create();
@@ -111,7 +110,6 @@ Entity *EntityManager::createFixedLine(Vec2 start, Vec2 end) {
     line->assign<Texture>(1, 1, 1);
     return line;
 }
-
 
 void EntityManager::createArena() {
     int l = gameState.arenaSize;
@@ -141,14 +139,14 @@ Entity *EntityManager::createSpaceShip(Vec2 position) {
     };
 
     spaceShip->assign<Shape>(spaceShipModel);
-    spaceShip->assign<SpaceShip>(200, 50);
+    spaceShip->assign<SpaceShip>(gameConfig.PLAYER_FIRING_RATE, gameConfig.PLAYER_SPEED);
     spaceShip->assign<Collision>(CollisionType::DYNAMIC);
     spaceShip->assign<CircleCollision>(5);
 
     spaceShip->assign<Texture>(1, 0, 0);
     spaceShip->assign<Transform>(position, 90, Vec2(1, 1));
-    spaceShip->assign<Moveable>(Vec2(0, 0), Vec2(0, 0), 1);
-    spaceShip->get<Moveable>()->drag = 1;
+    spaceShip->assign<Kinematics>(Vec2(0, 0), Vec2(0, 0), 1);
+    spaceShip->get<Kinematics>()->drag = 1;
 
     spaceShip->assign<PlayerInput>();
 
@@ -169,4 +167,18 @@ Entity *EntityManager::createBoundingCircle(double radius) {
 void EntityManager::destroy(Entity *entity) {
     // TODO: Fix memory leak
     entities.erase(entity->getId());
+    delete entity;
+}
+
+void EntityManager::createWorld() {
+    createArena();
+    createSpaceShip(Vec2(0, 0));
+    createBlackHole(10, Vec2(40, 50));
+}
+
+void EntityManager::destroyAll() {
+    for (std::pair<const unsigned int, Entity *> entity: entities) {
+        delete entity.second;
+    }
+    entities.clear();
 }

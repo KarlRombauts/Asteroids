@@ -7,10 +7,11 @@
 #include "../Components/Bullet.h"
 #include "../Components/Collision.h"
 #include "../Components/SpaceShip.h"
+#include "../Components/Destroy.h"
 
 void BulletCleanupSystem::update(EntityManager &entities, double dt) {
-    for (Entity *entity: entities.getEntitiesWith<Impact, Bullet>()) {
-        std::vector<Entity *> otherEntities = entity->get<Impact>()->entities;
+    for (Entity *bullet: entities.getEntitiesWith<Impact, Bullet>()) {
+        std::vector<Entity *> otherEntities = bullet->get<Impact>()->entities;
 
         for (Entity *otherEntity: otherEntities) {
             if (otherEntity->has<SpaceShip>()) {
@@ -19,7 +20,7 @@ void BulletCleanupSystem::update(EntityManager &entities, double dt) {
             if (otherEntity->get<Collision>()->type == CollisionType::TRIGGER) {
                 continue;
             }
-            entities.destroy(entity);
+            bullet->assign<Destroy>();
             return;
         }
     }

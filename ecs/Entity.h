@@ -15,6 +15,7 @@ private:
 
 public:
     explicit Entity(unsigned int id);
+    ~Entity();
 
     template<typename Component, typename ... Args>
     void assign(Args &&... args);
@@ -69,8 +70,9 @@ void Entity::assign(Args &&... args) {
 
 template<typename Component, typename... Args>
 void Entity::remove() {
-    // TODO: fix memory leak
+    Component *component = get<Component>();
     components.erase(typeid(Component));
+    delete component;
 }
 
 template<typename Component>

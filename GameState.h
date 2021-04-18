@@ -1,22 +1,19 @@
-//
-// Created by Karl Rombauts on 13/3/21.
-//
-
 #ifndef UNTITLED_GAMESTATE_H
 #define UNTITLED_GAMESTATE_H
-
 
 #include "Coordinates.h"
 
 struct GameState {
     int worldSize = 100;
     int arenaSize = worldSize - 10;
-    int width;
-    int height;
     int waveCount = 1;
     int msElapsedTime = 0;
     int score = 0;
+    bool isGameOver = false;
+    bool isWaveOver = true;
 
+    int width;
+    int height;
     CoordinateSpace worldCoordinates;
 
     void resizeWorld(double aspectRatio);
@@ -25,13 +22,14 @@ struct GameState {
 
     void resizeWorld(double minX, double maxX, double minY, double maxY);
 
-    bool isOutOfBounds(Vec2 vector);
-
     CoordinateSpace getWorldCoordinates();
 
     bool isCircleInArena(Vec2 pos, double radius);
 
     double getWorldToPixelRatioWidth();
+
+    void reset();
+
 };
 
 extern GameState gameState;

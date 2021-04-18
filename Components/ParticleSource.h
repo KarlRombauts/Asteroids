@@ -7,15 +7,12 @@
 
 
 struct ParticleSource: public Component {
-    ParticleSource(Vec2 velocity, double dispersion, int initialParticles, int spawnRate)
-                   : velocity(velocity), dispersion(dispersion), initialParticles(initialParticles), spawnRate(spawnRate) {}
+    ParticleSource(Vec2 velocity, double dispersion, int initialParticles)
+                   : velocity(velocity), dispersion(dispersion), initialParticles(initialParticles) {}
 
     double dispersion;
     Vec2 velocity;
     int initialParticles;
-    int spawnRate;
-    double timeSinceLastParticle = 0;
-    bool started = false;
 };
 
 

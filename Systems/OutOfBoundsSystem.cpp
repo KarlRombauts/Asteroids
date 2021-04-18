@@ -5,12 +5,14 @@
 #include "OutOfBoundsSystem.h"
 #include "../Components/Transform.h"
 #include "../GameState.h"
+#include "../Components/Destroy.h"
+#include "../Components/Asteroid.h"
 
 void OutOfBoundsSystem::update(EntityManager &entities) {
-    for (Entity *entity: entities.getEntitiesWith<Transform>()) {
-        Vec2 position = entity->get<Transform>()->position;
+    for (Entity *asteroid: entities.getEntitiesWith<Transform, Asteroid>()) {
+        Vec2 position = asteroid->get<Transform>()->position;
         if (position.magnitude() > gameState.worldCoordinates.distanceToCorner() + 30) {
-            entities.destroy(entity);
+            asteroid->assign<Destroy>();
         }
     }
 }

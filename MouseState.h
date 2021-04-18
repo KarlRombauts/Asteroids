@@ -1,10 +1,5 @@
-//
-// Created by Karl Rombauts on 19/3/21.
-//
-
 #ifndef UNTITLED_MOUSESTATE_H
 #define UNTITLED_MOUSESTATE_H
-
 
 #include "Vec2.h"
 
@@ -22,6 +17,5 @@ struct MouseState {
 
     void onMouseDrag(int x, int y);
 };
-
 
 #endif //UNTITLED_MOUSESTATE_H

@@ -18,6 +18,11 @@ CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o: ../Factories/AteroidFactory.
 CMakeFiles/main.dir/Factories/LineFactory.cpp.o: ../Factories/LineFactory.cpp
 CMakeFiles/main.dir/Factories/LineFactory.cpp.o: ../Factories/LineFactory.h
 
+CMakeFiles/main.dir/GameConfig.cpp.o: ../Components/Texture.h
+CMakeFiles/main.dir/GameConfig.cpp.o: ../GameConfig.cpp
+CMakeFiles/main.dir/GameConfig.cpp.o: ../GameConfig.h
+CMakeFiles/main.dir/GameConfig.cpp.o: ../ecs/Component.h
+
 CMakeFiles/main.dir/GameManager.cpp.o: ../GameManager.cpp
 CMakeFiles/main.dir/GameManager.cpp.o: ../GameManager.h
 
@@ -36,21 +41,8 @@ CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.cpp
 CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/MouseState.cpp.o: ../Vec2.h
 
-CMakeFiles/main.dir/Ship.cpp.o: ../Components/Transform.h
-CMakeFiles/main.dir/Ship.cpp.o: ../Coordinates.h
-CMakeFiles/main.dir/Ship.cpp.o: ../GameState.h
-CMakeFiles/main.dir/Ship.cpp.o: ../Globals.h
-CMakeFiles/main.dir/Ship.cpp.o: ../KeyboardState.h
-CMakeFiles/main.dir/Ship.cpp.o: ../MouseState.h
-CMakeFiles/main.dir/Ship.cpp.o: ../OpenGL.h
-CMakeFiles/main.dir/Ship.cpp.o: ../Ship.cpp
-CMakeFiles/main.dir/Ship.cpp.o: ../Ship.h
-CMakeFiles/main.dir/Ship.cpp.o: ../Vec2.h
-CMakeFiles/main.dir/Ship.cpp.o: ../ecs/Component.h
-CMakeFiles/main.dir/Ship.cpp.o: ../ecs/EventManager.h
-
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Helpers.h
-CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/OutsideArena.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Transform.h
@@ -64,7 +56,9 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/EntityManager.h
 
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/BlackHole.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/BoundingCircle.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Collision.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Line.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Transform.h
@@ -80,6 +74,7 @@ CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/EntityManager.h
 
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Bullet.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Collision.h
+CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Line.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/SpaceShip.h
@@ -96,14 +91,16 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/BlackHole.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Bullet.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Impact.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/OutsideArena.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/SpaceShip.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Events/AsteroidHitEvent.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../GameState.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../KeyboardState.h
@@ -119,9 +116,10 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../ecs/EventManager.h
 
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Asteroid.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Damage.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Impact.h
-CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/ParticleSource.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/SplitOnDeath.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Transform.h
@@ -134,9 +132,20 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../ecs/EntityManager.h
 
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Components/BoundingCircle.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Components/Destroy.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.cpp
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Vec2.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../ecs/Component.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../ecs/Entity.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../ecs/EntityManager.h
+
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Draggable.h
-CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Kinematics.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Components/Transform.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../MouseState.h
@@ -153,8 +162,8 @@ CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Bullet.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Damage.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/FiringBullet.h
+CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Components/Texture.h
@@ -176,6 +185,8 @@ CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../ecs/EntityManager.h
 
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Asteroid.h
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../GameState.h
@@ -187,10 +198,10 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/EntityManager.h
 
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Collision.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Helpers.h
-CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Impact.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/ParticleSource.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Texture.h
@@ -204,7 +215,7 @@ CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../ecs/EntityManager.h
 
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Components/Child.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Components/GravityForce.h
-CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Events/CollisionEvent.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Systems/PhysicsSystem.cpp
@@ -216,16 +227,14 @@ CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../ecs/EntityManager.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../ecs/EventManager.h
 
-CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Bullet.h
-CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/FiringBullet.h
-CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/ParticleSource.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/PlayerInput.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Components/Transform.h
+CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../MouseState.h
@@ -241,8 +250,8 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../ecs/EventManager.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Helpers.h
+CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Text.h
@@ -260,6 +269,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/EntityManager.h
 
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Asteroid.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Wall.h
@@ -299,8 +309,8 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/GravityForce.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Helpers.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/PlayerInput.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/SpaceShip.h
@@ -309,12 +319,17 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Wall.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameState.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Globals.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/EntityManager.cpp
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/EntityManager.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/EventManager.h
 
 CMakeFiles/main.dir/ecs/EventManager.cpp.o: ../ecs/EventManager.cpp
 CMakeFiles/main.dir/ecs/EventManager.cpp.o: ../ecs/EventManager.h
@@ -323,39 +338,26 @@ CMakeFiles/main.dir/ecs/Service.cpp.o: ../ecs/Service.cpp
 CMakeFiles/main.dir/ecs/Service.cpp.o: ../ecs/Service.h
 
 CMakeFiles/main.dir/main.cpp.o: ../Components/Asteroid.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/BlackHole.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/BoundingCircle.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Child.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Collision.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/GravityForce.h
+CMakeFiles/main.dir/main.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/main.cpp.o: ../Components/Helpers.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Identity.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Line.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Momentum.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Moveable.h
+CMakeFiles/main.dir/main.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/main.cpp.o: ../Components/OutsideArena.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Particle.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/ParticleSource.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/PlayerInput.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Rotation.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/main.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/main.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/main.cpp.o: ../Components/Transform.h
-CMakeFiles/main.dir/main.cpp.o: ../Components/Wall.h
 CMakeFiles/main.dir/main.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/main.cpp.o: ../Events/CollisionEvent.h
+CMakeFiles/main.dir/main.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/main.cpp.o: ../GameState.h
 CMakeFiles/main.dir/main.cpp.o: ../Globals.h
 CMakeFiles/main.dir/main.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/main.cpp.o: ../MouseState.h
-CMakeFiles/main.dir/main.cpp.o: ../Ship.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/AsteroidSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/BlackHoleSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/BulletCleanupSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/CollisionSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/DamageSystem.h
-CMakeFiles/main.dir/main.cpp.o: ../Systems/DragSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../Systems/DestroySystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/FiringSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/ImpactCleanupSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/OutOfBoundsSystem.h

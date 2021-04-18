@@ -10,7 +10,7 @@
 #include "../GameState.h"
 #include "../Components/SpaceShip.h"
 #include "../Components/Transform.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/Helpers.h"
 #include "../Components/OutsideArena.h"
 

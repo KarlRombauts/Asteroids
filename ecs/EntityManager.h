@@ -37,6 +37,10 @@ public:
     Entity *createBoundingCircle(double radius);
 
     Entity *createBlackHole(double radius, Vec2 position);
+
+    void destroyAll();
+
+    void createWorld();
 };
 
 template<typename... Components>

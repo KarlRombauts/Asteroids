@@ -1,64 +1,56 @@
-//
-// Created by Karl Rombauts on 17/4/21.
-//
-
-#include <iostream>
 #include "ParticleSystem.h"
 #include "../Components/ParticleSource.h"
 #include "../Components/Transform.h"
 #include "../Components/Particle.h"
-#include "../Components/Texture.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/Helpers.h"
 #include "../Components/Collision.h"
-#include "../Components/Impact.h"
+#include "../Components/Destroy.h"
 
 void ParticleSystem::update(EntityManager &entities, double dt) {
     for (Entity *emitter: entities.getEntitiesWith<ParticleSource, Transform>()) {
         ParticleSource *particleSource = emitter->get<ParticleSource>();
-
-        if (!particleSource->started) {
-            for (int i = 0; i < particleSource->initialParticles; i++) {
-                emitParticle(entities, emitter);
-            }
-            particleSource->started = true;
-        }
-
-        particleSource->timeSinceLastParticle += dt;
-        int numParticles = (particleSource->spawnRate / (float) 1000) * particleSource->timeSinceLastParticle;
-
-        for (int i = 0; i < numParticles; i++) {
+        for (int i = 0; i < particleSource->initialParticles; i++) {
             emitParticle(entities, emitter);
         }
-
-        particleSource->timeSinceLastParticle -= ((double) numParticles * 1000 / (double) particleSource->spawnRate);
+        emitter->assign<Destroy>();
     }
 
+    for (Entity *particleEntity: entities.getEntitiesWith<Particle>()) {
+        Texture *texture = particleEntity->get<Texture>();
+        Particle *particle = particleEntity->get<Particle>();
 
-    for (Entity* particle: entities.getEntitiesWith<Particle>()) {
-        Texture *texture = particle->get<Texture>();
         double decayRate = 1 * dt / 1000;
-        texture->red = lerp(texture->red, 0, decayRate);
-        texture->green = lerp(texture->green, 0, decayRate);
-        texture->blue = lerp(texture->blue, 0, decayRate);
+
+        texture->red = lerp(texture->red, particle->deathColor.red, decayRate);
+        texture->green = lerp(texture->green, particle->deathColor.green, decayRate);
+        texture->blue = lerp(texture->blue, particle->deathColor.blue, decayRate);
+        particle->size = lerp(particle->size, particle->deathSize, decayRate);
 
         if (texture->red + texture->blue + texture->green < 0.1) {
-            entities.destroy(particle);
+            particleEntity->assign<Destroy>();
         }
     }
 }
 
-void
-ParticleSystem::emitParticle(EntityManager &entities, Entity *emitterEntity) const {
+void ParticleSystem::emitParticle(EntityManager &entities, Entity *emitterEntity) const {
     ParticleSource *particleSource = emitterEntity->get<ParticleSource>();
-    Entity* particle = entities.create();
-    particle->assign<Particle>();
-    particle->assign<Transform>(*emitterEntity->get<Transform>());
-    particle->assign<Collision>(CollisionType::TRIGGER);
-    particle->assign<CircleCollision>(3);
+    Entity *particleEntity = entities.create();
+
+    Particle particle;
+    particle.size = 3;
+    particle.deathSize = 3;
+    particle.decayRate = 1;
+    particle.deathColor = {0, 0, 0};
+
+    particleEntity->assign<Particle>(particle);
+    particleEntity->assign<Transform>(*emitterEntity->get<Transform>());
+    particleEntity->assign<Collision>(CollisionType::DYNAMIC);
+    particleEntity->assign<CircleCollision>(3);
 
     double d = particleSource->dispersion;
-    Vec2 velocity = Vec2::polar(randf(0, 360), d + randf(-d / 3, d / 3)) + particleSource->velocity;
-    particle->assign<Moveable>(velocity, Vec2(0,0), 0);
-    particle->assign<Texture>(1, 1, 1);
+    Vec2 velocity = Vec2::polar(randf(0, 360), d + randf(-d / 3, d / 3)) +
+                    particleSource->velocity;
+    particleEntity->assign<Kinematics>(velocity, Vec2(0, 0), 0);
+    particleEntity->assign<Texture>(1, 1, 1);
 }

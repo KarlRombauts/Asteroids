@@ -258,6 +258,33 @@ Factories/LineFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.s
 .PHONY : Factories/LineFactory.cpp.s
 
+GameConfig.o: GameConfig.cpp.o
+
+.PHONY : GameConfig.o
+
+# target to build an object file
+GameConfig.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameConfig.cpp.o
+.PHONY : GameConfig.cpp.o
+
+GameConfig.i: GameConfig.cpp.i
+
+.PHONY : GameConfig.i
+
+# target to preprocess a source file
+GameConfig.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameConfig.cpp.i
+.PHONY : GameConfig.cpp.i
+
+GameConfig.s: GameConfig.cpp.s
+
+.PHONY : GameConfig.s
+
+# target to generate assembly for a file
+GameConfig.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameConfig.cpp.s
+.PHONY : GameConfig.cpp.s
+
 GameManager.o: GameManager.cpp.o
 
 .PHONY : GameManager.o
@@ -365,33 +392,6 @@ MouseState.s: MouseState.cpp.s
 MouseState.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.s
 .PHONY : MouseState.cpp.s
-
-Ship.o: Ship.cpp.o
-
-.PHONY : Ship.o
-
-# target to build an object file
-Ship.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.o
-.PHONY : Ship.cpp.o
-
-Ship.i: Ship.cpp.i
-
-.PHONY : Ship.i
-
-# target to preprocess a source file
-Ship.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.i
-.PHONY : Ship.cpp.i
-
-Ship.s: Ship.cpp.s
-
-.PHONY : Ship.s
-
-# target to generate assembly for a file
-Ship.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ship.cpp.s
-.PHONY : Ship.cpp.s
 
 Systems/AsteroidSystem.o: Systems/AsteroidSystem.cpp.o
 
@@ -527,6 +527,33 @@ Systems/DamageSystem.s: Systems/DamageSystem.cpp.s
 Systems/DamageSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DamageSystem.cpp.s
 .PHONY : Systems/DamageSystem.cpp.s
+
+Systems/DestroySystem.o: Systems/DestroySystem.cpp.o
+
+.PHONY : Systems/DestroySystem.o
+
+# target to build an object file
+Systems/DestroySystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
+.PHONY : Systems/DestroySystem.cpp.o
+
+Systems/DestroySystem.i: Systems/DestroySystem.cpp.i
+
+.PHONY : Systems/DestroySystem.i
+
+# target to preprocess a source file
+Systems/DestroySystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.i
+.PHONY : Systems/DestroySystem.cpp.i
+
+Systems/DestroySystem.s: Systems/DestroySystem.cpp.s
+
+.PHONY : Systems/DestroySystem.s
+
+# target to generate assembly for a file
+Systems/DestroySystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
+.PHONY : Systems/DestroySystem.cpp.s
 
 Systems/DragSystem.o: Systems/DragSystem.cpp.o
 
@@ -984,6 +1011,9 @@ help:
 	@echo "... Factories/LineFactory.o"
 	@echo "... Factories/LineFactory.i"
 	@echo "... Factories/LineFactory.s"
+	@echo "... GameConfig.o"
+	@echo "... GameConfig.i"
+	@echo "... GameConfig.s"
 	@echo "... GameManager.o"
 	@echo "... GameManager.i"
 	@echo "... GameManager.s"
@@ -996,9 +1026,6 @@ help:
 	@echo "... MouseState.o"
 	@echo "... MouseState.i"
 	@echo "... MouseState.s"
-	@echo "... Ship.o"
-	@echo "... Ship.i"
-	@echo "... Ship.s"
 	@echo "... Systems/AsteroidSystem.o"
 	@echo "... Systems/AsteroidSystem.i"
 	@echo "... Systems/AsteroidSystem.s"
@@ -1014,6 +1041,9 @@ help:
 	@echo "... Systems/DamageSystem.o"
 	@echo "... Systems/DamageSystem.i"
 	@echo "... Systems/DamageSystem.s"
+	@echo "... Systems/DestroySystem.o"
+	@echo "... Systems/DestroySystem.i"
+	@echo "... Systems/DestroySystem.s"
 	@echo "... Systems/DragSystem.o"
 	@echo "... Systems/DragSystem.i"
 	@echo "... Systems/DragSystem.s"

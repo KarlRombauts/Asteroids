@@ -17,7 +17,7 @@ void AsteroidSystem::launchAsteroidAtSpaceShip(EntityManager &entities, Entity *
     if (spaceShip) {
         Vec2 spaceShipPosition = spaceShip->get<Transform>()->position;
         const Vec2 &asteroidSpeed = (spaceShipPosition - asteroidPosition).normalize().scale(10);
-        asteroid->get<Moveable>()->velocity = asteroidSpeed;
+        asteroid->get<Kinematics>()->velocity = asteroidSpeed;
     }
 }
 

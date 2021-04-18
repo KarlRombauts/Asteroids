@@ -5,9 +5,10 @@
 #include "../Components/SplitOnDeath.h"
 #include "../Components/Asteroid.h"
 #include "../Components/Transform.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 #include "../Components/ParticleSource.h"
 #include "../GameState.h"
+#include "../Components/Destroy.h"
 
 void DamageSystem::update(EntityManager &entities) {
     for(Entity* entity: entities.getEntitiesWith<Impact, Health>()) {
@@ -32,7 +33,7 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
             double size = entity->get<Asteroid>()->size;
             Vec2 p1 = entity->get<Transform>()->position;
             Vec2 p2 = otherEntity->get<Transform>()->position;
-            Vec2 v = entity->get<Moveable>()->velocity;
+            Vec2 v = entity->get<Kinematics>()->velocity;
 
             Vec2 splitDir = (p2 - p1).perpendicular() * size / 2;
 
@@ -41,9 +42,9 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
                 Entity *asteroid2 = entities.createAsteroid(size / 2);
 
                 asteroid1->get<Transform>()->position = p1 + splitDir;
-                asteroid1->get<Moveable>()->velocity = (p2 - p1).normalize().scale(v.magnitude()).rotate(25);
+                asteroid1->get<Kinematics>()->velocity = (p2 - p1).normalize().scale(v.magnitude()).rotate(25);
                 asteroid2->get<Transform>()->position = p1 - splitDir;
-                asteroid1->get<Moveable>()->velocity = (p2 - p1).normalize().scale(v.magnitude()).rotate(-25);
+                asteroid1->get<Kinematics>()->velocity = (p2 - p1).normalize().scale(v.magnitude()).rotate(-25);
             }
 
         }
@@ -53,12 +54,12 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
         // Create particle emitter
         double size = entity->get<Asteroid>()->size;
         Entity* particles = entities.create();
-        particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5, 0);
+        particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5);
         particles->assign<Transform>(*entity->get<Transform>());
 
         // Increment Score
         gameState.score++;
     }
 
-    entities.destroy(entity);
+    entity->assign<Destroy>();
 }

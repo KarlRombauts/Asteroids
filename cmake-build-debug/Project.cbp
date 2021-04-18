@@ -140,13 +140,13 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Impact.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Kinematics.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Momentum.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Moveable.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h">
@@ -215,6 +215,12 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/LineFactory.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -245,12 +251,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -279,6 +279,12 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp">

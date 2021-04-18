@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 10/4/21.
-//
-
 #include <iostream>
 #include "ImpactCleanupSystem.h"
 #include "../Components/Impact.h"

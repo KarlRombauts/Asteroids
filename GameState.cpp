@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 13/3/21.
-//
-
 #include "GameState.h"
 #include "OpenGL.h"
 
@@ -36,13 +32,6 @@ CoordinateSpace GameState::getWorldCoordinates() {
 }
 
 
-bool GameState::isOutOfBounds(Vec2 vector) {
-//    return worldCoordinates.isOutOfBounds(vector);
-    return vector.x < -arenaSize || vector.x > arenaSize ||
-           vector.y < -arenaSize || vector.y > arenaSize;
-}
-
-
 bool GameState::isCircleInArena(Vec2 pos, double radius) {
     return (pos.x - radius) > -arenaSize &&
            (pos.x + radius) < arenaSize &&
@@ -60,4 +49,11 @@ void GameState::resizeScreen(int w, int h) {
 
 double GameState::getWorldToPixelRatioWidth() {
     return (double) width / (worldCoordinates.maxX * 2);
+}
+
+void GameState::reset() {
+    waveCount = 1;
+    msElapsedTime = 0;
+    score = 0;
+    isGameOver = false;
 }

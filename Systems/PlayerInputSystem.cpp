@@ -2,37 +2,42 @@
 #include "../Globals.h"
 #include "../Components/PlayerInput.h"
 #include "../Components/Transform.h"
-#include "../Components/Moveable.h"
-#include "../Components/Collision.h"
-#include "../Components/Texture.h"
-#include "../Components/Bullet.h"
+#include "../Components/Kinematics.h"
 #include "../Components/SpaceShip.h"
 #include "../Components/FiringBullet.h"
 #include "../Components/ParticleSource.h"
 
 void PlayerInputSystem::update(EntityManager &entities, double dt) {
-    for(Entity* entity: entities.getEntitiesWith<Transform, Moveable, PlayerInput, SpaceShip>()) {
+    for(Entity* entity: entities.getEntitiesWith<Transform, Kinematics, PlayerInput, SpaceShip>()) {
         Transform *transform = entity->get<Transform>();
-        Moveable *moveable = entity->get<Moveable>();
+        Kinematics *kinematics = entity->get<Kinematics>();
         SpaceShip *spaceShip = entity->get<SpaceShip>();
 
-        if (keyboardState.isKeyPressed('a'))
-            transform->rotation += (float) dt * 0.2;
+        if (keyboardState.isKeyPressed(gameConfig.PLAYER_LEFT)) {
+            transform->rotation += (float) gameConfig.PLAYER_TURN_SPEED * dt / 1000;
+        }
 
-        if (keyboardState.isKeyPressed('d'))
-            transform->rotation -= (float) dt * 0.2;
+        if (keyboardState.isKeyPressed(gameConfig.PLAYER_RIGHT)) {
+            transform->rotation -= (float) gameConfig.PLAYER_TURN_SPEED * dt / 1000;
+        }
 
-        if (keyboardState.isKeyPressed('w')) {
-            moveable->acceleration = Vec2::polar(transform->rotation, spaceShip->thrust);
+        if (keyboardState.isKeyPressed(gameConfig.PLAYER_FORWARD)) {
+            kinematics->acceleration = Vec2::polar(transform->rotation, spaceShip->thrust);
 
+            // Create exhaust particle system
             Entity* particles = entities.create();
-            particles->assign<ParticleSource>(moveable->acceleration.scale(-1) * dt / 1000, 5, 5, 0);
+
+            Vec2 initialVelocity = kinematics->acceleration.scale(-1) * dt / 1000;
+            particles->assign<ParticleSource>(initialVelocity, 5, 3);
+
+            // Offset particles
             Transform particlesTransform = *transform;
-            particlesTransform.position += moveable->acceleration.normalize().scale(-3);
+            particlesTransform.position += kinematics->acceleration.normalize().scale(-3);
             particles->assign<Transform>(particlesTransform);
         }
 
-        if (keyboardState.isKeyPressed(' '))
+        if (keyboardState.isKeyPressed(gameConfig.PLAYER_SHOOT)) {
             entity->assign<FiringBullet>();
+        }
     }
 }

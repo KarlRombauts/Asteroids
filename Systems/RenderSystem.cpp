@@ -11,7 +11,7 @@
 #include "../Components/Text.h"
 #include "../GameState.h"
 #include "../Components/Helpers.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
 
@@ -31,9 +31,9 @@ void RenderSystem::update(EntityManager &entities, double dt) {
             drawHealthBars(entity);
         }
 
-        if (entity->has<Transform, Moveable>()) {
+        if (entity->has<Transform, Kinematics>()) {
             Vec2 &pos = entity->get<Transform>()->position;
-            Vec2 &a = entity->get<Moveable>()->acceleration;
+            Vec2 &a = entity->get<Kinematics>()->acceleration;
             glPointSize(3.0);
             glBegin(GL_LINES);
             {
@@ -103,7 +103,7 @@ void RenderSystem::drawParticle(Entity *entity) const {
 
 void RenderSystem::drawLine(Entity *entity) const {
     Line *line = entity->get<Line>();
-    glPointSize(3.0);
+    glLineWidth(2.0);
     glBegin(GL_LINES);
     {
         glVertex3f(line->start.x, line->start.y, 0);
@@ -115,7 +115,7 @@ void RenderSystem::drawLine(Entity *entity) const {
 void RenderSystem::drawShape(Entity *entity) const {
     Shape *shape = entity->get<Shape>();
 
-    glPointSize(3.0);
+    glLineWidth(2.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glBegin(GL_POLYGON);
     {

@@ -8,12 +8,12 @@
 #include "../ecs/Component.h"
 
 struct Texture: public Component {
-    Texture(float red, float green, float blue)
+    Texture(double red, double green, double blue)
         : red(red), green(green), blue(blue) {}
 
-    float red;
-    float green;
-    float blue;
+    double red;
+    double green;
+    double blue;
 };
 
 #endif //UNTITLED_TEXTURE_H

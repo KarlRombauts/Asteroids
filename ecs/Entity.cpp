@@ -11,3 +11,9 @@ unsigned int Entity::getId() {
     return id;
 }
 
+Entity::~Entity() {
+    for (std::pair<const std::type_index, Component *> component: components) {
+        delete component.second;
+    }
+}
+

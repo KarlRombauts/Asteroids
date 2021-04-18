@@ -6,25 +6,25 @@
 #include "../Components/Draggable.h"
 #include "../Globals.h"
 #include "../Components/Transform.h"
-#include "../Components/Moveable.h"
+#include "../Components/Kinematics.h"
 
 void DragSystem::update(EntityManager &entities, double dt) {
     if (mouseState.leftMouseDown) {
-        for (Entity * entity: entities.getEntitiesWith<Draggable, Transform, Moveable>()) {
+        for (Entity * entity: entities.getEntitiesWith<Draggable, Transform, Kinematics>()) {
             Draggable * draggable = entity->get<Draggable>();
             Transform * transform = entity->get<Transform>();
-            Moveable * moveable = entity->get<Moveable>();
+            Kinematics * kinematics = entity->get<Kinematics>();
             Vec2 offset = mouseState.drag - transform->position;
             if (offset.magnitude() < draggable->targetSize) {
                 transform->position = mouseState.drag;
-                moveable->velocity = {0,0};
+                kinematics->velocity = {0,0};
 
             }
         }
     }
     if (mouseState.rightMouseDown && !prevRightMouseDown) {
         // Click
-        for (Entity * entity: entities.getEntitiesWith<Draggable, Transform, Moveable>()) {
+        for (Entity * entity: entities.getEntitiesWith<Draggable, Transform, Kinematics>()) {
             Draggable * draggable = entity->get<Draggable>();
             Transform * transform = entity->get<Transform>();
             Vec2 offset = mouseState.drag - transform->position;
@@ -45,7 +45,7 @@ void DragSystem::update(EntityManager &entities, double dt) {
     if (!mouseState.rightMouseDown && prevRightMouseDown) {
         // Release
         if (selectedEntity != nullptr) {
-            selectedEntity->get<Moveable>()->acceleration += force;
+            selectedEntity->get<Kinematics>()->acceleration += force;
         }
     }
 
