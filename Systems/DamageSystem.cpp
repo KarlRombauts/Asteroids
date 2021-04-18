@@ -9,6 +9,7 @@
 #include "../Components/ParticleSource.h"
 #include "../GameState.h"
 #include "../Components/Destroy.h"
+#include "../Globals.h"
 
 void DamageSystem::update(EntityManager &entities) {
     for(Entity* entity: entities.getEntitiesWith<Impact, Health>()) {
@@ -54,7 +55,7 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
         // Create particle emitter
         double size = entity->get<Asteroid>()->size;
         Entity* particles = entities.create();
-        particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5);
+        particles->assign<ParticleSource>(Vec2(0, 0), 20, size * 5, gameConfig.EXPLOSION_DECAY_RATE);
         particles->assign<Transform>(*entity->get<Transform>());
 
         // Increment Score

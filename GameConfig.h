@@ -18,7 +18,8 @@ struct GameConfig {
     Texture BULLET_COLOR = {1, 1, 0};
 
     int EXHAUST_PARTICLE_RATE = 3;
-    int EXHAUST_PARTICLE_DECAY = 10;
+    double EXHAUST_PARTICLE_DECAY = 3;
+    double EXPLOSION_DECAY_RATE = 0.5;
 
     double WARNING_DISTANCE = 20; // Game world units
 
@@ -36,6 +37,8 @@ struct GameConfig {
     Texture ASTEROID_COLOR = {1, 1, 1};
 
     double BLACK_HOLE_PULSE_RATE = 0.5; // times per second;
+    int BLACK_HOLE_STRENGTH = 40000;
+    bool BLACK_HOLE_ACTIVE = false; // Turns on/off the black hole
     Texture BLACK_HOLE_COLOR = {0.5, 0.5, 0.5};
 };
 

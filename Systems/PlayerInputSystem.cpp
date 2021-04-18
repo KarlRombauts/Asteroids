@@ -28,7 +28,11 @@ void PlayerInputSystem::update(EntityManager &entities, double dt) {
             Entity* particles = entities.create();
 
             Vec2 initialVelocity = kinematics->acceleration.scale(-1) * dt / 1000;
-            particles->assign<ParticleSource>(initialVelocity, 5, 3);
+            particles->assign<ParticleSource>(
+                    initialVelocity,
+                    5,
+                    gameConfig.EXHAUST_PARTICLE_RATE,
+                    gameConfig.EXHAUST_PARTICLE_DECAY);
 
             // Offset particles
             Transform particlesTransform = *transform;

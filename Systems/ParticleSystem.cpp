@@ -20,7 +20,7 @@ void ParticleSystem::update(EntityManager &entities, double dt) {
         Texture *texture = particleEntity->get<Texture>();
         Particle *particle = particleEntity->get<Particle>();
 
-        double decayRate = 1 * dt / 1000;
+        double decayRate = particle->decayRate * dt / 1000;
 
         texture->red = lerp(texture->red, particle->deathColor.red, decayRate);
         texture->green = lerp(texture->green, particle->deathColor.green, decayRate);
@@ -40,7 +40,7 @@ void ParticleSystem::emitParticle(EntityManager &entities, Entity *emitterEntity
     Particle particle;
     particle.size = 3;
     particle.deathSize = 3;
-    particle.decayRate = 1;
+    particle.decayRate = particleSource->decayRate;
     particle.deathColor = {0, 0, 0};
 
     particleEntity->assign<Particle>(particle);

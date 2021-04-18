@@ -128,9 +128,14 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Kinematics.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/ParticleSource.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SplitOnDeath.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h

@@ -52,7 +52,7 @@ Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
     blackHole->assign<BlackHole>();
     blackHole->assign<Collision>(CollisionType::TRIGGER);
     blackHole->assign<CircleCollision>(radius / 4);
-    blackHole->assign<GravityForce>(40000);
+    blackHole->assign<GravityForce>(gameConfig.BLACK_HOLE_STRENGTH);
     blackHole->assign<Texture>(gameConfig.BLACK_HOLE_COLOR);
     return blackHole;
 }
@@ -173,7 +173,10 @@ void EntityManager::destroy(Entity *entity) {
 void EntityManager::createWorld() {
     createArena();
     createSpaceShip(Vec2(0, 0));
-    createBlackHole(10, Vec2(40, 50));
+
+    if (gameConfig.BLACK_HOLE_ACTIVE) {
+        createBlackHole(10, Vec2(40, 50));
+    }
 }
 
 void EntityManager::destroyAll() {

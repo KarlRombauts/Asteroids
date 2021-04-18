@@ -127,9 +127,14 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/ParticleSource.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/SplitOnDeath.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Globals.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../KeyboardState.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.cpp
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Vec2.h
