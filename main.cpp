@@ -142,6 +142,7 @@ void handleStartScreen() {
 void handlePlayAgain() {
     if (keyboardState.isAnyKeyPressed()) {
         entities.createWorld();
+        gameModel.reset();
         gameModel.state = GameState::PLAYING;
     }
 }
@@ -149,7 +150,6 @@ void handlePlayAgain() {
 void handleGameOver() {
     keyboardState.clearPressedKeys();
     entities.destroyAll();
-    gameModel.reset();
     gameModel.state = GameState::PLAY_AGAIN;
 }
 

@@ -1,5 +1,3 @@
-
-
 #include <string>
 #include "RenderSystem.h"
 #include "../OpenGL.h"
@@ -8,14 +6,24 @@
 #include "../Components/Health.h"
 #include "../Components/HealthBar.h"
 #include "../Components/Particle.h"
-#include "../Components/Text.h"
 #include "../GameModel.h"
 #include "../Components/Helpers.h"
-#include "../Components/Kinematics.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
-    drawScore();
-    drawEntities(entities);
+    switch (gameModel.state) {
+        case GameState::START:
+            renderString(0, 0, "Press any key to start...", TextAlignment::CENTER);
+            break;
+        case GameState::GAME_OVER:
+        case GameState::PLAY_AGAIN:
+            renderString(0, 0, "Game Over. Press any key to play again...", TextAlignment::CENTER);
+            break;
+        case GameState::WAVE_OVER:
+        case GameState::PLAYING:
+            drawScore();
+            drawEntities(entities);
+            break;
+    }
 }
 
 void RenderSystem::drawEntities(EntityManager &entities) {
@@ -53,7 +61,7 @@ void RenderSystem::drawScore() {
     renderString(0, arenaSize + 2, "Wave: " + std::to_string(gameModel.waveCount),
                  TextAlignment::CENTER);
 
-    renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameModel.elapsedTime),
+    renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameModel.elapsedTime - gameModel.resetTime),
                  TextAlignment::RIGHT);
 }
 

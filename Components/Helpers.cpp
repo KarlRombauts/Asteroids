@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 15/3/21.
-//
-
 #include <cstdlib>
 #include <string>
 #include "Helpers.h"
@@ -19,6 +15,7 @@ double lerp(double a, double b, double f) {
 }
 
 std::string formatTime(int msElapsedTime) {
+    msElapsedTime = std::max(0, msElapsedTime);
     int seconds = (msElapsedTime / 1000) % 60;
     int minutes = (msElapsedTime / 1000) / 60;
 

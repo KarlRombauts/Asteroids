@@ -266,11 +266,9 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../ecs/EntityManager.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Helpers.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Kinematics.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Line.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Shape.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Text.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Coordinates.h
