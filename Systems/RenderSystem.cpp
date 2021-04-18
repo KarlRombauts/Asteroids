@@ -10,13 +10,16 @@
 #include "../Components/Helpers.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
+    drawDifficulty();
     switch (gameModel.state) {
         case GameState::START:
-            renderString(0, 0, "Press any key to start...", TextAlignment::CENTER);
+            renderString(0, 0, "Press SPACE BAR to start...", TextAlignment::CENTER);
+            renderString(0, -10, "(Press 1 or 2 to switch difficulty modes)", TextAlignment::CENTER);
             break;
         case GameState::GAME_OVER:
         case GameState::PLAY_AGAIN:
-            renderString(0, 0, "Game Over. Press any key to play again...", TextAlignment::CENTER);
+            renderString(0, 0, "Game Over. Press SPACE BAR to play again...", TextAlignment::CENTER);
+            renderString(0, -10, "(Press 1 or 2 to switch difficulty modes)", TextAlignment::CENTER);
             break;
         case GameState::WAVE_OVER:
         case GameState::PLAYING:
@@ -151,5 +154,17 @@ void RenderSystem::drawHealthBars(Entity *entity) const {
     }
     glEnd();
     glPopMatrix();
+}
+
+void RenderSystem::drawDifficulty() {
+    int arenaSize = gameModel.arenaSize;
+    switch (gameModel.difficulty) {
+        case Difficulty::HARD:
+            glColor3f(1, 0, 0);
+            return renderString(0, -(arenaSize + 6), "Difficulty: HARD", TextAlignment::CENTER);
+        case Difficulty::EASY:
+            glColor3f(1, 1, 1);
+            return renderString(0, -(arenaSize + 6), "Difficulty: EASY", TextAlignment::CENTER);
+    }
 }
 

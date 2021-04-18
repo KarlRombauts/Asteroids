@@ -176,7 +176,7 @@ void EntityManager::createWorld() {
     createArena();
     createSpaceShip(Vec2(gameModel.arenaSize * -0.8, gameModel.arenaSize * -0.8));
 
-    if (gameConfig.BLACK_HOLE_ACTIVE) {
+    if (gameModel.difficulty == Difficulty::HARD) {
         createBlackHole(10, Vec2(40, 50));
     }
 }

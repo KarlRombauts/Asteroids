@@ -11,6 +11,11 @@ enum class GameState {
     PLAY_AGAIN,
 };
 
+enum class Difficulty {
+    EASY,
+    HARD
+};
+
 struct GameModel {
     int worldSize = 100;
     int arenaSize = worldSize - 10;
@@ -18,6 +23,7 @@ struct GameModel {
     int elapsedTime = 0;
     int score = 0;
     int resetTime = 0;
+    Difficulty difficulty = Difficulty::EASY;
     GameState state = GameState::START;
 
     int width;

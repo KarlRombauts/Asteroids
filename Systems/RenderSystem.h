@@ -32,6 +32,8 @@ public:
     void drawScore();
 
     void drawEntities(EntityManager &entities);
+
+    void drawDifficulty();
 };
 
 

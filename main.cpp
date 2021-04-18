@@ -57,7 +57,7 @@ void handleGameOver();
 
 void handlePlayAgain();
 
-void handleStartScreen();
+void handleMenu();
 
 void handleWaveOver();
 
@@ -83,10 +83,8 @@ static void idle() {
             handleGamePlay();
             break;
         case GameState::START:
-            handleStartScreen();
-            break;
         case GameState::PLAY_AGAIN:
-            handlePlayAgain();
+            handleMenu();
             break;
     }
 
@@ -132,15 +130,14 @@ void handleWaveOver() {
     gameModel.state = GameState::PLAYING;
 }
 
-void handleStartScreen() {
-    if (keyboardState.isAnyKeyPressed()) {
-        entities.createWorld();
-        gameModel.state = GameState::PLAYING;
+void handleMenu() {
+    if (keyboardState.isKeyPressed('1')) {
+        gameModel.difficulty = Difficulty::EASY;
     }
-}
-
-void handlePlayAgain() {
-    if (keyboardState.isAnyKeyPressed()) {
+    if (keyboardState.isKeyPressed('2')) {
+        gameModel.difficulty = Difficulty::HARD;
+    }
+    if (keyboardState.isKeyPressed(' ')) {
         entities.createWorld();
         gameModel.reset();
         gameModel.state = GameState::PLAYING;
