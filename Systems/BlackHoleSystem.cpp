@@ -6,12 +6,13 @@
 #include "../Components/Collision.h"
 #include "../Components/Destroy.h"
 #include "../Components/BoundingCircle.h"
+#include "../Globals.h"
 
 void BlackHoleSystem::update(EntityManager &entities, double dt) {
     for (Entity *entity: entities.getEntitiesWith<BlackHole, Transform, CircleCollision>()) {
-        Transform* transform = entity->get<Transform>();
+        Transform *transform = entity->get<Transform>();
 
-        double pulseTime = 2;
+        double pulseTime = 1 / gameConfig.BLACK_HOLE_PULSE_RATE;
         double minSize = 0.7;
         double scale = (1 - ((fmod(gameState.msElapsedTime / (double) 1000, pulseTime)) / pulseTime) + minSize) / (1 + minSize);
 
@@ -20,6 +21,7 @@ void BlackHoleSystem::update(EntityManager &entities, double dt) {
 
     for (Entity *blackHole: entities.getEntitiesWith<BlackHole, Impact>()) {
         for (Entity *otherEntity: blackHole->get<Impact>()->entities) {
+            // We do not want the bounding circle to be destroyed
             if (!otherEntity->has<BoundingCircle>()) {
                 otherEntity->assign<Destroy>();
             }

@@ -39,8 +39,3 @@ void PhysicsSystem::update(EntityManager &entities, double dt) {
 
     }
 }
-
-void PhysicsSystem::notify(CollisionEvent event) {
-    std::cout << "Collision!" << std::endl;
-}
-

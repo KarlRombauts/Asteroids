@@ -20,6 +20,9 @@
 #include "../Components/BlackHole.h"
 #include "../Components/GravityForce.h"
 #include "../Globals.h"
+#include "../Components/Particle.h"
+#include "../Components/Bullet.h"
+#include "../Components/Damage.h"
 
 
 Entity *EntityManager::create() {
@@ -50,7 +53,7 @@ Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
     blackHole->assign<Collision>(CollisionType::TRIGGER);
     blackHole->assign<CircleCollision>(radius / 4);
     blackHole->assign<GravityForce>(40000);
-    blackHole->assign<Texture>(0.5, 0.5, 0.5);
+    blackHole->assign<Texture>(gameConfig.BLACK_HOLE_COLOR);
     return blackHole;
 }
 
@@ -63,18 +66,16 @@ Entity *EntityManager::createAsteroid(double radius) {
             0, Vec2(1, 1));
 
     std::vector<Vec2> asteroidModel;
-    int num_segments = 10;
+    int num_segments = 12;
     double roughness = 0.2;
     for (int i = 0; i < num_segments; i++) {
-        double theta = 2.0 * M_PI * float(i) /
-                       float(num_segments); // get the current angle
-
+        double theta = 2.0 * M_PI * float(i) / float(num_segments); // get the current angle
         double x = radius * cos(theta); // calculate the x component
         double y = radius * sin(theta); // calculate the y component
 
         Vec2 vertex = {
-                x + radius * randf(-roughness, roughness),
-                y + radius * randf(-roughness, roughness)
+            x + radius * randf(-roughness, roughness),
+            y + radius * randf(-roughness, roughness)
         };
 
         asteroidModel.push_back(vertex);
@@ -85,11 +86,11 @@ Entity *EntityManager::createAsteroid(double radius) {
     asteroid->assign<Collision>(CollisionType::DYNAMIC);
     asteroid->assign<CircleCollision>(radius);
     asteroid->assign<Draggable>(radius);
-    asteroid->assign<Texture>(1, 1, 1);
+    asteroid->assign<Texture>(gameConfig.ASTEROID_COLOR);
     asteroid->assign<Health>(radius * 10);
 
     Kinematics kinematics(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
-    kinematics.angularVelocity = randf(-180, 180);
+    kinematics.angularVelocity = randf(gameConfig.ASTEROID_MIN_ROTATION, gameConfig.ASTEROID_MAX_ROTATION);
 
     asteroid->assign<Kinematics>(kinematics);
 
@@ -150,7 +151,7 @@ Entity *EntityManager::createSpaceShip(Vec2 position) {
 
     spaceShip->assign<PlayerInput>();
 
-    Entity *boundingCircle = createBoundingCircle(30);
+    Entity *boundingCircle = createBoundingCircle(gameConfig.WARNING_DISTANCE);
     spaceShip->assign<Child>(boundingCircle);
     return spaceShip;
 }
@@ -165,7 +166,6 @@ Entity *EntityManager::createBoundingCircle(double radius) {
 }
 
 void EntityManager::destroy(Entity *entity) {
-    // TODO: Fix memory leak
     entities.erase(entity->getId());
     delete entity;
 }
@@ -181,4 +181,17 @@ void EntityManager::destroyAll() {
         delete entity.second;
     }
     entities.clear();
+}
+
+Entity *EntityManager::createBullet(Vec2 position, Vec2 velocity) {
+    Entity *bullet = create();
+    bullet->assign<Transform>(position, 0, Vec2(1, 1));
+    bullet->assign<Kinematics>(velocity, Vec2(0, 0), 1);
+    bullet->assign<Particle>();
+    bullet->assign<Bullet>();
+    bullet->assign<Damage>(gameConfig.BULLET_DAMAGE);
+    bullet->assign<Collision>(CollisionType::TRIGGER);
+    bullet->assign<CircleCollision>(2);
+    bullet->assign<Texture>(gameConfig.BULLET_COLOR);
+    return bullet;
 }

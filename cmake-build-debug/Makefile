@@ -123,33 +123,6 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-Arena.o: Arena.cpp.o
-
-.PHONY : Arena.o
-
-# target to build an object file
-Arena.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.o
-.PHONY : Arena.cpp.o
-
-Arena.i: Arena.cpp.i
-
-.PHONY : Arena.i
-
-# target to preprocess a source file
-Arena.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.i
-.PHONY : Arena.cpp.i
-
-Arena.s: Arena.cpp.s
-
-.PHONY : Arena.s
-
-# target to generate assembly for a file
-Arena.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Arena.cpp.s
-.PHONY : Arena.cpp.s
-
 Components/Helpers.o: Components/Helpers.cpp.o
 
 .PHONY : Components/Helpers.o
@@ -906,33 +879,6 @@ ecs/EntityManager.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EntityManager.cpp.s
 .PHONY : ecs/EntityManager.cpp.s
 
-ecs/EventManager.o: ecs/EventManager.cpp.o
-
-.PHONY : ecs/EventManager.o
-
-# target to build an object file
-ecs/EventManager.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.o
-.PHONY : ecs/EventManager.cpp.o
-
-ecs/EventManager.i: ecs/EventManager.cpp.i
-
-.PHONY : ecs/EventManager.i
-
-# target to preprocess a source file
-ecs/EventManager.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.i
-.PHONY : ecs/EventManager.cpp.i
-
-ecs/EventManager.s: ecs/EventManager.cpp.s
-
-.PHONY : ecs/EventManager.s
-
-# target to generate assembly for a file
-ecs/EventManager.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ecs/EventManager.cpp.s
-.PHONY : ecs/EventManager.cpp.s
-
 ecs/Service.o: ecs/Service.cpp.o
 
 .PHONY : ecs/Service.o
@@ -996,9 +942,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... Arena.o"
-	@echo "... Arena.i"
-	@echo "... Arena.s"
 	@echo "... Components/Helpers.o"
 	@echo "... Components/Helpers.i"
 	@echo "... Components/Helpers.s"
@@ -1083,9 +1026,6 @@ help:
 	@echo "... ecs/EntityManager.o"
 	@echo "... ecs/EntityManager.i"
 	@echo "... ecs/EntityManager.s"
-	@echo "... ecs/EventManager.o"
-	@echo "... ecs/EventManager.i"
-	@echo "... ecs/EventManager.s"
 	@echo "... ecs/Service.o"
 	@echo "... ecs/Service.i"
 	@echo "... ecs/Service.s"

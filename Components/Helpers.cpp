@@ -10,6 +10,10 @@ double randf(double min, double max) {
     return min + (rand() / (RAND_MAX / (max - min)));
 }
 
+int randInt(int min, int max) {
+    return min + rand() % max ;
+}
+
 double lerp(double a, double b, double f) {
     return a + f * (b - a);
 }

@@ -8,6 +8,8 @@
 
 double randf(double min, double max);
 
+int randInt(int min, int max);
+
 double lerp(double a, double b, double f);
 
 std::string formatTime(int msElapsedTime);

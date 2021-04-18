@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Arena.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Arena.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Acceleration.h">
 			<Option target="main"/>
 		</Unit>
@@ -369,12 +363,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EntityManager.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/EventManager.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Service.cpp">

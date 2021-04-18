@@ -34,6 +34,8 @@ public:
 
     Entity *createSpaceShip(Vec2 position);
 
+    Entity *createBullet(Vec2 position, Vec2 velocity);
+
     Entity *createBoundingCircle(double radius);
 
     Entity *createBlackHole(double radius, Vec2 position);

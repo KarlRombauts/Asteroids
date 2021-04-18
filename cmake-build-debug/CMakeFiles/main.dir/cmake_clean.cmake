@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/Arena.cpp.o"
   "CMakeFiles/main.dir/Components/Helpers.cpp.o"
   "CMakeFiles/main.dir/Coordinates.cpp.o"
   "CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o"
@@ -28,7 +27,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Vec2.cpp.o"
   "CMakeFiles/main.dir/ecs/Entity.cpp.o"
   "CMakeFiles/main.dir/ecs/EntityManager.cpp.o"
-  "CMakeFiles/main.dir/ecs/EventManager.cpp.o"
   "CMakeFiles/main.dir/ecs/Service.cpp.o"
   "CMakeFiles/main.dir/main.cpp.o"
   "main"
