@@ -22,17 +22,7 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
 
 
     for (int i = 0; i < rigidBodyEntities.size(); i++) {
-
         Entity *entity1 = rigidBodyEntities.at(i);
-
-        if (entity1->has<OutsideArena, CircleCollision>()) {
-            Vec2 p = entity1->get<Transform>()->position;
-            double r = entity1->get<CircleCollision>()->radius;
-            if (gameModel.isCircleInArena(p, r)) {
-                entity1->remove<OutsideArena>();
-            }
-            continue;
-        }
 
         for (int j = i + 1; j < rigidBodyEntities.size(); j++) {
             Entity *entity2 = rigidBodyEntities.at(j);
@@ -52,6 +42,15 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
 
             if (entity1->has<CircleCollision>() &&
                 entity2->has<LineCollision>()) {
+                if (entity1->has<OutsideArena, CircleCollision>()) {
+                    Vec2 p = entity1->get<Transform>()->position;
+                    double r = entity1->get<CircleCollision>()->radius;
+                    if (gameModel.isCircleInArena(p, r)) {
+                        entity1->remove<OutsideArena>();
+                    }
+                    continue;
+                }
+
                 if (areCircleAndLineIntersecting(entity1, entity2)) {
                     createImpacts(entity1, entity2);
                     resolveCircleLineCollision(entity1, entity2);

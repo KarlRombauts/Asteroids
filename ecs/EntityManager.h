@@ -45,8 +45,6 @@ public:
 
     void createWorld();
 
-    Entity *
-    CreateText(std::string string, Vec2 position, TextAlignment alignment);
 };
 
 template<typename... Components>

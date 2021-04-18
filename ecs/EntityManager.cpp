@@ -61,7 +61,7 @@ Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
 
 Entity *EntityManager::createAsteroid(double radius) {
     Entity *asteroid = this->create();
-    const CoordinateSpace &world = gameModel.getWorldCoordinates();
+    const CoordinateSpace &world = gameModel.worldCoordinates;
 
     asteroid->assign<Transform>(
             Vec2(randf(world.minX, world.maxX), randf(world.minY, world.maxY)),
@@ -174,10 +174,19 @@ void EntityManager::destroy(Entity *entity) {
 
 void EntityManager::createWorld() {
     createArena();
-    createSpaceShip(Vec2(gameModel.arenaSize * -0.8, gameModel.arenaSize * -0.8));
+    const Vec2 shipPosition = Vec2(gameModel.arenaSize * -0.7, gameModel.arenaSize * -0.7);
+    createSpaceShip(shipPosition);
 
     if (gameModel.difficulty == Difficulty::HARD) {
-        createBlackHole(10, Vec2(40, 50));
+        // Never create a black hole that is too close to the ship
+        int range = gameModel.arenaSize * 0.8;
+        Vec2 blackHolePosition = Vec2(0,0);
+        do {
+            blackHolePosition = Vec2(randInt(-range, range),
+                                     randInt(-range, range));
+        } while((blackHolePosition - shipPosition).magnitude() < gameModel.arenaSize * 0.4);
+
+        createBlackHole(10, blackHolePosition);
     }
 }
 
@@ -201,9 +210,3 @@ Entity *EntityManager::createBullet(Vec2 position, Vec2 velocity) {
     return bullet;
 }
 
-Entity *EntityManager::CreateText(std::string string, Vec2 position, TextAlignment alignment) {
-    Entity *text = create();
-    text->assign<Texture>(1, 1, 1);
-    text->assign<Text>(string, alignment);
-    text->assign<Transform>(position, 0, Vec2(1, 1));
-}

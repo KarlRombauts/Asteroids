@@ -36,15 +36,12 @@ struct GameModel {
 
     void resizeWorld(double minX, double maxX, double minY, double maxY);
 
-    CoordinateSpace getWorldCoordinates();
-
     bool isCircleInArena(Vec2 pos, double radius);
 
     double getWorldToPixelRatioWidth();
 
     void reset();
 
-    int getElapsedTime();
 };
 
 extern GameModel gameModel;

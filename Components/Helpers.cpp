@@ -7,7 +7,7 @@ double randf(double min, double max) {
 }
 
 int randInt(int min, int max) {
-    return min + rand() % max ;
+    return min + rand() % (max - min);
 }
 
 double lerp(double a, double b, double f) {

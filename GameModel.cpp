@@ -27,11 +27,6 @@ void GameModel::resizeWorld(double minX, double maxX, double minY, double maxY) 
 }
 
 
-CoordinateSpace GameModel::getWorldCoordinates() {
-    return worldCoordinates;
-}
-
-
 bool GameModel::isCircleInArena(Vec2 pos, double radius) {
     return (pos.x - radius) > -arenaSize &&
            (pos.x + radius) < arenaSize &&
