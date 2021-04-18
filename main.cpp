@@ -15,7 +15,7 @@
 #endif
 
 #include "Globals.h"
-#include "GameState.h"
+#include "GameModel.h"
 #include "ecs/EntityManager.h"
 #include "Systems/RenderSystem.h"
 #include "Systems/PhysicsSystem.h"
@@ -53,6 +53,16 @@ BlackHoleSystem blackHoleSystem;
 DestroySystem destroySystem;
 
 
+void handleGameOver();
+
+void handlePlayAgain();
+
+void handleStartScreen();
+
+void handleWaveOver();
+
+void handleGamePlay();
+
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glDisable(GL_DEPTH_TEST);
@@ -62,53 +72,89 @@ void display() {
 }
 
 static void idle() {
-    if (gameState.isGameOver) {
-        if (keyboardState.isAnyKeyPressed()) {
-            entities.destroyAll();
-            gameState.reset();
-            entities.createWorld();
-        }
-    } else {
-        int thisTime = glutGet(GLUT_ELAPSED_TIME);
-
-        if (gameState.isWaveOver) {
-            asteroidSystem.startWave(entities, gameState.waveCount++);
-        }
-
-        int dt = thisTime - gameState.msElapsedTime;
-
-        playerInputSystem.update(entities, dt);
-        firingSystem.update(entities, dt);
-        collisionSystem.update(entities, dt);
-        particleSystem.update(entities, dt);
-        physicsSystem.update(entities, dt);
-        warningSystem.update(entities);
-        damageSystem.update(entities);
-        bulletCleanupSystem.update(entities, dt);
-        shipImpactSystem.update(entities);
-        blackHoleSystem.update(entities, dt);
-        outOfBoundsSystem.update(entities);
-        impactCleanupSystem.update(entities, dt);
-        destroySystem.update(entities);
-
-        gameState.msElapsedTime = thisTime;
-        gameState.isGameOver = entities.getEntitiesWith<SpaceShip>().empty();
-        gameState.isWaveOver = entities.getEntitiesWith<Asteroid>().empty();
+    switch (gameModel.state) {
+        case GameState::GAME_OVER:
+            handleGameOver();
+            break;
+        case GameState::WAVE_OVER:
+            handleWaveOver();
+            break;
+        case GameState::PLAYING:
+            handleGamePlay();
+            break;
+        case GameState::START:
+            handleStartScreen();
+            break;
+        case GameState::PLAY_AGAIN:
+            handlePlayAgain();
+            break;
     }
 
     glutPostRedisplay();
+}
+
+void handleGamePlay() {
+    int thisTime = glutGet(GLUT_ELAPSED_TIME);
+    int dt = thisTime - gameModel.msElapsedTime;
+
+    playerInputSystem.update(entities, dt);
+    firingSystem.update(entities, dt);
+    collisionSystem.update(entities, dt);
+    particleSystem.update(entities, dt);
+    physicsSystem.update(entities, dt);
+    warningSystem.update(entities);
+    damageSystem.update(entities);
+    bulletCleanupSystem.update(entities, dt);
+    shipImpactSystem.update(entities);
+    blackHoleSystem.update(entities, dt);
+    outOfBoundsSystem.update(entities);
+    impactCleanupSystem.update(entities, dt);
+    destroySystem.update(entities);
+
+    gameModel.msElapsedTime = thisTime;
+
+    if (entities.getEntitiesWith<SpaceShip>().empty()) {
+        gameModel.state = GameState::GAME_OVER;
+    } else if (entities.getEntitiesWith<Asteroid>().empty()) {
+        gameModel.state = GameState::WAVE_OVER;
+    }
+}
+
+void handleWaveOver() {
+    asteroidSystem.startWave(entities, gameModel.waveCount++);
+    gameModel.state = GameState::PLAYING;
+}
+
+void handleStartScreen() {
+    if (keyboardState.isAnyKeyPressed()) {
+        entities.createWorld();
+        gameModel.state = GameState::PLAYING;
+    }
+}
+
+void handlePlayAgain() {
+    if (keyboardState.isAnyKeyPressed()) {
+        entities.createWorld();
+        gameModel.state = GameState::PLAYING;
+    }
+}
+
+void handleGameOver() {
+    keyboardState.clearPressedKeys();
+    entities.destroyAll();
+    gameModel.reset();
+    gameModel.state = GameState::PLAY_AGAIN;
 }
 
 void init() {
     glMatrixMode(GL_PROJECTION);
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     glMatrixMode(GL_MODELVIEW);
-    entities.createWorld();
 }
 
 void reshape (int w, int h) {
     glViewport(0, 0, (GLsizei) w, (GLsizei) h);
-    gameState.resizeScreen(w, h);
+    gameModel.resizeScreen(w, h);
 }
 
 void onKeyPress(unsigned char key, int x, int y) {

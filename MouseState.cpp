@@ -4,15 +4,15 @@
 
 #include <iostream>
 #include "MouseState.h"
-#include "GameState.h"
+#include "GameModel.h"
 
 
 MouseState::MouseState()
 : leftMouseDown(false), rightMouseDown(false), position({0,0}), drag({0,0}) {}
 
 void MouseState::onMouseDrag(int x, int y) {
-    double worldX = ((2 * x / (double) gameState.width) - 1) * gameState.worldCoordinates.maxX;
-    double worldY = -((2 * y / (double) gameState.height) - 1) * gameState.worldCoordinates.maxY;
+    double worldX = ((2 * x / (double) gameModel.width) - 1) * gameModel.worldCoordinates.maxX;
+    double worldY = -((2 * y / (double) gameModel.height) - 1) * gameModel.worldCoordinates.maxY;
 
     drag = Vec2(worldX, worldY);
 }

@@ -12,7 +12,7 @@ void AsteroidSystem::startWave(EntityManager &entities, int waveCount) {
 void AsteroidSystem::launchAsteroidAtSpaceShip(EntityManager &entities, Entity *spaceShip) const {
     int radius = randInt(gameConfig.ASTEROID_MIN_START_RADIUS, gameConfig.ASTEROID_MAX_START_RADIUS);
     Entity *asteroid = entities.createAsteroid(radius);
-    Vec2 asteroidPosition = Vec2::polar(randf(0, 360), gameState.worldCoordinates.distanceToCorner());
+    Vec2 asteroidPosition = Vec2::polar(randf(0, 360), gameModel.worldCoordinates.distanceToCorner());
     asteroid->get<Transform>()->position = asteroidPosition;
     asteroid->assign<OutsideArena>();
 

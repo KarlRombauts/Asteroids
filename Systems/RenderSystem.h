@@ -11,11 +11,7 @@
 #include "../Components/Transform.h"
 #include "../Components/Texture.h"
 
-enum class TextAlignment {
-    LEFT,
-    CENTER,
-    RIGHT
-};
+
 
 class RenderSystem: public System {
 

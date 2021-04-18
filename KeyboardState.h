@@ -9,31 +9,15 @@ class KeyboardState {
 private:
     std::set<char> pressedKeys;
 public:
-    void setPressedKey(char key) {
-        pressedKeys.insert(key);
+    void setPressedKey(char key);
 
-        for(auto key: pressedKeys) {
-            std::cout << key;
-        }
-        std::cout << std::endl;
-    }
+    bool isKeyPressed(unsigned char key);
 
-    bool isKeyPressed(unsigned char key) {
-        return pressedKeys.find(key) != pressedKeys.end();
-    }
+    void releaseKey(unsigned char key);
 
-    void releaseKey(unsigned char key) {
-        pressedKeys.erase(key);
+    void clearPressedKeys();
 
-        for(auto key: pressedKeys) {
-            std::cout << key;
-        }
-        std::cout << std::endl;
-    }
-
-    bool isAnyKeyPressed() {
-        return !pressedKeys.empty();
-    }
+    bool isAnyKeyPressed();
 };
 
 

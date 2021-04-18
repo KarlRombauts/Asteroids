@@ -10,6 +10,7 @@
 #include <vector>
 #include "Entity.h"
 #include "../Vec2.h"
+#include "../TextAlignment.h"
 
 class EntityManager {
 private:
@@ -43,6 +44,9 @@ public:
     void destroyAll();
 
     void createWorld();
+
+    Entity *
+    CreateText(std::string string, Vec2 position, TextAlignment alignment);
 };
 
 template<typename... Components>

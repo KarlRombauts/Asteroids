@@ -19,20 +19,17 @@ CMakeFiles/main.dir/GameConfig.cpp.o: ../GameConfig.cpp
 CMakeFiles/main.dir/GameConfig.cpp.o: ../GameConfig.h
 CMakeFiles/main.dir/GameConfig.cpp.o: ../ecs/Component.h
 
-CMakeFiles/main.dir/GameManager.cpp.o: ../GameManager.cpp
-CMakeFiles/main.dir/GameManager.cpp.o: ../GameManager.h
-
-CMakeFiles/main.dir/GameState.cpp.o: ../Coordinates.h
-CMakeFiles/main.dir/GameState.cpp.o: ../GameState.cpp
-CMakeFiles/main.dir/GameState.cpp.o: ../GameState.h
-CMakeFiles/main.dir/GameState.cpp.o: ../OpenGL.h
-CMakeFiles/main.dir/GameState.cpp.o: ../Vec2.h
+CMakeFiles/main.dir/GameModel.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/GameModel.cpp.o: ../GameModel.cpp
+CMakeFiles/main.dir/GameModel.cpp.o: ../GameModel.h
+CMakeFiles/main.dir/GameModel.cpp.o: ../OpenGL.h
+CMakeFiles/main.dir/GameModel.cpp.o: ../Vec2.h
 
 CMakeFiles/main.dir/KeyboardState.cpp.o: ../KeyboardState.cpp
 CMakeFiles/main.dir/KeyboardState.cpp.o: ../KeyboardState.h
 
 CMakeFiles/main.dir/MouseState.cpp.o: ../Coordinates.h
-CMakeFiles/main.dir/MouseState.cpp.o: ../GameState.h
+CMakeFiles/main.dir/MouseState.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.cpp
 CMakeFiles/main.dir/MouseState.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/MouseState.cpp.o: ../Vec2.h
@@ -45,7 +42,7 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../MouseState.h
@@ -66,7 +63,7 @@ CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../MouseState.h
@@ -107,7 +104,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Events/AsteroidHitEvent.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../MouseState.h
@@ -131,7 +128,7 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Globals.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../MouseState.h
@@ -197,7 +194,7 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Asteroid.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Coordinates.h
-CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Systems/OutOfBoundsSystem.cpp
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Systems/OutOfBoundsSystem.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Vec2.h
@@ -264,7 +261,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Text.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Coordinates.h
-CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../OpenGL.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Systems/RenderSystem.cpp
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Systems/RenderSystem.h
@@ -329,7 +326,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Wall.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameState.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Globals.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../MouseState.h
@@ -353,7 +350,7 @@ CMakeFiles/main.dir/main.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/main.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/main.cpp.o: ../Events/CollisionEvent.h
 CMakeFiles/main.dir/main.cpp.o: ../GameConfig.h
-CMakeFiles/main.dir/main.cpp.o: ../GameState.h
+CMakeFiles/main.dir/main.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/main.cpp.o: ../Globals.h
 CMakeFiles/main.dir/main.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/main.cpp.o: ../MouseState.h

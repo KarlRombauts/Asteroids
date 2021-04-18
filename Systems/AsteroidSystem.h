@@ -7,7 +7,7 @@
 
 
 #include "../ecs/EntityManager.h"
-#include "../GameState.h"
+#include "../GameModel.h"
 #include "../Components/SpaceShip.h"
 #include "../Components/Transform.h"
 #include "../Components/Kinematics.h"

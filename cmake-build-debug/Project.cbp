@@ -215,16 +215,10 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp">
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.cpp">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h">
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h">
@@ -342,6 +336,9 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.cpp">

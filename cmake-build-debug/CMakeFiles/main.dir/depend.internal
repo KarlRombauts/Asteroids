@@ -19,13 +19,10 @@ CMakeFiles/main.dir/GameConfig.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
-CMakeFiles/main.dir/GameManager.cpp.o
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.cpp
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameManager.h
-CMakeFiles/main.dir/GameState.cpp.o
+CMakeFiles/main.dir/GameModel.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.cpp
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.cpp
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
 CMakeFiles/main.dir/KeyboardState.cpp.o
@@ -33,7 +30,7 @@ CMakeFiles/main.dir/KeyboardState.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
 CMakeFiles/main.dir/MouseState.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
@@ -46,7 +43,7 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
@@ -67,7 +64,7 @@ CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
@@ -108,7 +105,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/AsteroidHitEvent.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
@@ -132,7 +129,7 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
@@ -198,7 +195,7 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Destroy.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
@@ -265,7 +262,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h
@@ -330,7 +327,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Wall.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
@@ -354,7 +351,7 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/CollisionEvent.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.h
- /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h

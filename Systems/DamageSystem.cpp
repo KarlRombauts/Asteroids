@@ -7,7 +7,7 @@
 #include "../Components/Transform.h"
 #include "../Components/Kinematics.h"
 #include "../Components/ParticleSource.h"
-#include "../GameState.h"
+#include "../GameModel.h"
 #include "../Components/Destroy.h"
 #include "../Globals.h"
 
@@ -59,7 +59,7 @@ void DamageSystem::handleDeath(EntityManager &entities, Entity *entity, Entity *
         particles->assign<Transform>(*entity->get<Transform>());
 
         // Increment Score
-        gameState.score++;
+        gameModel.score++;
     }
 
     entity->assign<Destroy>();

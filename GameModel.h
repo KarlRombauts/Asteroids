@@ -1,16 +1,23 @@
-#ifndef UNTITLED_GAMESTATE_H
-#define UNTITLED_GAMESTATE_H
+#ifndef UNTITLED_GAMEMODEL_H
+#define UNTITLED_GAMEMODEL_H
 
 #include "Coordinates.h"
 
-struct GameState {
+enum class GameState {
+    GAME_OVER,
+    WAVE_OVER,
+    PLAYING,
+    START,
+    PLAY_AGAIN,
+};
+
+struct GameModel {
     int worldSize = 100;
     int arenaSize = worldSize - 10;
     int waveCount = 1;
     int msElapsedTime = 0;
     int score = 0;
-    bool isGameOver = false;
-    bool isWaveOver = true;
+    GameState state = GameState::START;
 
     int width;
     int height;
@@ -32,6 +39,6 @@ struct GameState {
 
 };
 
-extern GameState gameState;
+extern GameModel gameModel;
 
-#endif //UNTITLED_GAMESTATE_H
+#endif //UNTITLED_GAMEMODEL_H

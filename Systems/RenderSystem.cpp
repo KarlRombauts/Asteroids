@@ -9,7 +9,7 @@
 #include "../Components/HealthBar.h"
 #include "../Components/Particle.h"
 #include "../Components/Text.h"
-#include "../GameState.h"
+#include "../GameModel.h"
 #include "../Components/Helpers.h"
 #include "../Components/Kinematics.h"
 
@@ -20,11 +20,11 @@ void RenderSystem::update(EntityManager &entities, double dt) {
         Texture *texture = entity->get<Texture>();
 
         glColor3f(1, 1, 1);
-        int arenaSize = gameState.arenaSize;
-        renderString(-arenaSize, arenaSize + 2, "Score: " + std::to_string(gameState.score),
+        int arenaSize = gameModel.arenaSize;
+        renderString(-arenaSize, arenaSize + 2, "Score: " + std::to_string(gameModel.score),
                      TextAlignment::LEFT);
 
-        renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameState.msElapsedTime),
+        renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameModel.msElapsedTime),
                      TextAlignment::RIGHT);
 
         if (entity->has<Health, HealthBar>()) {
@@ -76,7 +76,7 @@ RenderSystem::renderString(GLdouble x, GLdouble y, const std::string &string,
         width += glutBitmapWidth(GLUT_BITMAP_HELVETICA_18, string[n]);
     }
 
-    width = width / gameState.getWorldToPixelRatioWidth();
+    width = width / gameModel.getWorldToPixelRatioWidth();
 
     double offset = 0;
     if (alignment == TextAlignment::CENTER) {

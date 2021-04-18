@@ -258,59 +258,32 @@ GameConfig.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameConfig.cpp.s
 .PHONY : GameConfig.cpp.s
 
-GameManager.o: GameManager.cpp.o
+GameModel.o: GameModel.cpp.o
 
-.PHONY : GameManager.o
-
-# target to build an object file
-GameManager.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.o
-.PHONY : GameManager.cpp.o
-
-GameManager.i: GameManager.cpp.i
-
-.PHONY : GameManager.i
-
-# target to preprocess a source file
-GameManager.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.i
-.PHONY : GameManager.cpp.i
-
-GameManager.s: GameManager.cpp.s
-
-.PHONY : GameManager.s
-
-# target to generate assembly for a file
-GameManager.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameManager.cpp.s
-.PHONY : GameManager.cpp.s
-
-GameState.o: GameState.cpp.o
-
-.PHONY : GameState.o
+.PHONY : GameModel.o
 
 # target to build an object file
-GameState.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameState.cpp.o
-.PHONY : GameState.cpp.o
+GameModel.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameModel.cpp.o
+.PHONY : GameModel.cpp.o
 
-GameState.i: GameState.cpp.i
+GameModel.i: GameModel.cpp.i
 
-.PHONY : GameState.i
+.PHONY : GameModel.i
 
 # target to preprocess a source file
-GameState.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameState.cpp.i
-.PHONY : GameState.cpp.i
+GameModel.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameModel.cpp.i
+.PHONY : GameModel.cpp.i
 
-GameState.s: GameState.cpp.s
+GameModel.s: GameModel.cpp.s
 
-.PHONY : GameState.s
+.PHONY : GameModel.s
 
 # target to generate assembly for a file
-GameState.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameState.cpp.s
-.PHONY : GameState.cpp.s
+GameModel.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameModel.cpp.s
+.PHONY : GameModel.cpp.s
 
 KeyboardState.o: KeyboardState.cpp.o
 
@@ -957,12 +930,9 @@ help:
 	@echo "... GameConfig.o"
 	@echo "... GameConfig.i"
 	@echo "... GameConfig.s"
-	@echo "... GameManager.o"
-	@echo "... GameManager.i"
-	@echo "... GameManager.s"
-	@echo "... GameState.o"
-	@echo "... GameState.i"
-	@echo "... GameState.s"
+	@echo "... GameModel.o"
+	@echo "... GameModel.i"
+	@echo "... GameModel.s"
 	@echo "... KeyboardState.o"
 	@echo "... KeyboardState.i"
 	@echo "... KeyboardState.s"

@@ -12,7 +12,7 @@
 #include "../Components/Bullet.h"
 #include "../Components/Kinematics.h"
 #include "../Components/BlackHole.h"
-#include "../GameState.h"
+#include "../GameModel.h"
 #include "../Components/Impact.h"
 #include "../Components/OutsideArena.h"
 #include "../Components/Particle.h"
@@ -28,7 +28,7 @@ void CollisionSystem::update(EntityManager &entities, double dt) {
         if (entity1->has<OutsideArena, CircleCollision>()) {
             Vec2 p = entity1->get<Transform>()->position;
             double r = entity1->get<CircleCollision>()->radius;
-            if (gameState.isCircleInArena(p, r)) {
+            if (gameModel.isCircleInArena(p, r)) {
                 entity1->remove<OutsideArena>();
             }
             continue;

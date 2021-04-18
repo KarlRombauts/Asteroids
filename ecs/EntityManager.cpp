@@ -7,7 +7,7 @@
 #include "../Components/Asteroid.h"
 #include "../Components/Helpers.h"
 #include "../Components/Shape.h"
-#include "../GameState.h"
+#include "../GameModel.h"
 #include "../Components/Draggable.h"
 #include "../Components/Health.h"
 #include "../Components/HealthBar.h"
@@ -23,6 +23,7 @@
 #include "../Components/Particle.h"
 #include "../Components/Bullet.h"
 #include "../Components/Damage.h"
+#include "../TextAlignment.h"
 
 
 Entity *EntityManager::create() {
@@ -59,7 +60,7 @@ Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
 
 Entity *EntityManager::createAsteroid(double radius) {
     Entity *asteroid = this->create();
-    const CoordinateSpace &world = gameState.getWorldCoordinates();
+    const CoordinateSpace &world = gameModel.getWorldCoordinates();
 
     asteroid->assign<Transform>(
             Vec2(randf(world.minX, world.maxX), randf(world.minY, world.maxY)),
@@ -113,7 +114,7 @@ Entity *EntityManager::createFixedLine(Vec2 start, Vec2 end) {
 }
 
 void EntityManager::createArena() {
-    int l = gameState.arenaSize;
+    int l = gameModel.arenaSize;
     Entity *leftWall = createFixedLine(Vec2(-l, -l), Vec2(-l, l));
     leftWall->assign<Wall>();
 
@@ -172,7 +173,7 @@ void EntityManager::destroy(Entity *entity) {
 
 void EntityManager::createWorld() {
     createArena();
-    createSpaceShip(Vec2(0, 0));
+    createSpaceShip(Vec2(gameModel.arenaSize * -0.8, gameModel.arenaSize * -0.8));
 
     if (gameConfig.BLACK_HOLE_ACTIVE) {
         createBlackHole(10, Vec2(40, 50));
@@ -197,4 +198,9 @@ Entity *EntityManager::createBullet(Vec2 position, Vec2 velocity) {
     bullet->assign<CircleCollision>(2);
     bullet->assign<Texture>(gameConfig.BULLET_COLOR);
     return bullet;
+}
+
+Entity *EntityManager::CreateText(std::string string, Vec2 position, TextAlignment alignment) {
+    Entity *text = create();
+    text->assign<Texture>(1, 1, 1);
 }
