@@ -48,6 +48,7 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Systems/AsteroidSystem.cpp
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Systems/AsteroidSystem.h
+CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/Entity.h
@@ -70,6 +71,7 @@ CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/BlackHoleSystem.cpp
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/BlackHoleSystem.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/Entity.h
@@ -84,6 +86,7 @@ CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Systems/BulletCleanupSystem.cpp
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Systems/BulletCleanupSystem.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../ecs/Entity.h
@@ -111,6 +114,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/CollisionSystem.cpp
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/CollisionSystem.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../ecs/Entity.h
@@ -134,6 +138,7 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.cpp
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Systems/DamageSystem.h
+CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/DamageSystem.cpp.o: ../ecs/Entity.h
@@ -143,6 +148,7 @@ CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Components/BoundingCircle.h
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Components/Destroy.h
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.cpp
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Systems/DestroySystem.h
+CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/DestroySystem.cpp.o: ../ecs/Entity.h
@@ -159,6 +165,7 @@ CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/DragSystem.cpp
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/DragSystem.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/DragSystem.cpp.o: ../ecs/Entity.h
@@ -176,6 +183,7 @@ CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Systems/FiringSystem.cpp
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Systems/FiringSystem.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/FiringSystem.cpp.o: ../ecs/Entity.h
@@ -185,6 +193,7 @@ CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../Systems/ImpactCleanupSystem.cpp
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../Systems/ImpactCleanupSystem.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o: ../ecs/Entity.h
@@ -197,6 +206,7 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Coordinates.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Systems/OutOfBoundsSystem.cpp
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Systems/OutOfBoundsSystem.h
+CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/Entity.h
@@ -213,6 +223,7 @@ CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Systems/ParticleSystem.cpp
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Systems/ParticleSystem.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../ecs/Entity.h
@@ -226,6 +237,7 @@ CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Events/CollisionEvent.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Systems/PhysicsSystem.cpp
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Systems/PhysicsSystem.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o: ../ecs/Entity.h
@@ -245,6 +257,7 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/PlayerInputSystem.cpp
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/PlayerInputSystem.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o: ../ecs/Entity.h
@@ -266,6 +279,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../OpenGL.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Systems/RenderSystem.cpp
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Systems/RenderSystem.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../ecs/Entity.h
@@ -278,6 +292,7 @@ CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Components/Wall.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Systems/ShipImpactSystem.cpp
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Systems/ShipImpactSystem.h
+CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o: ../ecs/Entity.h
@@ -290,6 +305,7 @@ CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Components/Wall.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Systems/WarningSystem.cpp
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Systems/WarningSystem.h
+CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/WarningSystem.cpp.o: ../ecs/Entity.h
@@ -321,6 +337,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/PlayerInput.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/SplitOnDeath.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Text.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Texture.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Wall.h
@@ -330,6 +347,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Globals.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../MouseState.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../ecs/Entity.h
@@ -370,6 +388,7 @@ CMakeFiles/main.dir/main.cpp.o: ../Systems/RenderSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/ShipImpactSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/System.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/WarningSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../TextAlignment.h
 CMakeFiles/main.dir/main.cpp.o: ../Vec2.h
 CMakeFiles/main.dir/main.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/main.cpp.o: ../ecs/Entity.h

@@ -14,9 +14,10 @@ enum class GameState {
 struct GameModel {
     int worldSize = 100;
     int arenaSize = worldSize - 10;
-    int waveCount = 1;
-    int msElapsedTime = 0;
+    int waveCount = 0;
+    int elapsedTime = 0;
     int score = 0;
+    int resetTime = 0;
     GameState state = GameState::START;
 
     int width;
@@ -37,6 +38,7 @@ struct GameModel {
 
     void reset();
 
+    int getElapsedTime();
 };
 
 extern GameModel gameModel;

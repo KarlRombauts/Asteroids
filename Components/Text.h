@@ -9,8 +9,9 @@
 #include "../ecs/Component.h"
 
 struct Text: public Component {
-    Text(std::string string): string(string) {}
+    Text(std::string string, TextAlignment alignment): string(string), alignment(alignment) {}
     std::string string;
+    TextAlignment alignment;
 };
 
 #endif //UNTITLED_TEXT_H

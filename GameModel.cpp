@@ -52,8 +52,13 @@ double GameModel::getWorldToPixelRatioWidth() {
 }
 
 void GameModel::reset() {
-    waveCount = 1;
-    msElapsedTime = 0;
+    waveCount = 0;
+    resetTime = getElapsedTime();
+    elapsedTime = 0;
     score = 0;
     state = GameState::PLAYING;
+}
+
+int GameModel::getElapsedTime() {
+    return glutGet(GLUT_ELAPSED_TIME) - resetTime;
 }

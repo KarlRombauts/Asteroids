@@ -14,7 +14,7 @@ void BlackHoleSystem::update(EntityManager &entities, double dt) {
 
         double pulseTime = 1 / gameConfig.BLACK_HOLE_PULSE_RATE;
         double minSize = 0.7;
-        double scale = (1 - ((fmod(gameModel.msElapsedTime / (double) 1000, pulseTime)) / pulseTime) + minSize) / (1 + minSize);
+        double scale = (1 - ((fmod(gameModel.elapsedTime / (double) 1000, pulseTime)) / pulseTime) + minSize) / (1 + minSize);
 
         transform->scale = Vec2(scale, scale);
     }

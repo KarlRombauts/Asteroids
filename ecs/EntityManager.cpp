@@ -24,6 +24,7 @@
 #include "../Components/Bullet.h"
 #include "../Components/Damage.h"
 #include "../TextAlignment.h"
+#include "../Components/Text.h"
 
 
 Entity *EntityManager::create() {
@@ -203,4 +204,6 @@ Entity *EntityManager::createBullet(Vec2 position, Vec2 velocity) {
 Entity *EntityManager::CreateText(std::string string, Vec2 position, TextAlignment alignment) {
     Entity *text = create();
     text->assign<Texture>(1, 1, 1);
+    text->assign<Text>(string, alignment);
+    text->assign<Transform>(position, 0, Vec2(1, 1));
 }

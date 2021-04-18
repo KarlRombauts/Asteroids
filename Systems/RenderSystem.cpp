@@ -14,57 +14,47 @@
 #include "../Components/Kinematics.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
+    drawScore();
+    drawEntities(entities);
+}
 
+void RenderSystem::drawEntities(EntityManager &entities) {
     for (Entity* entity: entities.getEntitiesWith<Transform, Texture>()) {
         Transform *transform = entity->get<Transform>();
         Texture *texture = entity->get<Texture>();
-
-        glColor3f(1, 1, 1);
-        int arenaSize = gameModel.arenaSize;
-        renderString(-arenaSize, arenaSize + 2, "Score: " + std::to_string(gameModel.score),
-                     TextAlignment::LEFT);
-
-        renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameModel.msElapsedTime),
-                     TextAlignment::RIGHT);
 
         if (entity->has<Health, HealthBar>()) {
             drawHealthBars(entity);
         }
 
-        if (entity->has<Transform, Kinematics>()) {
-            Vec2 &pos = entity->get<Transform>()->position;
-            Vec2 &a = entity->get<Kinematics>()->acceleration;
-            glPointSize(3.0);
-            glBegin(GL_LINES);
-            {
-                glVertex3f(pos.x, pos.y, 0);
-                glVertex3f(pos.x + a.x, pos.y + a.y, 0);
-            }
-            glEnd();
-        }
-
         glPushMatrix();
-        glTranslatef(transform->position.x, transform->position.y, 0);
-        glRotatef(transform->rotation, 0, 0, 1);
-        glScalef(transform->scale.x, transform->scale.y, 1);
+            glTranslatef(transform->position.x, transform->position.y, 0);
+            glRotatef(transform->rotation, 0, 0, 1);
+            glScalef(transform->scale.x, transform->scale.y, 1);
+            glColor3f(texture->red, texture->green, texture->blue);
 
-        glColor3f(texture->red, texture->green, texture->blue);
-
-        if (entity->has<Text>()) {
-            renderString(0, 0, entity->get<Text>()->string,
-                         TextAlignment::LEFT);
-        } else if (entity->has<Shape>()) {
-            drawShape(entity);
-        } else if (entity->has<Line>()) {
-            drawLine(entity);
-        } else if (entity->has<Particle>()) {
-            drawParticle(entity);
-        }
-
-
-
+            if (entity->has<Shape>()) {
+                drawShape(entity);
+            } else if (entity->has<Line>()) {
+                drawLine(entity);
+            } else if (entity->has<Particle>()) {
+                drawParticle(entity);
+            }
         glPopMatrix();
     }
+}
+
+void RenderSystem::drawScore() {
+    glColor3f(1, 1, 1);
+    int arenaSize = gameModel.arenaSize;
+    renderString(-arenaSize, arenaSize + 2, "Score: " + std::to_string(gameModel.score),
+                 TextAlignment::LEFT);
+
+    renderString(0, arenaSize + 2, "Wave: " + std::to_string(gameModel.waveCount),
+                 TextAlignment::CENTER);
+
+    renderString(arenaSize, arenaSize + 2, "Time: " + formatTime(gameModel.elapsedTime),
+                 TextAlignment::RIGHT);
 }
 
 void

@@ -28,6 +28,10 @@ public:
 
     void renderString(GLdouble x, GLdouble y, const std::string &string,
                       TextAlignment alignment);
+
+    void drawScore();
+
+    void drawEntities(EntityManager &entities);
 };
 
 

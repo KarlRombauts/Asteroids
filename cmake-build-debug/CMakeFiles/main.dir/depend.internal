@@ -49,6 +49,7 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -71,6 +72,7 @@ CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -85,6 +87,7 @@ CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -112,6 +115,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -135,6 +139,7 @@ CMakeFiles/main.dir/Systems/DamageSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -144,6 +149,7 @@ CMakeFiles/main.dir/Systems/DestroySystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Destroy.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -160,6 +166,7 @@ CMakeFiles/main.dir/Systems/DragSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -177,6 +184,7 @@ CMakeFiles/main.dir/Systems/FiringSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -186,6 +194,7 @@ CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -198,6 +207,7 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -214,6 +224,7 @@ CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ParticleSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -227,6 +238,7 @@ CMakeFiles/main.dir/Systems/PhysicsSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PhysicsSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -246,6 +258,7 @@ CMakeFiles/main.dir/Systems/PlayerInputSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/PlayerInputSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -267,6 +280,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/RenderSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -279,6 +293,7 @@ CMakeFiles/main.dir/Systems/ShipImpactSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Wall.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -291,6 +306,7 @@ CMakeFiles/main.dir/Systems/WarningSystem.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Wall.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.cpp
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -322,6 +338,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SpaceShip.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SplitOnDeath.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Text.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Transform.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Wall.h
@@ -331,6 +348,7 @@ CMakeFiles/main.dir/ecs/EntityManager.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h
@@ -371,6 +389,7 @@ CMakeFiles/main.dir/main.cpp.o
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ShipImpactSystem.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/System.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.h
+ /Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Component.h
  /Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Entity.h

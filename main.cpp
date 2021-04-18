@@ -95,7 +95,14 @@ static void idle() {
 
 void handleGamePlay() {
     int thisTime = glutGet(GLUT_ELAPSED_TIME);
-    int dt = thisTime - gameModel.msElapsedTime;
+    int dt = thisTime - gameModel.elapsedTime;
+
+    // if more than 100ms have passed between frames, skip updating to ensure
+    // physics engine does not produce side effects
+    if (dt > 100) {
+        gameModel.elapsedTime = thisTime;
+        return;
+    }
 
     playerInputSystem.update(entities, dt);
     firingSystem.update(entities, dt);
@@ -111,7 +118,7 @@ void handleGamePlay() {
     impactCleanupSystem.update(entities, dt);
     destroySystem.update(entities);
 
-    gameModel.msElapsedTime = thisTime;
+    gameModel.elapsedTime = thisTime;
 
     if (entities.getEntitiesWith<SpaceShip>().empty()) {
         gameModel.state = GameState::GAME_OVER;
@@ -121,7 +128,7 @@ void handleGamePlay() {
 }
 
 void handleWaveOver() {
-    asteroidSystem.startWave(entities, gameModel.waveCount++);
+    asteroidSystem.startWave(entities, ++gameModel.waveCount);
     gameModel.state = GameState::PLAYING;
 }
 
