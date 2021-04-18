@@ -54,15 +54,15 @@
 #include "Components/ParticleSource.h"
 #include "Systems/ParticleSystem.h"
 #include "Components/Particle.h"
+#include "Systems/BlackHoleSystem.h"
 
 /* Display callback */
-static int lastTime = 0;
 
 EntityManager entities;
 RenderSystem renderSystem;
 DragSystem dragSystem;
-PhysicsSystem physicsSystem;
 CollisionSystem collisionSystem;
+PhysicsSystem physicsSystem;
 PlayerInputSystem playerInputSystem;
 FiringSystem firingSystem;
 ImpactCleanupSystem impactCleanupSystem;
@@ -73,6 +73,7 @@ AsteroidSystem asteroidSystem;
 OutOfBoundsSystem outOfBoundsSystem;
 ShipImpactSystem shipImpactSystem;
 ParticleSystem particleSystem;
+BlackHoleSystem blackHoleSystem;
 
 
 void display()
@@ -122,16 +123,17 @@ static void idle_func(void)
     thisTime = glutGet(GLUT_ELAPSED_TIME);
     int dt = thisTime - gameState.msElapsedTime;
 
-    particleSystem.update(entities, dt);
     playerInputSystem.update(entities, dt);
     dragSystem.update(entities, dt);
     firingSystem.update(entities, dt);
     collisionSystem.update(entities, dt);
+    particleSystem.update(entities, dt);
     physicsSystem.update(entities, dt);
     warningSystem.update(entities);
     damageSystem.update(entities);
     bulletCleanupSystem.update(entities, dt);
     shipImpactSystem.update(entities);
+    blackHoleSystem.update(entities, dt);
     impactCleanupSystem.update(entities, dt);
     outOfBoundsSystem.update(entities);
 
@@ -152,16 +154,10 @@ void init() {
     glMatrixMode(GL_MODELVIEW);
 
     entities.createArena();
-    entities.createSpaceShip();
+    entities.createSpaceShip(Vec2(0, 0));
     asteroidSystem.startWave(entities, gameState.waveCount);
+    entities.createBlackHole(10, Vec2(40, 50));
 
-
-//    Entity* blackHole = entities.create();
-//    blackHole->assign<Transform>(Vec2(-0.4, 0.7), 0, Vec2(2, 2));
-//    blackHole->assign<BlackHole>();
-//    blackHole->assign<Collision>(CollisionType::TRIGGER);
-//    blackHole->assign<GravityForce>(1);
-//    blackHole->assign<Texture>(0.2, 0.2, 0.2);
 }
 
 

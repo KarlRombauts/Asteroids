@@ -257,6 +257,12 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.cpp">
 			<Option target="main"/>
 		</Unit>

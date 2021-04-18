@@ -78,3 +78,9 @@ Vec2 Vec2::rotate(double theta) {
     return Vec2(this->x * cosT - this->y * sinT, this->x * sinT + this->y * cosT);
 }
 
+void Vec2::operator*=(const double &scalar) {
+    const Vec2 &newVec = this->scale(scalar);
+    this->x = newVec.x;
+    this->y = newVec.y;
+}
+

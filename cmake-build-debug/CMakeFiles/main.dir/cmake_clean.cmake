@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/MouseState.cpp.o"
   "CMakeFiles/main.dir/Ship.cpp.o"
   "CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o"
+  "CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o"
   "CMakeFiles/main.dir/Systems/DamageSystem.cpp.o"

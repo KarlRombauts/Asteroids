@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/MouseState.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Ship.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Ship.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/DamageSystem.cpp.o"

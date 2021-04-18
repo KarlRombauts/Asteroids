@@ -420,6 +420,33 @@ Systems/AsteroidSystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.s
 .PHONY : Systems/AsteroidSystem.cpp.s
 
+Systems/BlackHoleSystem.o: Systems/BlackHoleSystem.cpp.o
+
+.PHONY : Systems/BlackHoleSystem.o
+
+# target to build an object file
+Systems/BlackHoleSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o
+.PHONY : Systems/BlackHoleSystem.cpp.o
+
+Systems/BlackHoleSystem.i: Systems/BlackHoleSystem.cpp.i
+
+.PHONY : Systems/BlackHoleSystem.i
+
+# target to preprocess a source file
+Systems/BlackHoleSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.i
+.PHONY : Systems/BlackHoleSystem.cpp.i
+
+Systems/BlackHoleSystem.s: Systems/BlackHoleSystem.cpp.s
+
+.PHONY : Systems/BlackHoleSystem.s
+
+# target to generate assembly for a file
+Systems/BlackHoleSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.s
+.PHONY : Systems/BlackHoleSystem.cpp.s
+
 Systems/BulletCleanupSystem.o: Systems/BulletCleanupSystem.cpp.o
 
 .PHONY : Systems/BulletCleanupSystem.o
@@ -975,6 +1002,9 @@ help:
 	@echo "... Systems/AsteroidSystem.o"
 	@echo "... Systems/AsteroidSystem.i"
 	@echo "... Systems/AsteroidSystem.s"
+	@echo "... Systems/BlackHoleSystem.o"
+	@echo "... Systems/BlackHoleSystem.i"
+	@echo "... Systems/BlackHoleSystem.s"
 	@echo "... Systems/BulletCleanupSystem.o"
 	@echo "... Systems/BulletCleanupSystem.i"
 	@echo "... Systems/BulletCleanupSystem.s"

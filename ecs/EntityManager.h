@@ -32,9 +32,11 @@ public:
 
     void createArena();
 
-    Entity *createSpaceShip();
+    Entity *createSpaceShip(Vec2 position);
 
     Entity *createBoundingCircle(double radius);
+
+    Entity *createBlackHole(double radius, Vec2 position);
 };
 
 template<typename... Components>

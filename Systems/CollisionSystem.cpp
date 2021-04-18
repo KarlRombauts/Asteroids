@@ -15,6 +15,7 @@
 #include "../GameState.h"
 #include "../Components/Impact.h"
 #include "../Components/OutsideArena.h"
+#include "../Components/Particle.h"
 
 void CollisionSystem::update(EntityManager &entities, double dt) {
     std::vector<Entity *> rigidBodyEntities = entities.getEntitiesWith<Transform, Collision>();
@@ -64,6 +65,10 @@ void CollisionSystem::createImpacts(Entity *entity1, Entity *entity2) const {
     }
     entity1->get<Impact>()->entities.push_back(entity2);
     entity2->get<Impact>()->entities.push_back(entity1);
+
+    if (entity1->has<BlackHole>()) {
+        std::cout << "Particle" << std::endl;
+    }
 }
 
 const bool

@@ -11,6 +11,7 @@
 #include "../Components/Text.h"
 #include "../GameState.h"
 #include "../Components/Helpers.h"
+#include "../Components/Moveable.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
 
@@ -30,6 +31,18 @@ void RenderSystem::update(EntityManager &entities, double dt) {
             drawHealthBars(entity);
         }
 
+        if (entity->has<Transform, Moveable>()) {
+            Vec2 &pos = entity->get<Transform>()->position;
+            Vec2 &a = entity->get<Moveable>()->acceleration;
+            glPointSize(3.0);
+            glBegin(GL_LINES);
+            {
+                glVertex3f(pos.x, pos.y, 0);
+                glVertex3f(pos.x + a.x, pos.y + a.y, 0);
+            }
+            glEnd();
+        }
+
         glPushMatrix();
         glTranslatef(transform->position.x, transform->position.y, 0);
         glRotatef(transform->rotation, 0, 0, 1);
@@ -47,6 +60,8 @@ void RenderSystem::update(EntityManager &entities, double dt) {
         } else if (entity->has<Particle>()) {
             drawParticle(entity);
         }
+
+
 
         glPopMatrix();
     }

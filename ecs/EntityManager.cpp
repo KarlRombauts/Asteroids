@@ -17,6 +17,8 @@
 #include "../Components/BoundingCircle.h"
 #include "../Components/PlayerInput.h"
 #include "../Components/SpaceShip.h"
+#include "../Components/BlackHole.h"
+#include "../Components/GravityForce.h"
 
 
 Entity *EntityManager::create() {
@@ -26,6 +28,31 @@ Entity *EntityManager::create() {
     return entities.at(id);
 }
 
+
+Entity *EntityManager::createBlackHole(double radius, Vec2 position) {
+    std::vector<Vec2> circle;
+    int num_segments = 16;
+    for (int i = 0; i < num_segments; i++) {
+        double theta = 2.0 * M_PI * float(i) / float(num_segments); // get the current angle
+
+        double x = radius * cos(theta); // calculate the x component
+        double y = radius * sin(theta); // calculate the y component
+
+        Vec2 vertex = {x, y};
+
+        circle.push_back(vertex);
+    }
+
+    Entity* blackHole = create();
+    blackHole->assign<Transform>(position, 0, Vec2(1, 1));
+    blackHole->assign<Shape>(circle);
+    blackHole->assign<BlackHole>();
+    blackHole->assign<Collision>(CollisionType::TRIGGER);
+    blackHole->assign<CircleCollision>(radius / 4);
+    blackHole->assign<GravityForce>(40000);
+    blackHole->assign<Texture>(0.5, 0.5, 0.5);
+    return blackHole;
+}
 
 Entity *EntityManager::createAsteroid(double radius) {
     Entity *asteroid = this->create();
@@ -60,7 +87,6 @@ Entity *EntityManager::createAsteroid(double radius) {
     asteroid->assign<Draggable>(radius);
     asteroid->assign<Texture>(1, 1, 1);
     asteroid->assign<Health>(radius * 10);
-    asteroid->assign<HealthBar>();
 
     Moveable moveable(Vec2::polar(randf(0, 360), randf(10, 20)), Vec2(0, 0), pow(radius, 2));
     moveable.angularVelocity = randf(-180, 180);
@@ -69,6 +95,7 @@ Entity *EntityManager::createAsteroid(double radius) {
 
     if (radius > 2) {
         asteroid->assign<SplitOnDeath>();
+        asteroid->assign<HealthBar>();
     }
 
     return asteroid;
@@ -101,7 +128,7 @@ void EntityManager::createArena() {
     bottomWall->assign<Wall>();
 }
 
-Entity *EntityManager::createSpaceShip() {
+Entity *EntityManager::createSpaceShip(Vec2 position) {
     Entity *spaceShip = create();
 
     std::vector<Vec2> spaceShipModel = {
@@ -119,7 +146,7 @@ Entity *EntityManager::createSpaceShip() {
     spaceShip->assign<CircleCollision>(5);
 
     spaceShip->assign<Texture>(1, 0, 0);
-    spaceShip->assign<Transform>(Vec2(0, 0), 90, Vec2(1, 1));
+    spaceShip->assign<Transform>(position, 90, Vec2(1, 1));
     spaceShip->assign<Moveable>(Vec2(0, 0), Vec2(0, 0), 1);
     spaceShip->get<Moveable>()->drag = 1;
 

@@ -18,6 +18,7 @@ public:
     void operator+=(const Vec2& vector);
     Vec2 operator-(Vec2 vector);
     Vec2 operator-=(const Vec2& vector);
+    void operator*=(const double& scalar);
     Vec2 operator*(const double& scalar);
     Vec2 operator/(const double& scalar);
 

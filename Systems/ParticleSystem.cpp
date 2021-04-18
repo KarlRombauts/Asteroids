@@ -2,6 +2,7 @@
 // Created by Karl Rombauts on 17/4/21.
 //
 
+#include <iostream>
 #include "ParticleSystem.h"
 #include "../Components/ParticleSource.h"
 #include "../Components/Transform.h"
@@ -9,6 +10,8 @@
 #include "../Components/Texture.h"
 #include "../Components/Moveable.h"
 #include "../Components/Helpers.h"
+#include "../Components/Collision.h"
+#include "../Components/Impact.h"
 
 void ParticleSystem::update(EntityManager &entities, double dt) {
     for (Entity *emitter: entities.getEntitiesWith<ParticleSource, Transform>()) {
@@ -51,6 +54,8 @@ ParticleSystem::emitParticle(EntityManager &entities, Entity *emitterEntity) con
     Entity* particle = entities.create();
     particle->assign<Particle>();
     particle->assign<Transform>(*emitterEntity->get<Transform>());
+    particle->assign<Collision>(CollisionType::TRIGGER);
+    particle->assign<CircleCollision>(3);
 
     double d = particleSource->dispersion;
     Vec2 velocity = Vec2::polar(randf(0, 360), d + randf(-d / 3, d / 3)) + particleSource->velocity;

@@ -63,6 +63,21 @@ CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o: ../ecs/EntityManager.h
 
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/BlackHole.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Collision.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Impact.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Line.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Components/Transform.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Coordinates.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../GameState.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/BlackHoleSystem.cpp
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/BlackHoleSystem.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Systems/System.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../Vec2.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/Component.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/Entity.h
+CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o: ../ecs/EntityManager.h
+
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Bullet.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o: ../Components/Impact.h
@@ -84,6 +99,7 @@ CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Impact.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Line.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/OutsideArena.h
+CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/SpaceShip.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Components/Transform.h
 CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o: ../Coordinates.h
@@ -170,7 +186,10 @@ CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/Component.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/Entity.h
 CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o: ../ecs/EntityManager.h
 
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Helpers.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Impact.h
+CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Line.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/ParticleSystem.cpp.o: ../Components/ParticleSource.h
@@ -223,6 +242,7 @@ CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Helpers.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Line.h
+CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Moveable.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Particle.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Shape.h
 CMakeFiles/main.dir/Systems/RenderSystem.cpp.o: ../Components/Text.h
@@ -270,10 +290,12 @@ CMakeFiles/main.dir/ecs/Entity.cpp.o: ../ecs/Entity.cpp
 CMakeFiles/main.dir/ecs/Entity.cpp.o: ../ecs/Entity.h
 
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Asteroid.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/BlackHole.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/BoundingCircle.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Child.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Collision.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Draggable.h
+CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/GravityForce.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Health.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/HealthBar.h
 CMakeFiles/main.dir/ecs/EntityManager.cpp.o: ../Components/Helpers.h
@@ -329,6 +351,7 @@ CMakeFiles/main.dir/main.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/main.cpp.o: ../MouseState.h
 CMakeFiles/main.dir/main.cpp.o: ../Ship.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/AsteroidSystem.h
+CMakeFiles/main.dir/main.cpp.o: ../Systems/BlackHoleSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/BulletCleanupSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/CollisionSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/DamageSystem.h
