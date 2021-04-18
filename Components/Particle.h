@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 17/4/21.
-//
-
 #ifndef UNTITLED_PARTICLE_H
 #define UNTITLED_PARTICLE_H
 

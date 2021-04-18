@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Acceleration.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Asteroid.h">
 			<Option target="main"/>
 		</Unit>
@@ -107,9 +104,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Destroy.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Draggable.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/FiringBullet.h">
 			<Option target="main"/>
 		</Unit>
@@ -122,15 +116,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/HealthBar.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Identity.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Impact.h">
 			<Option target="main"/>
 		</Unit>
@@ -138,9 +123,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Line.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Momentum.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/OutsideArena.h">
@@ -155,9 +137,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/PlayerInput.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Rotation.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Shape.h">
 			<Option target="main"/>
 		</Unit>
@@ -165,9 +144,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/SplitOnDeath.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Text.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Texture.h">
@@ -185,30 +161,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/AsteroidHitEvent.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/CollisionEvent.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/Death.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Events/SpaceShipHitEvent.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/AteroidFactory.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/AteroidFactory.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/LineFactory.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/LineFactory.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -224,16 +176,16 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Globals.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Helpers.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Helpers.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.cpp">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/OpenGL.h">
@@ -273,12 +225,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp">
@@ -338,9 +284,6 @@
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/WarningSystem.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/TextAlignment.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/Vec2.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -366,6 +309,9 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/ecs/Service.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/enum/TextAlignment.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/karlrombauts/CLionProjects/APT-test2/untitled/main.cpp">

@@ -4,21 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Components/Helpers.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Components/Helpers.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Coordinates.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Coordinates.cpp.o"
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/AteroidFactory.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o"
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Factories/LineFactory.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Factories/LineFactory.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameConfig.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/GameConfig.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/GameModel.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/GameModel.cpp.o"
+  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Helpers.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Helpers.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/KeyboardState.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/KeyboardState.cpp.o"
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/MouseState.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/MouseState.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/AsteroidSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/AsteroidSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BlackHoleSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/BlackHoleSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/BulletCleanupSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/BulletCleanupSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/CollisionSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/CollisionSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DamageSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/DamageSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DestroySystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/DestroySystem.cpp.o"
-  "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/DragSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/DragSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/FiringSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/FiringSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/ImpactCleanupSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/ImpactCleanupSystem.cpp.o"
   "/Users/karlrombauts/CLionProjects/APT-test2/untitled/Systems/OutOfBoundsSystem.cpp" "/Users/karlrombauts/CLionProjects/APT-test2/untitled/cmake-build-debug/CMakeFiles/main.dir/Systems/OutOfBoundsSystem.cpp.o"

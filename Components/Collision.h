@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 15/3/21.
-//
-
 #ifndef UNTITLED_COLLISION_H
 #define UNTITLED_COLLISION_H
 

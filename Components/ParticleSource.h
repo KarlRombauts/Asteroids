@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 16/4/21.
-//
-
 #ifndef UNTITLED_PARTICLESOURCE_H
 #define UNTITLED_PARTICLESOURCE_H
 

@@ -370,6 +370,7 @@ CMakeFiles/main.dir/main.cpp.o: ../GameModel.h
 CMakeFiles/main.dir/main.cpp.o: ../Globals.h
 CMakeFiles/main.dir/main.cpp.o: ../KeyboardState.h
 CMakeFiles/main.dir/main.cpp.o: ../MouseState.h
+CMakeFiles/main.dir/main.cpp.o: ../OpenGL.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/AsteroidSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/BlackHoleSystem.h
 CMakeFiles/main.dir/main.cpp.o: ../Systems/BulletCleanupSystem.h

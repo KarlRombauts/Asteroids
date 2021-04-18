@@ -10,7 +10,7 @@
 #include <vector>
 #include "Entity.h"
 #include "../Vec2.h"
-#include "../TextAlignment.h"
+#include "../enum/TextAlignment.h"
 
 class EntityManager {
 private:

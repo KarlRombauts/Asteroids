@@ -5,10 +5,9 @@
 #include "../Components/Texture.h"
 #include "../Components/Kinematics.h"
 #include "../Components/Asteroid.h"
-#include "../Components/Helpers.h"
+#include "../Helpers.h"
 #include "../Components/Shape.h"
 #include "../GameModel.h"
-#include "../Components/Draggable.h"
 #include "../Components/Health.h"
 #include "../Components/HealthBar.h"
 #include "../Components/SplitOnDeath.h"
@@ -23,8 +22,6 @@
 #include "../Components/Particle.h"
 #include "../Components/Bullet.h"
 #include "../Components/Damage.h"
-#include "../TextAlignment.h"
-#include "../Components/Text.h"
 
 
 Entity *EntityManager::create() {
@@ -87,7 +84,6 @@ Entity *EntityManager::createAsteroid(double radius) {
     asteroid->assign<Shape>(asteroidModel);
     asteroid->assign<Collision>(CollisionType::DYNAMIC);
     asteroid->assign<CircleCollision>(radius);
-    asteroid->assign<Draggable>(radius);
     asteroid->assign<Texture>(gameConfig.ASTEROID_COLOR);
     asteroid->assign<Health>(radius * 10);
 

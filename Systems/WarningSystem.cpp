@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 16/4/21.
-//
-
 #include <iostream>
 #include "WarningSystem.h"
 #include "../Components/Impact.h"

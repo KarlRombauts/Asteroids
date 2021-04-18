@@ -3,7 +3,7 @@
 #include "../Components/Transform.h"
 #include "../Components/Particle.h"
 #include "../Components/Kinematics.h"
-#include "../Components/Helpers.h"
+#include "../Helpers.h"
 #include "../Components/Collision.h"
 #include "../Components/Destroy.h"
 

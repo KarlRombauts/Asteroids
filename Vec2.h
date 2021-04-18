@@ -27,8 +27,6 @@ public:
 
     static Vec2 polar(double rotation, double radius);
 
-    static double distanceBetween(Vec2 v1, Vec2 v2);
-
     Vec2 perpendicular();
 
     Vec2 rotate(double theta);

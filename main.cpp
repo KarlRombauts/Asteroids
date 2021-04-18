@@ -1,19 +1,8 @@
 #include <stdlib.h>
 
-#if _WIN32
-    # include <windows.h>
-#endif
 
-#if __APPLE__
-    # include <OpenGL/gl.h>
-    # include <GLUT/glut.h>
 
-#else
-    # include <GL/gl.h>
-    # include <GL/glu.h>
-    # include <GL/glut.h>
-#endif
-
+#include "OpenGL.h"
 #include "Globals.h"
 #include "GameModel.h"
 #include "ecs/EntityManager.h"
@@ -54,8 +43,6 @@ DestroySystem destroySystem;
 
 
 void handleGameOver();
-
-void handlePlayAgain();
 
 void handleMenu();
 
@@ -176,18 +163,6 @@ void onKeyRelease(unsigned char key, int x, int y) {
     keyboardState.releaseKey(key);
 }
 
-void onMouseButton(int btn, int state, int x, int y) {
-    mouseState.onMouseButton(btn, state, x, y);
-}
-
-void onMouseMove(int x, int y) {
-    mouseState.onMouseMove(x, y);
-}
-
-void onMouseDrag(int x, int y) {
-    mouseState.onMouseDrag(x, y);
-}
-
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
@@ -202,9 +177,6 @@ int main(int argc, char **argv) {
     glutReshapeFunc(reshape);
     glutKeyboardFunc(onKeyPress);
     glutKeyboardUpFunc(onKeyRelease);
-    glutMouseFunc(onMouseButton);
-    glutMotionFunc(onMouseDrag);
-    glutPassiveMotionFunc(onMouseMove);
 
     /* Let glut take over */
     glutMainLoop();

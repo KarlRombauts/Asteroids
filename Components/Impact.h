@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 9/4/21.
-//
-
 #ifndef UNTITLED_IMPACT_H
 #define UNTITLED_IMPACT_H
 

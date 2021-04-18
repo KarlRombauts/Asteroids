@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 14/3/21.
-//
-
 #include "CollisionSystem.h"
 #include "../Components/Transform.h"
 #include "../Globals.h"

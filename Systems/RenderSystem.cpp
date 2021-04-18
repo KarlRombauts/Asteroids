@@ -7,7 +7,7 @@
 #include "../Components/HealthBar.h"
 #include "../Components/Particle.h"
 #include "../GameModel.h"
-#include "../Components/Helpers.h"
+#include "../Helpers.h"
 
 void RenderSystem::update(EntityManager &entities, double dt) {
     drawDifficulty();

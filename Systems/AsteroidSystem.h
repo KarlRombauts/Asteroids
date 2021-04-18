@@ -11,7 +11,7 @@
 #include "../Components/SpaceShip.h"
 #include "../Components/Transform.h"
 #include "../Components/Kinematics.h"
-#include "../Components/Helpers.h"
+#include "../Helpers.h"
 #include "../Components/OutsideArena.h"
 
 class AsteroidSystem {

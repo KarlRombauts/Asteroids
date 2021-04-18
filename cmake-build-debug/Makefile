@@ -123,33 +123,6 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-Components/Helpers.o: Components/Helpers.cpp.o
-
-.PHONY : Components/Helpers.o
-
-# target to build an object file
-Components/Helpers.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.o
-.PHONY : Components/Helpers.cpp.o
-
-Components/Helpers.i: Components/Helpers.cpp.i
-
-.PHONY : Components/Helpers.i
-
-# target to preprocess a source file
-Components/Helpers.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.i
-.PHONY : Components/Helpers.cpp.i
-
-Components/Helpers.s: Components/Helpers.cpp.s
-
-.PHONY : Components/Helpers.s
-
-# target to generate assembly for a file
-Components/Helpers.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Components/Helpers.cpp.s
-.PHONY : Components/Helpers.cpp.s
-
 Coordinates.o: Coordinates.cpp.o
 
 .PHONY : Coordinates.o
@@ -176,60 +149,6 @@ Coordinates.s: Coordinates.cpp.s
 Coordinates.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Coordinates.cpp.s
 .PHONY : Coordinates.cpp.s
-
-Factories/AteroidFactory.o: Factories/AteroidFactory.cpp.o
-
-.PHONY : Factories/AteroidFactory.o
-
-# target to build an object file
-Factories/AteroidFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.o
-.PHONY : Factories/AteroidFactory.cpp.o
-
-Factories/AteroidFactory.i: Factories/AteroidFactory.cpp.i
-
-.PHONY : Factories/AteroidFactory.i
-
-# target to preprocess a source file
-Factories/AteroidFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.i
-.PHONY : Factories/AteroidFactory.cpp.i
-
-Factories/AteroidFactory.s: Factories/AteroidFactory.cpp.s
-
-.PHONY : Factories/AteroidFactory.s
-
-# target to generate assembly for a file
-Factories/AteroidFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/AteroidFactory.cpp.s
-.PHONY : Factories/AteroidFactory.cpp.s
-
-Factories/LineFactory.o: Factories/LineFactory.cpp.o
-
-.PHONY : Factories/LineFactory.o
-
-# target to build an object file
-Factories/LineFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.o
-.PHONY : Factories/LineFactory.cpp.o
-
-Factories/LineFactory.i: Factories/LineFactory.cpp.i
-
-.PHONY : Factories/LineFactory.i
-
-# target to preprocess a source file
-Factories/LineFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.i
-.PHONY : Factories/LineFactory.cpp.i
-
-Factories/LineFactory.s: Factories/LineFactory.cpp.s
-
-.PHONY : Factories/LineFactory.s
-
-# target to generate assembly for a file
-Factories/LineFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Factories/LineFactory.cpp.s
-.PHONY : Factories/LineFactory.cpp.s
 
 GameConfig.o: GameConfig.cpp.o
 
@@ -285,6 +204,33 @@ GameModel.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/GameModel.cpp.s
 .PHONY : GameModel.cpp.s
 
+Helpers.o: Helpers.cpp.o
+
+.PHONY : Helpers.o
+
+# target to build an object file
+Helpers.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.cpp.o
+.PHONY : Helpers.cpp.o
+
+Helpers.i: Helpers.cpp.i
+
+.PHONY : Helpers.i
+
+# target to preprocess a source file
+Helpers.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.cpp.i
+.PHONY : Helpers.cpp.i
+
+Helpers.s: Helpers.cpp.s
+
+.PHONY : Helpers.s
+
+# target to generate assembly for a file
+Helpers.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.cpp.s
+.PHONY : Helpers.cpp.s
+
 KeyboardState.o: KeyboardState.cpp.o
 
 .PHONY : KeyboardState.o
@@ -311,33 +257,6 @@ KeyboardState.s: KeyboardState.cpp.s
 KeyboardState.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/KeyboardState.cpp.s
 .PHONY : KeyboardState.cpp.s
-
-MouseState.o: MouseState.cpp.o
-
-.PHONY : MouseState.o
-
-# target to build an object file
-MouseState.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.o
-.PHONY : MouseState.cpp.o
-
-MouseState.i: MouseState.cpp.i
-
-.PHONY : MouseState.i
-
-# target to preprocess a source file
-MouseState.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.i
-.PHONY : MouseState.cpp.i
-
-MouseState.s: MouseState.cpp.s
-
-.PHONY : MouseState.s
-
-# target to generate assembly for a file
-MouseState.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/MouseState.cpp.s
-.PHONY : MouseState.cpp.s
 
 Systems/AsteroidSystem.o: Systems/AsteroidSystem.cpp.o
 
@@ -500,33 +419,6 @@ Systems/DestroySystem.s: Systems/DestroySystem.cpp.s
 Systems/DestroySystem.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DestroySystem.cpp.s
 .PHONY : Systems/DestroySystem.cpp.s
-
-Systems/DragSystem.o: Systems/DragSystem.cpp.o
-
-.PHONY : Systems/DragSystem.o
-
-# target to build an object file
-Systems/DragSystem.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.o
-.PHONY : Systems/DragSystem.cpp.o
-
-Systems/DragSystem.i: Systems/DragSystem.cpp.i
-
-.PHONY : Systems/DragSystem.i
-
-# target to preprocess a source file
-Systems/DragSystem.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.i
-.PHONY : Systems/DragSystem.cpp.i
-
-Systems/DragSystem.s: Systems/DragSystem.cpp.s
-
-.PHONY : Systems/DragSystem.s
-
-# target to generate assembly for a file
-Systems/DragSystem.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Systems/DragSystem.cpp.s
-.PHONY : Systems/DragSystem.cpp.s
 
 Systems/FiringSystem.o: Systems/FiringSystem.cpp.o
 
@@ -915,30 +807,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... Components/Helpers.o"
-	@echo "... Components/Helpers.i"
-	@echo "... Components/Helpers.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"
-	@echo "... Factories/AteroidFactory.o"
-	@echo "... Factories/AteroidFactory.i"
-	@echo "... Factories/AteroidFactory.s"
-	@echo "... Factories/LineFactory.o"
-	@echo "... Factories/LineFactory.i"
-	@echo "... Factories/LineFactory.s"
 	@echo "... GameConfig.o"
 	@echo "... GameConfig.i"
 	@echo "... GameConfig.s"
 	@echo "... GameModel.o"
 	@echo "... GameModel.i"
 	@echo "... GameModel.s"
+	@echo "... Helpers.o"
+	@echo "... Helpers.i"
+	@echo "... Helpers.s"
 	@echo "... KeyboardState.o"
 	@echo "... KeyboardState.i"
 	@echo "... KeyboardState.s"
-	@echo "... MouseState.o"
-	@echo "... MouseState.i"
-	@echo "... MouseState.s"
 	@echo "... Systems/AsteroidSystem.o"
 	@echo "... Systems/AsteroidSystem.i"
 	@echo "... Systems/AsteroidSystem.s"
@@ -957,9 +840,6 @@ help:
 	@echo "... Systems/DestroySystem.o"
 	@echo "... Systems/DestroySystem.i"
 	@echo "... Systems/DestroySystem.s"
-	@echo "... Systems/DragSystem.o"
-	@echo "... Systems/DragSystem.i"
-	@echo "... Systems/DragSystem.s"
 	@echo "... Systems/FiringSystem.o"
 	@echo "... Systems/FiringSystem.i"
 	@echo "... Systems/FiringSystem.s"

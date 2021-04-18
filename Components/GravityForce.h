@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 16/3/21.
-//
-
 #ifndef UNTITLED_GRAVITYFORCE_H
 #define UNTITLED_GRAVITYFORCE_H
 

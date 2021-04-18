@@ -34,10 +34,6 @@ Vec2 Vec2::polar(double rotation, double radius) {
     return Vec2(x, y);
 }
 
-double Vec2::distanceBetween(Vec2 v1, Vec2 v2) {
-    return (v1 - v2).magnitude();
-}
-
 Vec2 Vec2::operator+(const Vec2 &vector) {
     return this->add(vector);
 }

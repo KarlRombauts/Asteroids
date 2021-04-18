@@ -1,7 +1,3 @@
-//
-// Created by Karl Rombauts on 14/3/21.
-//
-
 #ifndef UNTITLED_KINEMATICS_H
 #define UNTITLED_KINEMATICS_H
 

@@ -4,12 +4,6 @@
 #include "../ecs/Component.h"
 #include "../Vec2.h"
 
-enum class OutOfBoundsBehaviour {
-    WRAP = 0,
-    BOUNCE = 1,
-    DESTROY = 2,
-};
-
 struct Transform : public Component {
     Transform() : position(Vec2(0,0)), rotation(0), scale(Vec2(1,1)) {}
     Transform(Vec2 position, double rotation, Vec2 scale)
